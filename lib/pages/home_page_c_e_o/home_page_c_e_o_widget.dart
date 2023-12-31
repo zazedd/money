@@ -215,15 +215,24 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          13.0, 0.0, 0.0, 0.0),
-                                      child: Icon(
-                                        Icons.euro_symbol_outlined,
-                                        color: Color(0xFF168B8B),
-                                        size: 30.0,
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        15.0, 0.0, 0.0, 0.0),
+                                    child: Container(
+                                      width: 23.0,
+                                      height: 23.0,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            Color(0xFF1ED3D3),
+                                            Color(0xFF1B8D8D)
+                                          ],
+                                          stops: [0.0, 1.0],
+                                          begin:
+                                              AlignmentDirectional(0.0, -1.0),
+                                          end: AlignmentDirectional(0, 1.0),
+                                        ),
+                                        shape: BoxShape.circle,
                                       ),
                                     ),
                                   ),

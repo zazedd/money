@@ -1,3 +1,4 @@
+import '/auth/user_role.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,8 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 
 import 'auth/supabase_auth/supabase_user_provider.dart';
 import 'auth/supabase_auth/auth_util.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '/backend/supabase/supabase.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
@@ -23,6 +26,10 @@ void main() async {
   await SupaFlow.initialize();
 
   await FlutterFlowTheme.initialize();
+
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  userRole.role = prefs.getInt("userRole");
+  print("main $userRole.role");
 
   runApp(MyApp());
 }
@@ -122,21 +129,37 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'homePageEmpreendedor': HomePageEmpreendedorWidget(),
-      'homePageTrabalhador': HomePageTrabalhadorWidget(),
-      'homePageCEO': HomePageCEOWidget(),
-      'materiais': MateriaisWidget(),
-      'profilePage': ProfilePageWidget(),
+      0: {
+        'homePageCEO': HomePageCEOWidget(),
+        'materiais': MateriaisWidget(),
+        'profilePage': ProfilePageWidget(),
+      },
+      1: {
+        'homePageEmpreendedor': HomePageEmpreendedorWidget(),
+        'profilePage': ProfilePageWidget(),
+      },
+      2: {
+        'homePageTrabalhador': HomePageTrabalhadorWidget(),
+        'profilePage': ProfilePageWidget(),
+      },
     };
-    final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
+
+    final userTabs = tabs[userRole.role] ?? tabs[2];
+    int currentIndex = userTabs?.keys.toList().indexOf(_currentPageName) ?? 0;
+    if (currentIndex == -1) currentIndex = 0;
+
+    print(userRole.role);
+    print('currentIndex: $currentIndex');
+    print('keys: ${userTabs?.keys.toList()}');
+    print('_currentPageName: $_currentPageName');
 
     return Scaffold(
-      body: _currentPage ?? tabs[_currentPageName],
+      body: _currentPage ?? userTabs?[_currentPageName],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() {
           _currentPage = null;
-          _currentPageName = tabs.keys.toList()[i];
+          _currentPageName = userTabs?.keys.toList()[i] ?? 'materiais';
         }),
         backgroundColor: Color(0xFF181818),
         selectedItemColor: Color(0xFF1ED3D3),
@@ -144,61 +167,67 @@ class _NavBarPageState extends State<NavBarPage> {
         showSelectedLabels: true,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.home_rounded,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.home_rounded,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.home_rounded,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.handyman_sharp,
-              size: 22.0,
-            ),
-            label: 'Materiais',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle_outlined,
-              size: 24.0,
-            ),
-            label: 'Perfil',
-            tooltip: '',
-          )
-        ],
+        items: userTabs?.entries.map((entry) {
+              final key = entry.key;
+              return BottomNavigationBarItem(
+                icon: getIcon(key),
+                activeIcon: getActiveIcon(key),
+                label: key == 'profilePage'
+                    ? 'Perfil'
+                    : key == 'materiais'
+                        ? 'Materiais'
+                        : 'Home',
+                tooltip: '',
+              );
+            }).toList() ??
+            [
+              BottomNavigationBarItem(
+                  icon: getIcon('homePageTrabalhador'),
+                  activeIcon: getActiveIcon('homePageTrabalhador'),
+                  label: 'Home')
+            ],
       ),
     );
+  }
+
+  // Helper functions to get icons based on the page name
+  Icon getIcon(String pageName) {
+    switch (pageName) {
+      case 'materiais':
+        return Icon(
+          Icons.handyman_sharp,
+          size: 22.0,
+        );
+      case 'profilePage':
+        return Icon(
+          Icons.account_circle_outlined,
+          size: 24.0,
+        );
+      default:
+        return Icon(
+          Icons.home_outlined,
+          size: 24.0,
+        );
+    }
+  }
+
+  Icon getActiveIcon(String pageName) {
+    switch (pageName) {
+      case 'materiais':
+        return Icon(
+          Icons.handyman_sharp,
+          size: 22.0,
+        );
+      case 'profilePage':
+        return Icon(
+          Icons.account_circle_outlined,
+          size: 24.0,
+        );
+      default:
+        return Icon(
+          Icons.home_rounded,
+          size: 24.0,
+        );
+    }
   }
 }

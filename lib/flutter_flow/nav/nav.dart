@@ -167,11 +167,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ? NavBarPage(initialPage: 'materiais')
               : MateriaisWidget(),
         ),
-        FFRoute(
-          name: 'waiting',
-          path: '/waiting',
-          builder: (context, params) => WaitingWidget(),
-        )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 

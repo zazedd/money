@@ -30,11 +30,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
     super.initState();
     _model = createModel(context, () => EditarPerfilModel());
 
-    _model.yourNameController ??= TextEditingController();
     _model.yourNameFocusNode ??= FocusNode();
-
-    _model.yourEmailController ??= TextEditingController();
-    _model.yourEmailFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -242,7 +238,10 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                       child: TextFormField(
-                        controller: _model.yourNameController,
+                        controller: _model.yourNameController ??=
+                            TextEditingController(
+                          text: containerUsersRow?.name,
+                        ),
                         focusNode: _model.yourNameFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
@@ -291,62 +290,18 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
-                      child: TextFormField(
-                        controller: _model.yourEmailController,
-                        focusNode: _model.yourEmailFocusNode,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          labelText: 'Email Address',
-                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
-                          hintText: 'Your email',
-                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).alternate,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0x00000000),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          filled: true,
-                          fillColor:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          contentPadding: EdgeInsetsDirectional.fromSTEB(
-                              20.0, 24.0, 20.0, 24.0),
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                        keyboardType: TextInputType.emailAddress,
-                        validator: _model.yourEmailControllerValidator
-                            .asValidator(context),
-                      ),
-                    ),
-                    Padding(
-                      padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button-Login pressed ...');
+                        onPressed: () async {
+                          await UsersTable().update(
+                            data: {
+                              'name': _model.yourNameController.text,
+                            },
+                            matchingRows: (rows) => rows.eq(
+                              'id',
+                              containerUsersRow?.id,
+                            ),
+                          );
                         },
                         text: 'Guardar',
                         options: FFButtonOptions(

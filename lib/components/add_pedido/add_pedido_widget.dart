@@ -320,6 +320,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                         'description': _model.descController.text,
                         'user_id': currentUserUid,
                         'work_id': widget.obra?.id,
+                        'status': 0,
                       });
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(

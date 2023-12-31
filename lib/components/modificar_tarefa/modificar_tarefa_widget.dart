@@ -7,7 +7,6 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -400,11 +399,88 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                           alignment: AlignmentDirectional(-1.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
-                              if (kIsWeb) {
-                                final _datePicked1Date = await showDatePicker(
+                              final _datePicked1Date = await showDatePicker(
+                                context: context,
+                                initialDate:
+                                    (widget.tarefa?.startsAt ?? DateTime.now()),
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2050),
+                                builder: (context, child) {
+                                  return wrapInMaterialDatePickerTheme(
+                                    context,
+                                    child!,
+                                    headerBackgroundColor:
+                                        FlutterFlowTheme.of(context).primary,
+                                    headerForegroundColor:
+                                        FlutterFlowTheme.of(context).info,
+                                    headerTextStyle:
+                                        FlutterFlowTheme.of(context)
+                                            .headlineLarge
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              fontSize: 32.0,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                    pickerBackgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                    pickerForegroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                    selectedDateTimeBackgroundColor:
+                                        FlutterFlowTheme.of(context).primary,
+                                    selectedDateTimeForegroundColor:
+                                        FlutterFlowTheme.of(context).info,
+                                    actionButtonForegroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                    iconSize: 24.0,
+                                  );
+                                },
+                              );
+
+                              if (_datePicked1Date != null) {
+                                safeSetState(() {
+                                  _model.datePicked1 = DateTime(
+                                    _datePicked1Date.year,
+                                    _datePicked1Date.month,
+                                    _datePicked1Date.day,
+                                  );
+                                });
+                              }
+                            },
+                            text: 'Data de Início',
+                            options: FFButtonOptions(
+                              height: 40.0,
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 0.0, 24.0, 0.0),
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    color: Colors.white,
+                                  ),
+                              elevation: 3.0,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional(1.0, 0.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                final _datePicked2Date = await showDatePicker(
                                   context: context,
-                                  initialDate: (widget.tarefa?.startsAt ??
-                                      DateTime.now()),
+                                  initialDate:
+                                      (widget.tarefa?.endsAt ?? DateTime.now()),
                                   firstDate: DateTime(1900),
                                   lastDate: DateTime(2050),
                                   builder: (context, child) {
@@ -441,135 +517,14 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                   },
                                 );
 
-                                if (_datePicked1Date != null) {
+                                if (_datePicked2Date != null) {
                                   safeSetState(() {
-                                    _model.datePicked1 = DateTime(
-                                      _datePicked1Date.year,
-                                      _datePicked1Date.month,
-                                      _datePicked1Date.day,
+                                    _model.datePicked2 = DateTime(
+                                      _datePicked2Date.year,
+                                      _datePicked2Date.month,
+                                      _datePicked2Date.day,
                                     );
                                   });
-                                }
-                              } else {
-                                await DatePicker.showDatePicker(
-                                  context,
-                                  showTitleActions: true,
-                                  onConfirm: (date) {
-                                    safeSetState(() {
-                                      _model.datePicked1 = date;
-                                    });
-                                  },
-                                  currentTime: widget.tarefa!.startsAt!,
-                                  minTime: DateTime(0, 0, 0),
-                                  locale: LocaleType.values.firstWhere(
-                                    (l) =>
-                                        l.name ==
-                                        FFLocalizations.of(context)
-                                            .languageCode,
-                                    orElse: () => LocaleType.en,
-                                  ),
-                                );
-                              }
-                            },
-                            text: 'Data de Início',
-                            options: FFButtonOptions(
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Align(
-                            alignment: AlignmentDirectional(1.0, 0.0),
-                            child: FFButtonWidget(
-                              onPressed: () async {
-                                if (kIsWeb) {
-                                  final _datePicked2Date = await showDatePicker(
-                                    context: context,
-                                    initialDate: (widget.tarefa?.endsAt ??
-                                        DateTime.now()),
-                                    firstDate: DateTime(1900),
-                                    lastDate: DateTime(2050),
-                                    builder: (context, child) {
-                                      return wrapInMaterialDatePickerTheme(
-                                        context,
-                                        child!,
-                                        headerBackgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                        headerForegroundColor:
-                                            FlutterFlowTheme.of(context).info,
-                                        headerTextStyle:
-                                            FlutterFlowTheme.of(context)
-                                                .headlineLarge
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 32.0,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                        pickerBackgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
-                                        pickerForegroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                        selectedDateTimeBackgroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
-                                        selectedDateTimeForegroundColor:
-                                            FlutterFlowTheme.of(context).info,
-                                        actionButtonForegroundColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                        iconSize: 24.0,
-                                      );
-                                    },
-                                  );
-
-                                  if (_datePicked2Date != null) {
-                                    safeSetState(() {
-                                      _model.datePicked2 = DateTime(
-                                        _datePicked2Date.year,
-                                        _datePicked2Date.month,
-                                        _datePicked2Date.day,
-                                      );
-                                    });
-                                  }
-                                } else {
-                                  await DatePicker.showDatePicker(
-                                    context,
-                                    showTitleActions: true,
-                                    onConfirm: (date) {
-                                      safeSetState(() {
-                                        _model.datePicked2 = date;
-                                      });
-                                    },
-                                    currentTime: widget.tarefa!.endsAt!,
-                                    minTime: DateTime(0, 0, 0),
-                                    locale: LocaleType.values.firstWhere(
-                                      (l) =>
-                                          l.name ==
-                                          FFLocalizations.of(context)
-                                              .languageCode,
-                                      orElse: () => LocaleType.en,
-                                    ),
-                                  );
                                 }
                               },
                               text: 'Data de Fim',

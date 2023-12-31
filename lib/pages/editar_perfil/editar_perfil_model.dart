@@ -24,10 +24,6 @@ class EditarPerfilModel extends FlutterFlowModel<EditarPerfilWidget> {
   FocusNode? yourNameFocusNode;
   TextEditingController? yourNameController;
   String? Function(BuildContext, String?)? yourNameControllerValidator;
-  // State field(s) for yourEmail widget.
-  FocusNode? yourEmailFocusNode;
-  TextEditingController? yourEmailController;
-  String? Function(BuildContext, String?)? yourEmailControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -36,9 +32,6 @@ class EditarPerfilModel extends FlutterFlowModel<EditarPerfilWidget> {
   void dispose() {
     yourNameFocusNode?.dispose();
     yourNameController?.dispose();
-
-    yourEmailFocusNode?.dispose();
-    yourEmailController?.dispose();
   }
 
   /// Action blocks are added here.

@@ -18,4 +18,3 @@ export '/pages/home_page_c_e_o/home_page_c_e_o_widget.dart'
 export '/pages/obra_trabalhador/obra_trabalhador_widget.dart'
     show ObraTrabalhadorWidget;
 export '/pages/materiais/materiais_widget.dart' show MateriaisWidget;
-export '/pages/waiting/waiting_widget.dart' show WaitingWidget;

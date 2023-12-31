@@ -1,4 +1,6 @@
 import '/auth/supabase_auth/auth_util.dart';
+import '/auth/user_role.dart';
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -313,9 +315,34 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             if (user == null) {
                                               return;
                                             }
+                                            var usersRows = await UsersTable()
+                                                .querySingleRow(
+                                              queryFn: (q) => q.eq(
+                                                'id',
+                                                currentUserUid,
+                                              ),
+                                            );
+                                            final usersRow =
+                                                usersRows.isNotEmpty
+                                                    ? usersRows.first
+                                                    : null;
+                                            final role = usersRow?.role ?? 2;
+                                            saveUserRole(role);
+                                            userRole.role = role;
 
-                                            context.pushNamedAuth(
-                                                'waiting', context.mounted);
+                                            if (role == 0) {
+                                              context.pushNamedAuth(
+                                                  'homePageCEO',
+                                                  context.mounted);
+                                            } else if (role == 1) {
+                                              context.pushNamedAuth(
+                                                  'homePageEmpreendedor',
+                                                  context.mounted);
+                                            } else {
+                                              context.pushNamedAuth(
+                                                  'homePageTrabalhador',
+                                                  context.mounted);
+                                            }
                                           },
                                           text: 'Login',
                                           icon: Icon(

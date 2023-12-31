@@ -223,15 +223,20 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                     return Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                13.0, 0.0, 0.0, 0.0),
-                            child: Icon(
-                              Icons.euro_symbol_outlined,
-                              color: Color(0xFF168B8B),
-                              size: 25.0,
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              15.0, 0.0, 0.0, 0.0),
+                          child: Container(
+                            width: 23.0,
+                            height: 23.0,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [Color(0xFF1ED3D3), Color(0xFF1B8D8D)],
+                                stops: [0.0, 1.0],
+                                begin: AlignmentDirectional(0.0, -1.0),
+                                end: AlignmentDirectional(0, 1.0),
+                              ),
+                              shape: BoxShape.circle,
                             ),
                           ),
                         ),
@@ -607,268 +612,256 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                               ),
                             ),
                             Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 0.0, 0.0, 15.0),
-                                child: FutureBuilder<List<MovementRow>>(
-                                  future: MovementTable().queryRows(
-                                    queryFn: (q) => q.order('date'),
-                                  ),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: SpinKitFadingFour(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            size: 50.0,
-                                          ),
+                              child: FutureBuilder<List<MovementRow>>(
+                                future: MovementTable().queryRows(
+                                  queryFn: (q) => q.order('date'),
+                                ),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        child: SpinKitFadingFour(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          size: 50.0,
                                         ),
-                                      );
-                                    }
-                                    List<MovementRow> listViewMovementRowList =
-                                        snapshot.data!;
-                                    if (listViewMovementRowList.isEmpty) {
-                                      return Center(
-                                        child: Image.asset(
-                                          'assets/images/emptyBudgets@2x.png',
-                                          width:
-                                              MediaQuery.sizeOf(context).width *
-                                                  0.8,
-                                          height: 400.0,
-                                        ),
-                                      );
-                                    }
-                                    return ListView.builder(
-                                      padding: EdgeInsets.zero,
-                                      primary: false,
-                                      shrinkWrap: true,
-                                      scrollDirection: Axis.vertical,
-                                      itemCount: listViewMovementRowList.length,
-                                      itemBuilder: (context, listViewIndex) {
-                                        final listViewMovementRow =
-                                            listViewMovementRowList[
-                                                listViewIndex];
-                                        return Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 12.0),
-                                          child: InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onTap: () async {
-                                              await showModalBottomSheet(
-                                                isScrollControlled: true,
-                                                backgroundColor:
-                                                    Colors.transparent,
-                                                enableDrag: false,
-                                                context: context,
-                                                builder: (context) {
-                                                  return Padding(
-                                                    padding:
-                                                        MediaQuery.viewInsetsOf(
-                                                            context),
-                                                    child: Container(
-                                                      height: 425.0,
-                                                      child:
-                                                          VisualizarMovimentoWidget(
-                                                        mov: listViewMovementRow
-                                                            .id,
-                                                      ),
+                                      ),
+                                    );
+                                  }
+                                  List<MovementRow> listViewMovementRowList =
+                                      snapshot.data!;
+                                  if (listViewMovementRowList.isEmpty) {
+                                    return Center(
+                                      child: Image.asset(
+                                        'assets/images/emptyBudgets@2x.png',
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.8,
+                                        height: 400.0,
+                                      ),
+                                    );
+                                  }
+                                  return ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    primary: false,
+                                    shrinkWrap: true,
+                                    scrollDirection: Axis.vertical,
+                                    itemCount: listViewMovementRowList.length,
+                                    itemBuilder: (context, listViewIndex) {
+                                      final listViewMovementRow =
+                                          listViewMovementRowList[
+                                              listViewIndex];
+                                      return Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 12.0),
+                                        child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            await showModalBottomSheet(
+                                              isScrollControlled: true,
+                                              backgroundColor:
+                                                  Colors.transparent,
+                                              enableDrag: false,
+                                              context: context,
+                                              builder: (context) {
+                                                return Padding(
+                                                  padding:
+                                                      MediaQuery.viewInsetsOf(
+                                                          context),
+                                                  child: Container(
+                                                    height: 425.0,
+                                                    child:
+                                                        VisualizarMovimentoWidget(
+                                                      mov: listViewMovementRow
+                                                          .id,
                                                     ),
-                                                  );
-                                                },
-                                              ).then((value) =>
-                                                  safeSetState(() {}));
-                                            },
-                                            child: Container(
-                                              width: 100.0,
-                                              decoration: BoxDecoration(
-                                                gradient: LinearGradient(
-                                                  colors: [
-                                                    FlutterFlowTheme.of(context)
-                                                        .error,
-                                                    Color(0x54F06A6A)
-                                                  ],
-                                                  stops: [0.0, 1.0],
-                                                  begin: AlignmentDirectional(
-                                                      -1.0, 0.0),
-                                                  end: AlignmentDirectional(
-                                                      1.0, 0),
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(20.0),
+                                                  ),
+                                                );
+                                              },
+                                            ).then(
+                                                (value) => safeSetState(() {}));
+                                          },
+                                          child: Container(
+                                            width: 100.0,
+                                            decoration: BoxDecoration(
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
+                                                  Color(0x54F06A6A)
+                                                ],
+                                                stops: [0.0, 1.0],
+                                                begin: AlignmentDirectional(
+                                                    -1.0, 0.0),
+                                                end: AlignmentDirectional(
+                                                    1.0, 0),
                                               ),
-                                              child: Padding(
-                                                padding: EdgeInsets.all(12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  4.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Text(
-                                                            valueOrDefault<
-                                                                String>(
-                                                              listViewMovementRow
-                                                                  .name,
-                                                              'nome',
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .headlineSmall,
-                                                          ),
-                                                          Icon(
-                                                            Icons
-                                                                .arrow_forward_ios_rounded,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primaryText,
-                                                            size: 16.0,
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                    Row(
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsets.all(12.0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 4.0),
+                                                    child: Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
                                                       children: [
                                                         Text(
-                                                          '-${valueOrDefault<String>(
+                                                          valueOrDefault<
+                                                              String>(
                                                             listViewMovementRow
-                                                                .cost
-                                                                ?.toString(),
-                                                            '0',
-                                                          )}€',
+                                                                .name,
+                                                            'nome',
+                                                          ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .displaySmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Readex Pro',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryText,
-                                                              ),
+                                                              .headlineSmall,
+                                                        ),
+                                                        Icon(
+                                                          Icons
+                                                              .arrow_forward_ios_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
+                                                          size: 16.0,
                                                         ),
                                                       ],
                                                     ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  4.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Text(
-                                                            valueOrDefault<
-                                                                String>(
-                                                              dateTimeFormat(
-                                                                'd/M/yy',
-                                                                listViewMovementRow
-                                                                    .date,
-                                                                locale: FFLocalizations.of(
-                                                                        context)
-                                                                    .languageCode,
-                                                              ),
-                                                              '1/1/2000',
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .titleSmall,
-                                                          ),
-                                                          Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            4.0,
-                                                                            0.0),
-                                                                child: Text(
-                                                                  'Quantidade',
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .end,
-                                                                  style: FlutterFlowTheme.of(
+                                                  ),
+                                                  Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Text(
+                                                        '-${valueOrDefault<String>(
+                                                          listViewMovementRow
+                                                              .cost
+                                                              ?.toString(),
+                                                          '0',
+                                                        )}€',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .bodySmall
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Inter',
-                                                                        color: Color(
-                                                                            0xB3FFFFFF),
-                                                                        fontWeight:
-                                                                            FontWeight.w300,
-                                                                      ),
+                                                                      .primaryText,
                                                                 ),
-                                                              ),
-                                                              Text(
-                                                                valueOrDefault<
-                                                                    String>(
-                                                                  listViewMovementRow
-                                                                      .quantity
-                                                                      ?.toString(),
-                                                                  '0',
-                                                                ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 4.0,
+                                                                0.0, 0.0),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Text(
+                                                          valueOrDefault<
+                                                              String>(
+                                                            dateTimeFormat(
+                                                              'd/M/yy',
+                                                              listViewMovementRow
+                                                                  .date,
+                                                              locale: FFLocalizations
+                                                                      .of(context)
+                                                                  .languageCode,
+                                                            ),
+                                                            '1/1/2000',
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .titleSmall,
+                                                        ),
+                                                        Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          4.0,
+                                                                          0.0),
+                                                              child: Text(
+                                                                'Quantidade',
                                                                 textAlign:
                                                                     TextAlign
                                                                         .end,
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .headlineSmall,
+                                                                    .bodySmall
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Inter',
+                                                                      color: Color(
+                                                                          0xB3FFFFFF),
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w300,
+                                                                    ),
                                                               ),
-                                                            ],
-                                                          ),
-                                                        ],
-                                                      ),
+                                                            ),
+                                                            Text(
+                                                              valueOrDefault<
+                                                                  String>(
+                                                                listViewMovementRow
+                                                                    .quantity
+                                                                    ?.toString(),
+                                                                '0',
+                                                              ),
+                                                              textAlign:
+                                                                  TextAlign.end,
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .headlineSmall,
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ],
                                                     ),
-                                                  ],
-                                                ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),
-                                        );
-                                      },
-                                    ).animateOnPageLoad(animationsMap[
-                                        'listViewOnPageLoadAnimation1']!);
-                                  },
-                                ),
+                                        ),
+                                      );
+                                    },
+                                  ).animateOnPageLoad(animationsMap[
+                                      'listViewOnPageLoadAnimation1']!);
+                                },
                               ),
                             ),
                           ],
@@ -893,7 +886,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                             Expanded(
                               child: FutureBuilder<List<FundsBankRow>>(
                                 future: FundsBankTable().queryRows(
-                                  queryFn: (q) => q,
+                                  queryFn: (q) => q.order('created_at'),
                                 ),
                                 builder: (context, snapshot) {
                                   // Customize what your widget looks like when it's loading.

@@ -242,7 +242,7 @@ class _VisualizarPessoaDisponivelWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 15.0),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -283,37 +283,10 @@ class _VisualizarPessoaDisponivelWidgetState
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 10.0),
-                              child: FutureBuilder<List<TaskRow>>(
-                                future: TaskTable().queryRows(
-                                  queryFn: (q) => q.eq(
-                                    'work_id',
-                                    widget.obra,
-                                  ),
-                                ),
-                                builder: (context, snapshot) {
-                                  // Customize what your widget looks like when it's loading.
-                                  if (!snapshot.hasData) {
-                                    return Center(
-                                      child: SizedBox(
-                                        width: 50.0,
-                                        height: 50.0,
-                                        child: SpinKitFadingFour(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          size: 50.0,
-                                        ),
-                                      ),
-                                    );
-                                  }
-                                  List<TaskRow> textTaskRowList =
-                                      snapshot.data!;
-                                  return Text(
-                                    bottomSheetTaskRowList.length.toString(),
-                                    textAlign: TextAlign.start,
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
-                                  );
-                                },
+                              child: Text(
+                                bottomSheetTaskRowList.length.toString(),
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ),
                           ],
