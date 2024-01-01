@@ -14,8 +14,8 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'home_page_c_e_o_model.dart';
-export 'home_page_c_e_o_model.dart';
+import 'home_page_ceo_model.dart';
+export 'home_page_ceo_model.dart';
 
 class HomePageCEOWidget extends StatefulWidget {
   const HomePageCEOWidget({Key? key}) : super(key: key);

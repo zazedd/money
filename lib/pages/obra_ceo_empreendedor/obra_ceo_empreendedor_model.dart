@@ -12,7 +12,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'obra_c_e_o_empreendedor_widget.dart' show ObraCEOEmpreendedorWidget;
+import 'obra_ceo_empreendedor_widget.dart' show ObraCEOEmpreendedorWidget;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

@@ -29,7 +29,6 @@ void main() async {
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   userRole.role = prefs.getInt("userRole");
-  print("main $userRole.role");
 
   runApp(MyApp());
 }
@@ -149,11 +148,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final userTabs = tabs[userRole.role] ?? tabs[2];
     int currentIndex = userTabs?.keys.toList().indexOf(_currentPageName) ?? 0;
     if (currentIndex == -1) currentIndex = 0;
-
-    print(userRole.role);
-    print('currentIndex: $currentIndex');
-    print('keys: ${userTabs?.keys.toList()}');
-    print('_currentPageName: $_currentPageName');
 
     return Scaffold(
       body: _currentPage ?? userTabs?[_currentPageName],

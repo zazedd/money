@@ -24,8 +24,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
-import 'obra_c_e_o_empreendedor_model.dart';
-export 'obra_c_e_o_empreendedor_model.dart';
+import 'obra_ceo_empreendedor_model.dart';
+export 'obra_ceo_empreendedor_model.dart';
 
 class ObraCEOEmpreendedorWidget extends StatefulWidget {
   const ObraCEOEmpreendedorWidget({
