@@ -1,49 +1,36 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import '/backend/supabase/supabase.dart';
+import 'package:flutter/material.dart';
 
-class ColorMap extends InheritedWidget {
+class ColorMap {
   Map<String, Color> colors = Map();
 
-  void setTextos(String body) {
-    // Map<String, dynamic> r = JsonDecoder().convert(body);
+  Future<void> fetchData() async {
+    var json =
+        SupabaseBackend.client.storage.from('jsons').download('cores.json');
+    var value = await json;
+    setCores(utf8.decode(value));
+    print("Fetched Language Data");
+  }
+
+  void setCores(String body) {
     Map<String, dynamic> r = jsonDecode(body);
     r.forEach((key, value) {
       var ss = value as String;
-      colors[key] = Color(int.parse(ss, radix: 16));
+      Color cor = Color(int.parse(ss, radix: 16));
+      print(ss);
+      colors[key] = cor;
     });
-  }
-
-  ColorMap({
-    required Widget child,
-  }) : super(child: child) {
-    return;
-  }
-
-  Future<String> fetchData() async {
-    try {
-      var json =
-          await SupabaseBackend.client.storage.from('jsons').download('textos.json');
-      setTextos(utf8.decode(json));
-    } catch (e) {
-      var ee = e.toString();
-      print("Error : $ee");
-    }
-
-    return "Fetched Data";
-  }
-
-  static ColorMap? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<ColorMap>();
   }
 
   Color get(String key, Color def) {
     return colors[key] ?? def;
   }
+}
 
-  @override
-  bool updateShouldNotify(ColorMap oldWidget) {
-    return oldWidget.colors != colors;
-  }
+ColorMap colors = ColorMap();
+
+Future<void> initializeColors() async {
+  await colors.fetchData();
 }

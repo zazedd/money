@@ -14,6 +14,7 @@ import 'geral/theme.dart';
 import 'geral/util.dart';
 import 'geral/internationalization.dart';
 import 'geral/language.dart';
+import 'geral/colors.dart';
 import 'geral/nav/nav.dart';
 import 'index.dart';
 
@@ -26,6 +27,7 @@ void main() async {
   await AppTheme.initialize();
 
   await initializeLanguage();
+  await initializeColors();
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   userRole.role = prefs.getInt("userRole");
