@@ -30,11 +30,8 @@ abstract class AppTheme {
         : LightModeTheme();
   }
 
-  @Deprecated('Use primary instead')
   Color get primaryColor => primary;
-  @Deprecated('Use secondary instead')
   Color get secondaryColor => secondary;
-  @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
   late Color primary;
@@ -54,33 +51,19 @@ abstract class AppTheme {
   late Color error;
   late Color info;
 
-  @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
-  @Deprecated('Use displaySmall instead')
   TextStyle get title1 => typography.displaySmall;
-  @Deprecated('Use headlineMediumFamily instead')
   String get title2Family => typography.headlineMediumFamily;
-  @Deprecated('Use headlineMedium instead')
   TextStyle get title2 => typography.headlineMedium;
-  @Deprecated('Use headlineSmallFamily instead')
   String get title3Family => typography.headlineSmallFamily;
-  @Deprecated('Use headlineSmall instead')
   TextStyle get title3 => typography.headlineSmall;
-  @Deprecated('Use titleMediumFamily instead')
   String get subtitle1Family => typography.titleMediumFamily;
-  @Deprecated('Use titleMedium instead')
   TextStyle get subtitle1 => typography.titleMedium;
-  @Deprecated('Use titleSmallFamily instead')
   String get subtitle2Family => typography.titleSmallFamily;
-  @Deprecated('Use titleSmall instead')
   TextStyle get subtitle2 => typography.titleSmall;
-  @Deprecated('Use bodyMediumFamily instead')
   String get bodyText1Family => typography.bodyMediumFamily;
-  @Deprecated('Use bodyMedium instead')
   TextStyle get bodyText1 => typography.bodyMedium;
-  @Deprecated('Use bodySmallFamily instead')
   String get bodyText2Family => typography.bodySmallFamily;
-  @Deprecated('Use bodySmall instead')
   TextStyle get bodyText2 => typography.bodySmall;
 
   String get displayLargeFamily => typography.displayLargeFamily;
@@ -118,11 +101,8 @@ abstract class AppTheme {
 }
 
 class LightModeTheme extends AppTheme {
-  @Deprecated('Use primary instead')
   Color get primaryColor => primary;
-  @Deprecated('Use secondary instead')
   Color get secondaryColor => secondary;
-  @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
   late Color primary = const Color(0xFF105DFB);
@@ -288,11 +268,8 @@ class ThemeTypography extends Typography {
 }
 
 class DarkModeTheme extends AppTheme {
-  @Deprecated('Use primary instead')
   Color get primaryColor => primary;
-  @Deprecated('Use secondary instead')
   Color get secondaryColor => secondary;
-  @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
   late Color primary = const Color(0xFF105DFB);
