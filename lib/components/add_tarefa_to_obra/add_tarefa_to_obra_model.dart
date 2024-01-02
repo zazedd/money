@@ -1,16 +1,7 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'add_tarefa_to_obra_widget.dart' show AddTarefaToObraWidget;
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class AddTarefaToObraModel extends FlutterFlowModel<AddTarefaToObraWidget> {
   ///  State fields for stateful widgets in this component.
