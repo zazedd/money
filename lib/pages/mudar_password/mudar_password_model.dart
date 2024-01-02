@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'mudar_password_widget.dart' show MudarPasswordWidget;
 import 'package:flutter/material.dart';
 

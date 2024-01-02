@@ -1,8 +1,8 @@
 import '/backend/supabase/supabase.dart';
 import '/components/modificar_obra/modificar_obra_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'select_what_to_do_model.dart';

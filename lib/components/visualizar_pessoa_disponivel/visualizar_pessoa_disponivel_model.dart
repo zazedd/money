@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'visualizar_pessoa_disponivel_widget.dart'
     show VisualizarPessoaDisponivelWidget;
 import 'package:flutter/material.dart';

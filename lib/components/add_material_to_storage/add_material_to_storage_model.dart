@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '/geral/util.dart';
+import '/geral/form_field_controller.dart';
 import 'add_material_to_storage_widget.dart' show AddMaterialToStorageWidget;
 import 'package:flutter/material.dart';
 

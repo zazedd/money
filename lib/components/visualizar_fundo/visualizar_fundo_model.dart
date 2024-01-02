@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'visualizar_fundo_widget.dart' show VisualizarFundoWidget;
 import 'package:flutter/material.dart';
 

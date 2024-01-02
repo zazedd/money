@@ -1,8 +1,8 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '/geral/animations.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'obra_trabalhador_widget.dart' show ObraTrabalhadorWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

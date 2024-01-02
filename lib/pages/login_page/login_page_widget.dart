@@ -1,10 +1,10 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/auth/user_role.dart';
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/language.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/widgets.dart';
+import '/geral/language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'login_page_model.dart';

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '/geral/util.dart';
+import '/geral/form_field_controller.dart';
 import 'add_trabalhador_to_obra_widget.dart' show AddTrabalhadorToObraWidget;
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'visualizar_pedido_widget.dart' show VisualizarPedidoWidget;
 import 'package:flutter/material.dart';
 

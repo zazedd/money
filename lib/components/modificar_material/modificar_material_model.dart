@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '/geral/util.dart';
+import '/geral/form_field_controller.dart';
 import 'modificar_material_widget.dart' show ModificarMaterialWidget;
 import 'package:flutter/material.dart';
 

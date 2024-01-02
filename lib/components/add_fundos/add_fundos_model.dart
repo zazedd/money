@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'add_fundos_widget.dart' show AddFundosWidget;
 import 'package:flutter/material.dart';
 

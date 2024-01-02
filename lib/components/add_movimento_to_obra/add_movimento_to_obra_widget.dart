@@ -1,7 +1,7 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'add_movimento_to_obra_model.dart';
 export 'add_movimento_to_obra_model.dart';

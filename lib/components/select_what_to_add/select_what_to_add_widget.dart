@@ -3,9 +3,9 @@ import '/components/add_material_to_obra_pt1/add_material_to_obra_pt1_widget.dar
 import '/components/add_movimento_to_obra/add_movimento_to_obra_widget.dart';
 import '/components/add_tarefa_to_obra/add_tarefa_to_obra_widget.dart';
 import '/components/add_trabalhador_to_obra/add_trabalhador_to_obra_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

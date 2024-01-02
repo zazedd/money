@@ -1,9 +1,9 @@
 import '/backend/supabase/supabase.dart';
 import '/components/add_more_material_from_request/add_more_material_from_request_widget.dart';
 import '/components/add_movimento_to_obra/add_movimento_to_obra_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';

@@ -1,9 +1,9 @@
 import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_radio_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '/geral/radio_button.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
+import '/geral/widgets.dart';
+import '/geral/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'add_material_to_storage_model.dart';
 export 'add_material_to_storage_model.dart';

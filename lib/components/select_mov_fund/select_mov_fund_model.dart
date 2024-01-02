@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/util.dart';
 import 'select_mov_fund_widget.dart' show SelectMovFundWidget;
 import 'package:flutter/material.dart';
 

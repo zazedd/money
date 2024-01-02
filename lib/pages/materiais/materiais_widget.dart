@@ -1,9 +1,9 @@
 import '/backend/supabase/supabase.dart';
 import '/components/add_material_to_storage/add_material_to_storage_widget.dart';
 import '/components/select_add_mod/select_add_mod_widget.dart';
-import '/flutter_flow/animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '/geral/animations.dart';
+import '/geral/theme.dart';
+import '/geral/util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';

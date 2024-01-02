@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '/geral/util.dart';
+import '/geral/form_field_controller.dart';
 import 'add_tarefa_to_obra_widget.dart' show AddTarefaToObraWidget;
 import 'package:flutter/material.dart';
 
