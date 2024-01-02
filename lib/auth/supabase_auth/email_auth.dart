@@ -4,7 +4,7 @@ Future<User?> emailSignInFunc(
   String email,
   String password,
 ) async {
-  final AuthResponse res = await SupaFlow.client.auth
+  final AuthResponse res = await SupabaseBackend.client.auth
       .signInWithPassword(email: email, password: password);
   return res.user;
 }
@@ -14,7 +14,7 @@ Future<User?> emailCreateAccountFunc(
   String password,
 ) async {
   final AuthResponse res =
-      await SupaFlow.client.auth.signUp(email: email, password: password);
+      await SupabaseBackend.client.auth.signUp(email: email, password: password);
 
   // If the Supabase project is configured to not let users sign in until the
   // email has been confirmed, the user returned in the AuthResponse still has

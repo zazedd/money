@@ -24,7 +24,7 @@ class ColorMap extends InheritedWidget {
   Future<String> fetchData() async {
     try {
       var json =
-          await SupaFlow.client.storage.from('jsons').download('textos.json');
+          await SupabaseBackend.client.storage.from('jsons').download('textos.json');
       setTextos(utf8.decode(json));
     } catch (e) {
       var ee = e.toString();

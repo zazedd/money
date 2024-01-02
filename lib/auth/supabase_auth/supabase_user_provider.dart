@@ -24,7 +24,7 @@ class MoneySupabaseUser extends BaseAuthUser {
   @override
   Future? updateEmail(String email) async {
     final response =
-        await SupaFlow.client.auth.updateUser(UserAttributes(email: email));
+        await SupabaseBackend.client.auth.updateUser(UserAttributes(email: email));
     if (response.user != null) {
       user = response.user;
     }
@@ -46,18 +46,18 @@ class MoneySupabaseUser extends BaseAuthUser {
 
   @override
   Future refreshUser() async {
-    await SupaFlow.client.auth
+    await SupabaseBackend.client.auth
         .refreshSession()
-        .then((_) => user = SupaFlow.client.auth.currentUser);
+        .then((_) => user = SupabaseBackend.client.auth.currentUser);
   }
 }
 
 /// Generates a stream of the authenticated user.
-/// [SupaFlow.client.auth.onAuthStateChange] does not yield any values until the
+/// [SupabaseBackend.client.auth.onAuthStateChange] does not yield any values until the
 /// user is already authenticated. So we add a default null user to the stream,
 /// if we need to interact with the [currentUser] before logging in.
 Stream<BaseAuthUser> moneySupabaseUserStream() {
-  final supabaseAuthStream = SupaFlow.client.auth.onAuthStateChange.debounce(
+  final supabaseAuthStream = SupabaseBackend.client.auth.onAuthStateChange.debounce(
       (authState) => authState.event == AuthChangeEvent.tokenRefreshed
           ? TimerStream(authState, Duration(seconds: 1))
           : Stream.value(authState));

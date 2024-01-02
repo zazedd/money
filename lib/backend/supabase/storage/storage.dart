@@ -18,7 +18,7 @@ Future<String> uploadSupabaseStorageFile({
   required String bucketName,
   required SelectedFile selectedFile,
 }) async {
-  final storageBucket = SupaFlow.client.storage.from(bucketName);
+  final storageBucket = SupabaseBackend.client.storage.from(bucketName);
   await storageBucket.uploadBinary(
     selectedFile.storagePath,
     selectedFile.bytes,
@@ -28,14 +28,15 @@ Future<String> uploadSupabaseStorageFile({
 }
 
 Future deleteSupabaseFileFromPublicUrl(String publicUrl) async {
-  final storagePath = SupaFlow.client.storage.pathFromPublicUrl(publicUrl);
+  final storagePath =
+      SupabaseBackend.client.storage.pathFromPublicUrl(publicUrl);
   if (storagePath == null) {
     return;
   }
 
   final bucketName = storagePath.split('/').first;
   final filePath = storagePath.split('/').skip(1).join('/');
-  await SupaFlow.client.storage.from(bucketName).remove([filePath]);
+  await SupabaseBackend.client.storage.from(bucketName).remove([filePath]);
 }
 
 extension _SupabaseBucketExtensions on SupabaseStorageClient {

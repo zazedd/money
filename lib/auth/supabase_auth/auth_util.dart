@@ -22,7 +22,7 @@ bool get currentUserEmailVerified => currentUser?.emailVerified ?? false;
 
 /// Create a Stream that listens to the current user's JWT Token.
 String? _currentJwtToken;
-final jwtTokenStream = SupaFlow.client.auth.onAuthStateChange
+final jwtTokenStream = SupabaseBackend.client.auth.onAuthStateChange
     .map(
       (authState) => _currentJwtToken = authState.session?.accessToken,
     )

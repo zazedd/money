@@ -6,7 +6,7 @@ class Language {
   Map<String, String> linguagem = Map();
 
   Future<void> fetchData() async {
-    var json = SupaFlow.client.storage.from('jsons').download('textos.json');
+    var json = SupabaseBackend.client.storage.from('jsons').download('textos.json');
     var value = await json; // await the download
     setTextos(utf8.decode(value));
     print("Fetched Language Data");

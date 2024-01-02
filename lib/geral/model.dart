@@ -86,8 +86,8 @@ abstract class WidgetModel<W extends Widget> {
   }
 }
 
-class FlutterFlowDynamicModels<T extends WidgetModel> {
-  FlutterFlowDynamicModels(this.defaultBuilder);
+class DynamicModels<T extends WidgetModel> {
+  DynamicModels(this.defaultBuilder);
 
   final T Function() defaultBuilder;
   final Map<String, T> _childrenModels = {};

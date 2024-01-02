@@ -21,7 +21,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
 
-  await SupaFlow.initialize();
+  await SupabaseBackend.initialize();
 
   await AppTheme.initialize();
 

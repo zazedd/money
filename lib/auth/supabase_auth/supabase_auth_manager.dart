@@ -13,7 +13,7 @@ export '/auth/base_auth_user_provider.dart';
 class SupabaseAuthManager extends AuthManager with EmailSignInManager {
   @override
   Future signOut() {
-    return SupaFlow.client.auth.signOut();
+    return SupabaseBackend.client.auth.signOut();
   }
 
   @override
@@ -61,7 +61,7 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
     required BuildContext context,
   }) async {
     try {
-      await SupaFlow.client.auth.resetPasswordForEmail(email);
+      await SupabaseBackend.client.auth.resetPasswordForEmail(email);
     } on AuthException catch (e) {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
