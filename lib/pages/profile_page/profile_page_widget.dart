@@ -64,7 +64,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                 width: 50.0,
                 height: 50.0,
                 child: SpinKitFadingFour(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: AppTheme.of(context).primary,
                   size: 50.0,
                 ),
               ),
@@ -129,7 +129,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primary,
                                           size: 50.0,
                                         ),
@@ -145,7 +145,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           : null;
                                   return Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: AppTheme.of(context).primary,
                                     elevation: 2.0,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(40.0),
@@ -187,13 +187,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
-                                        child: FlutterFlowIconButton(
+                                        child: CustomIconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 30.0,
                                           buttonSize: 46.0,
                                           icon: Icon(
                                             Icons.login_rounded,
-                                            color: FlutterFlowTheme.of(context)
+                                            color: AppTheme.of(context)
                                                 .primaryText,
                                             size: 24.0,
                                           ),
@@ -227,11 +227,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   profilePageUsersRow?.name,
                                   'Utilizador',
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .headlineSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .primaryText,
                                     ),
                               ),
@@ -249,7 +249,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   profilePageUsersRow?.email,
                                   'Email',
                                 ),
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
@@ -277,7 +277,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           children: [
                             Text(
                               'Minha Conta',
-                              style: FlutterFlowTheme.of(context).headlineSmall,
+                              style: AppTheme.of(context).headlineSmall,
                             ),
                           ],
                         ),
@@ -308,10 +308,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           height: 60.0,
                           decoration: BoxDecoration(
                             color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                                AppTheme.of(context).primaryBackground,
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: AppTheme.of(context).alternate,
                               width: 2.0,
                             ),
                           ),
@@ -324,14 +324,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               children: [
                                 Text(
                                   'Editar Perfil',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: AppTheme.of(context)
                                       .displaySmall
                                       .override(
                                         fontFamily: 'Readex Pro',
                                         fontSize: 13.0,
                                       ),
                                 ),
-                                FlutterFlowIconButton(
+                                CustomIconButton(
                                   borderColor: Colors.transparent,
                                   borderRadius: 30.0,
                                   buttonSize: 46.0,
@@ -384,11 +384,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 60.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context)
                                     .primaryBackground,
                                 borderRadius: BorderRadius.circular(8.0),
                                 border: Border.all(
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: AppTheme.of(context).alternate,
                                   width: 2.0,
                                 ),
                               ),
@@ -402,14 +402,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   children: [
                                     Text(
                                       'Mudar Password',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AppTheme.of(context)
                                           .displaySmall
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             fontSize: 13.0,
                                           ),
                                     ),
-                                    FlutterFlowIconButton(
+                                    CustomIconButton(
                                       borderColor: Colors.transparent,
                                       borderRadius: 30.0,
                                       buttonSize: 46.0,
@@ -466,12 +466,12 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               child: Container(
                                 height: 60.0,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
+                                  color: AppTheme.of(context)
                                       .primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
                                     color:
-                                        FlutterFlowTheme.of(context).alternate,
+                                        AppTheme.of(context).alternate,
                                     width: 2.0,
                                   ),
                                 ),
@@ -485,14 +485,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     children: [
                                       Text(
                                         'Português',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AppTheme.of(context)
                                             .displaySmall
                                             .override(
                                               fontFamily: 'Readex Pro',
                                               fontSize: 13.0,
                                             ),
                                       ),
-                                      FlutterFlowIconButton(
+                                      CustomIconButton(
                                         borderColor: Colors.transparent,
                                         borderRadius: 30.0,
                                         buttonSize: 46.0,
@@ -532,11 +532,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 child: Container(
                                   height: 60.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: AppTheme.of(context)
                                         .primaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                     border: Border.all(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .alternate,
                                       width: 2.0,
                                     ),
@@ -551,14 +551,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       children: [
                                         Text(
                                           'Inglês',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .displaySmall
                                               .override(
                                                 fontFamily: 'Readex Pro',
                                                 fontSize: 13.0,
                                               ),
                                         ),
-                                        FlutterFlowIconButton(
+                                        CustomIconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 30.0,
                                           buttonSize: 46.0,

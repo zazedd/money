@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 
-Widget wrapWithModel<T extends FlutterFlowModel>({
+Widget wrapWithModel<T extends WidgetModel>({
   required T model,
   required Widget child,
   required VoidCallback updateCallback,
@@ -25,7 +25,7 @@ Widget wrapWithModel<T extends FlutterFlowModel>({
   );
 }
 
-T createModel<T extends FlutterFlowModel>(
+T createModel<T extends WidgetModel>(
   BuildContext context,
   T Function() defaultBuilder,
 ) {
@@ -34,7 +34,7 @@ T createModel<T extends FlutterFlowModel>(
   return model;
 }
 
-abstract class FlutterFlowModel<W extends Widget> {
+abstract class WidgetModel<W extends Widget> {
   // Initialization methods
   bool _isInitialized = false;
   void initState(BuildContext context);
@@ -72,7 +72,7 @@ abstract class FlutterFlowModel<W extends Widget> {
   // Function to call when the model receives an update.
   VoidCallback _updateCallback = () {};
   void onUpdate() => updateOnChange ? _updateCallback() : () {};
-  FlutterFlowModel setOnUpdate({
+  WidgetModel setOnUpdate({
     bool updateOnChange = false,
     required VoidCallback onUpdate,
   }) =>
@@ -86,7 +86,7 @@ abstract class FlutterFlowModel<W extends Widget> {
   }
 }
 
-class FlutterFlowDynamicModels<T extends FlutterFlowModel> {
+class FlutterFlowDynamicModels<T extends WidgetModel> {
   FlutterFlowDynamicModels(this.defaultBuilder);
 
   final T Function() defaultBuilder;

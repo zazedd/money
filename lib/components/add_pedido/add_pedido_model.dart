@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'add_pedido_widget.dart' show AddPedidoWidget;
 import 'package:flutter/material.dart';
 
-class AddPedidoModel extends FlutterFlowModel<AddPedidoWidget> {
+class AddPedidoModel extends WidgetModel<AddPedidoWidget> {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();

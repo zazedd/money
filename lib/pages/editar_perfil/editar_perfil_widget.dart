@@ -57,7 +57,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFF181818),
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
+        leading: CustomIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30.0,
           borderWidth: 1.0,
@@ -73,9 +73,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
         ),
         title: Text(
           'Editar Perfil',
-          style: FlutterFlowTheme.of(context).headlineMedium.override(
+          style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
-                color: FlutterFlowTheme.of(context).info,
+                color: AppTheme.of(context).info,
                 fontSize: 20.0,
               ),
         ),
@@ -100,7 +100,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                   width: 50.0,
                   height: 50.0,
                   child: SpinKitFadingFour(
-                    color: FlutterFlowTheme.of(context).primary,
+                    color: AppTheme.of(context).primary,
                     size: 50.0,
                   ),
                 ),
@@ -129,7 +129,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                       width: 90.0,
                       height: 90.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: AppTheme.of(context).primaryBackground,
                         shape: BoxShape.circle,
                       ),
                       child: Container(
@@ -221,11 +221,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          textStyle: FlutterFlowTheme.of(context).bodySmall,
+                              AppTheme.of(context).secondaryBackground,
+                          textStyle: AppTheme.of(context).bodySmall,
                           elevation: 0.0,
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).alternate,
+                            color: AppTheme.of(context).alternate,
                             width: 2.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
@@ -244,12 +244,12 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Nome Completo',
-                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                          labelStyle: AppTheme.of(context).bodySmall,
                           hintText: 'Introduza o seu nome...',
-                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                          hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: AppTheme.of(context).alternate,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
@@ -277,11 +277,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                           ),
                           filled: true,
                           fillColor:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                              AppTheme.of(context).secondaryBackground,
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: AppTheme.of(context).bodyMedium,
                         validator: _model.yourNameControllerValidator
                             .asValidator(context),
                       ),
@@ -309,12 +309,12 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle: FlutterFlowTheme.of(context)
+                          color: AppTheme.of(context).primary,
+                          textStyle: AppTheme.of(context)
                               .titleSmall
                               .override(
                                 fontFamily: 'Inter',
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: AppTheme.of(context).primaryText,
                               ),
                           elevation: 3.0,
                           borderSide: BorderSide(

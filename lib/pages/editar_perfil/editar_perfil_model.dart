@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'editar_perfil_widget.dart' show EditarPerfilWidget;
 import 'package:flutter/material.dart';
 
-class EditarPerfilModel extends FlutterFlowModel<EditarPerfilWidget> {
+class EditarPerfilModel extends WidgetModel<EditarPerfilWidget> {
   ///  State fields for stateful widgets in this page.
 
   bool isDataUploading = false;

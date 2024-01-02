@@ -60,7 +60,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -95,7 +95,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -109,7 +109,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                           EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                       child: Text(
                         'Tarefa',
-                        style: FlutterFlowTheme.of(context).headlineSmall,
+                        style: AppTheme.of(context).headlineSmall,
                       ),
                     ),
                     Expanded(
@@ -134,11 +134,11 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
                                             'Completa',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .success,
                                                 ),
@@ -149,7 +149,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                     Icon(
                                       Icons.done,
                                       color:
-                                          FlutterFlowTheme.of(context).success,
+                                          AppTheme.of(context).success,
                                       size: 20.0,
                                     ),
                                   ],
@@ -175,11 +175,11 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
                                             'Pendente',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .warning,
                                                 ),
@@ -190,7 +190,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                     Icon(
                                       Icons.keyboard_control_sharp,
                                       color:
-                                          FlutterFlowTheme.of(context).warning,
+                                          AppTheme.of(context).warning,
                                       size: 20.0,
                                     ),
                                   ],
@@ -216,11 +216,11 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
                                             'Cancelada',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .error,
                                                 ),
@@ -230,7 +230,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                     ),
                                     Icon(
                                       Icons.close,
-                                      color: FlutterFlowTheme.of(context).error,
+                                      color: AppTheme.of(context).error,
                                       size: 20.0,
                                     ),
                                   ],
@@ -275,7 +275,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Atribuída a:',
-                              style: FlutterFlowTheme.of(context).titleSmall,
+                              style: AppTheme.of(context).titleSmall,
                             ),
                           ),
                           Padding(
@@ -287,7 +287,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 'Pessoa',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -328,7 +328,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Nome:',
-                              style: FlutterFlowTheme.of(context).titleSmall,
+                              style: AppTheme.of(context).titleSmall,
                             ),
                           ),
                           Padding(
@@ -340,7 +340,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 'Nome',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -380,7 +380,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Descrição:',
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -397,7 +397,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 'Desc',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -437,7 +437,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Data de Fim:',
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -459,7 +459,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 'Data',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -501,13 +501,13 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                       content: Text(
                                         'Obrigado por concluír a sua tarefa.',
                                         style: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primaryText,
                                         ),
                                       ),
                                       duration: Duration(milliseconds: 4000),
                                       backgroundColor:
-                                          FlutterFlowTheme.of(context).success,
+                                          AppTheme.of(context).success,
                                     ),
                                   );
                                 },
@@ -522,8 +522,8 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).success,
-                                  textStyle: FlutterFlowTheme.of(context)
+                                  color: AppTheme.of(context).success,
+                                  textStyle: AppTheme.of(context)
                                       .titleSmall
                                       .override(
                                         fontFamily: 'Inter',

@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'login_page_widget.dart' show LoginPageWidget;
 import 'package:flutter/material.dart';
 
-class LoginPageModel extends FlutterFlowModel<LoginPageWidget> {
+class LoginPageModel extends WidgetModel<LoginPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for email-login widget.

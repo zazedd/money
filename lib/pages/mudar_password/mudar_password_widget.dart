@@ -54,7 +54,7 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFF181818),
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
+        leading: CustomIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30.0,
           borderWidth: 1.0,
@@ -70,7 +70,7 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
         ),
         title: Text(
           'Mudar Password',
-          style: FlutterFlowTheme.of(context).headlineMedium.override(
+          style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20.0,
               ),
@@ -100,7 +100,7 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                 child: Text(
                   'Introduza aqui o seu email. Iremos enviar os passos necessários para mudar a password da sua conta de maneira segura.',
                   textAlign: TextAlign.justify,
-                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  style: AppTheme.of(context).bodyMedium,
                 ),
               ),
               Padding(
@@ -111,12 +111,12 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                    labelStyle: AppTheme.of(context).bodySmall,
                     hintText: 'Introduza o seu email...',
-                    hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                    hintStyle: AppTheme.of(context).bodySmall,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).alternate,
+                        color: AppTheme.of(context).alternate,
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
@@ -143,11 +143,11 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     filled: true,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                    fillColor: AppTheme.of(context).secondaryBackground,
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  style: AppTheme.of(context).bodyMedium,
                   validator: _model.emailAddressControllerValidator
                       .asValidator(context),
                 ),
@@ -165,10 +165,10 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                    color: AppTheme.of(context).primary,
+                    textStyle: AppTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter',
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: AppTheme.of(context).primaryText,
                         ),
                     elevation: 3.0,
                     borderSide: BorderSide(

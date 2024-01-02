@@ -93,7 +93,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: AppTheme.of(context).secondaryText,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
@@ -103,7 +103,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
                 'Modificar Material',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                style: AppTheme.of(context).headlineSmall,
               ),
             ),
             Padding(
@@ -124,9 +124,9 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: 'Nome',
-                            labelStyle: FlutterFlowTheme.of(context).bodySmall,
+                            labelStyle: AppTheme.of(context).bodySmall,
                             hintText: 'Nome',
-                            hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                            hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
@@ -160,7 +160,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                             contentPadding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 2.0, 20.0, 24.0),
                           ),
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style: AppTheme.of(context).bodyMedium,
                           validator: _model.nomeControllerValidator
                               .asValidator(context),
                         ),
@@ -186,8 +186,8 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Quantidade',
-                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
-                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                          labelStyle: AppTheme.of(context).bodySmall,
+                          hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -221,7 +221,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 2.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: AppTheme.of(context).bodyMedium,
                         validator: _model.quantController1Validator
                             .asValidator(context),
                       ),
@@ -246,8 +246,8 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Custo',
-                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
-                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                          labelStyle: AppTheme.of(context).bodySmall,
+                          hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -281,7 +281,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 2.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: AppTheme.of(context).bodyMedium,
                         validator: _model.quantController2Validator
                             .asValidator(context),
                       ),
@@ -292,19 +292,19 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 0.0, 0.0),
-              child: FlutterFlowRadioButton(
+              child: CustomRadioButton(
                 options: ['Unidades', 'Kilogramas'].toList(),
                 onChanged: (val) => setState(() {}),
                 controller: _model.radioButtonValueController ??=
                     FormFieldController<String>('Unidades'),
                 optionHeight: 32.0,
-                textStyle: FlutterFlowTheme.of(context).labelMedium,
-                selectedTextStyle: FlutterFlowTheme.of(context).bodyMedium,
+                textStyle: AppTheme.of(context).labelMedium,
+                selectedTextStyle: AppTheme.of(context).bodyMedium,
                 buttonPosition: RadioButtonPosition.left,
                 direction: Axis.horizontal,
-                radioButtonColor: FlutterFlowTheme.of(context).primary,
+                radioButtonColor: AppTheme.of(context).primary,
                 inactiveRadioButtonColor:
-                    FlutterFlowTheme.of(context).secondaryText,
+                    AppTheme.of(context).secondaryText,
                 toggleable: false,
                 horizontalAlignment: WrapAlignment.start,
                 verticalAlignment: WrapCrossAlignment.start,
@@ -331,11 +331,11 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                             content: Text(
                               'Material removido com sucesso.',
                               style: TextStyle(
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: AppTheme.of(context).primaryText,
                               ),
                             ),
                             duration: Duration(milliseconds: 4000),
-                            backgroundColor: FlutterFlowTheme.of(context).error,
+                            backgroundColor: AppTheme.of(context).error,
                           ),
                         );
                       },
@@ -350,9 +350,9 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).error,
+                        color: AppTheme.of(context).error,
                         textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                            AppTheme.of(context).titleSmall.override(
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                 ),
@@ -391,12 +391,12 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                                 'Material atualizado com sucesso.',
                                 style: TextStyle(
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
                               backgroundColor:
-                                  FlutterFlowTheme.of(context).success,
+                                  AppTheme.of(context).success,
                             ),
                           );
                         },
@@ -411,9 +411,9 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                               24.0, 0.0, 24.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).success,
+                          color: AppTheme.of(context).success,
                           textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
+                              AppTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter',
                                     color: Colors.white,
                                   ),

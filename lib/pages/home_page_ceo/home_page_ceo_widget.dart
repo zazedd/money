@@ -126,7 +126,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
         elevation: 8.0,
         child: Icon(
           Icons.add,
-          color: FlutterFlowTheme.of(context).primaryText,
+          color: AppTheme.of(context).primaryText,
           size: 32.0,
         ),
       ),
@@ -138,9 +138,9 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
           child: Text(
             'Home',
             textAlign: TextAlign.start,
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
+            style: AppTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
-                  color: FlutterFlowTheme.of(context).info,
+                  color: AppTheme.of(context).info,
                   fontSize: 20.0,
                   fontWeight: FontWeight.w500,
                 ),
@@ -176,7 +176,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 width: 50.0,
                                 height: 50.0,
                                 child: SpinKitFadingFour(
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: AppTheme.of(context).primary,
                                   size: 50.0,
                                 ),
                               ),
@@ -240,7 +240,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                         baBankRow?.name,
                                         'Nome',
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: AppTheme.of(context)
                                           .displaySmall
                                           .override(
                                             fontFamily: 'Readex Pro',
@@ -262,7 +262,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                             '0',
                                           )}€',
                                           textAlign: TextAlign.end,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .headlineSmall
                                               .override(
                                                 fontFamily: 'Readex Pro',
@@ -300,7 +300,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                               width: 50.0,
                               height: 50.0,
                               child: SpinKitFadingFour(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: AppTheme.of(context).primary,
                                 size: 50.0,
                               ),
                             ),
@@ -418,7 +418,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                   TextAlign
                                                                       .start,
                                                               maxLines: 1,
-                                                              style: FlutterFlowTheme
+                                                              style: AppTheme
                                                                       .of(context)
                                                                   .displaySmall
                                                                   .override(
@@ -442,7 +442,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                   ?.toString(),
                                                               '0',
                                                             )}€ usados de ${carouselWorkRow.budget?.toString()}€',
-                                                            style: FlutterFlowTheme
+                                                            style: AppTheme
                                                                     .of(context)
                                                                 .displaySmall
                                                                 .override(
@@ -520,7 +520,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                           context)
                                                                       .languageCode,
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .displaySmall
                                                                     .override(
@@ -570,7 +570,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                     Color(
                                                                         0xFF168B8B),
                                                                 backgroundColor:
-                                                                    FlutterFlowTheme.of(
+                                                                    AppTheme.of(
                                                                             context)
                                                                         .secondaryText,
                                                                 barRadius: Radius
@@ -603,7 +603,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                           context)
                                                                       .languageCode,
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .displaySmall
                                                                     .override(
@@ -645,13 +645,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .success,
                                                                   fontSize: 9.0,
@@ -680,13 +680,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .error,
                                                                   fontSize: 9.0,
@@ -715,7 +715,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
@@ -783,7 +783,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 children: [
                                   Text(
                                     'Estatísticas',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Readex Pro',
@@ -807,7 +807,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                           width: 50.0,
                                           height: 50.0,
                                           child: SpinKitFadingFour(
-                                            color: FlutterFlowTheme.of(context)
+                                            color: AppTheme.of(context)
                                                 .primary,
                                             size: 50.0,
                                           ),
@@ -849,7 +849,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                   Text(
                                                     'Obras em Curso',
                                                     textAlign: TextAlign.start,
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .headlineSmall
                                                         .override(
@@ -877,13 +877,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .tertiary,
                                                                   fontSize:
@@ -905,7 +905,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                   Text(
                                                     'Obras Completas',
                                                     textAlign: TextAlign.start,
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .headlineSmall
                                                         .override(
@@ -933,13 +933,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .success,
                                                                   fontSize:
@@ -957,7 +957,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 Text(
                                                   'Obras Canceladas',
                                                   textAlign: TextAlign.start,
-                                                  style: FlutterFlowTheme.of(
+                                                  style: AppTheme.of(
                                                           context)
                                                       .headlineSmall
                                                       .override(
@@ -985,13 +985,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .displaySmall
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: FlutterFlowTheme.of(
+                                                                color: AppTheme.of(
                                                                         context)
                                                                     .error,
                                                                 fontSize: 20.0,
@@ -1031,7 +1031,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 children: [
                                   Text(
                                     'Últimos 30 dias',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Readex Pro',
@@ -1065,7 +1065,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 width: 50.0,
                                                 height: 50.0,
                                                 child: SpinKitFadingFour(
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .primary,
                                                   size: 50.0,
@@ -1104,7 +1104,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                   Text(
                                                     'Receitas',
                                                     textAlign: TextAlign.start,
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .headlineSmall,
                                                   ),
@@ -1125,13 +1125,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .displaySmall
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: FlutterFlowTheme.of(
+                                                                color: AppTheme.of(
                                                                         context)
                                                                     .success,
                                                                 fontSize: 25.0,
@@ -1168,13 +1168,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                           }(incomeCardFundsBankRowList.map((e) => e.quant).withoutNulls.toList())}%',
                                                           textAlign:
                                                               TextAlign.start,
-                                                          style: FlutterFlowTheme
+                                                          style: AppTheme
                                                                   .of(context)
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
                                                                     'Inter',
-                                                                color: FlutterFlowTheme.of(
+                                                                color: AppTheme.of(
                                                                         context)
                                                                     .success,
                                                               ),
@@ -1182,7 +1182,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         Icon(
                                                           Icons
                                                               .trending_up_rounded,
-                                                          color: FlutterFlowTheme
+                                                          color: AppTheme
                                                                   .of(context)
                                                               .success,
                                                           size: 24.0,
@@ -1215,7 +1215,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                   width: 50.0,
                                                   height: 50.0,
                                                   child: SpinKitFadingFour(
-                                                    color: FlutterFlowTheme.of(
+                                                    color: AppTheme.of(
                                                             context)
                                                         .primary,
                                                     size: 50.0,
@@ -1255,7 +1255,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .headlineSmall,
                                                     ),
@@ -1279,13 +1279,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .error,
                                                                   fontSize:
@@ -1323,13 +1323,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                             }(spendingCardMovementRowList.map((e) => e.cost).withoutNulls.toList())}%',
                                                             textAlign:
                                                                 TextAlign.start,
-                                                            style: FlutterFlowTheme
+                                                            style: AppTheme
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'Inter',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .error,
                                                                 ),
@@ -1337,7 +1337,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                           Icon(
                                                             Icons
                                                                 .trending_up_rounded,
-                                                            color: FlutterFlowTheme
+                                                            color: AppTheme
                                                                     .of(context)
                                                                 .error,
                                                             size: 24.0,

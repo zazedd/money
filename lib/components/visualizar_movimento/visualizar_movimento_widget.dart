@@ -61,7 +61,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -99,7 +99,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                       width: 50.0,
                       height: 50.0,
                       child: SpinKitFadingFour(
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: AppTheme.of(context).primary,
                         size: 50.0,
                       ),
                     ),
@@ -121,7 +121,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                           width: 50.0,
                           height: 4.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: AppTheme.of(context).secondaryText,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                         ),
@@ -135,7 +135,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                           bottomSheetMovementRow?.name,
                           'Fundo',
                         ),
-                        style: FlutterFlowTheme.of(context).headlineSmall,
+                        style: AppTheme.of(context).headlineSmall,
                       ),
                     ),
                     Padding(
@@ -172,7 +172,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 child: Text(
                                   'Descrição:',
                                   style:
-                                      FlutterFlowTheme.of(context).titleSmall,
+                                      AppTheme.of(context).titleSmall,
                                 ),
                               ),
                               Padding(
@@ -185,7 +185,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                   ),
                                   textAlign: TextAlign.start,
                                   style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                      AppTheme.of(context).bodyMedium,
                                 ),
                               ),
                             ],
@@ -227,7 +227,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 child: Text(
                                   'Data:',
                                   style:
-                                      FlutterFlowTheme.of(context).titleSmall,
+                                      AppTheme.of(context).titleSmall,
                                 ),
                               ),
                               Padding(
@@ -240,7 +240,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                   ),
                                   textAlign: TextAlign.start,
                                   style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                      AppTheme.of(context).bodyMedium,
                                 ),
                               ),
                             ],
@@ -282,7 +282,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 child: Text(
                                   'Quantidade:',
                                   style:
-                                      FlutterFlowTheme.of(context).titleSmall,
+                                      AppTheme.of(context).titleSmall,
                                 ),
                               ),
                               Padding(
@@ -296,7 +296,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                   ),
                                   textAlign: TextAlign.start,
                                   style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                      AppTheme.of(context).bodyMedium,
                                 ),
                               ),
                             ],
@@ -338,7 +338,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 child: Text(
                                   'Custo:',
                                   style:
-                                      FlutterFlowTheme.of(context).titleSmall,
+                                      AppTheme.of(context).titleSmall,
                                 ),
                               ),
                               Padding(
@@ -351,7 +351,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                   )}€',
                                   textAlign: TextAlign.start,
                                   style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                      AppTheme.of(context).bodyMedium,
                                 ),
                               ),
                             ],
@@ -377,7 +377,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 width: 50.0,
                                 height: 50.0,
                                 child: SpinKitFadingFour(
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: AppTheme.of(context).primary,
                                   size: 50.0,
                                 ),
                               ),
@@ -403,7 +403,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primary,
                                           size: 50.0,
                                         ),
@@ -460,14 +460,14 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                             'Movimento removido.',
                                             style: TextStyle(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .primaryText,
                                             ),
                                           ),
                                           duration:
                                               Duration(milliseconds: 4000),
                                           backgroundColor:
-                                              FlutterFlowTheme.of(context)
+                                              AppTheme.of(context)
                                                   .error,
                                         ),
                                       );
@@ -484,8 +484,8 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: FlutterFlowTheme.of(context).error,
-                                      textStyle: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context).error,
+                                      textStyle: AppTheme.of(context)
                                           .titleSmall
                                           .override(
                                             fontFamily: 'Inter',

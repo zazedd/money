@@ -59,7 +59,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -94,7 +94,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -108,7 +108,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                           EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                       child: Text(
                         'Pedido',
-                        style: FlutterFlowTheme.of(context).headlineSmall,
+                        style: AppTheme.of(context).headlineSmall,
                       ),
                     ),
                     Expanded(
@@ -133,11 +133,11 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
                                             'Aceite',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .success,
                                                 ),
@@ -148,7 +148,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                     Icon(
                                       Icons.done,
                                       color:
-                                          FlutterFlowTheme.of(context).success,
+                                          AppTheme.of(context).success,
                                       size: 20.0,
                                     ),
                                   ],
@@ -174,11 +174,11 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
                                             'Pendente',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .warning,
                                                 ),
@@ -189,7 +189,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                     Icon(
                                       Icons.keyboard_control_sharp,
                                       color:
-                                          FlutterFlowTheme.of(context).warning,
+                                          AppTheme.of(context).warning,
                                       size: 20.0,
                                     ),
                                   ],
@@ -215,11 +215,11 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
                                             'Cancelado',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .error,
                                                 ),
@@ -229,7 +229,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                     ),
                                     Icon(
                                       Icons.close,
-                                      color: FlutterFlowTheme.of(context).error,
+                                      color: AppTheme.of(context).error,
                                       size: 20.0,
                                     ),
                                   ],
@@ -274,7 +274,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Nome:',
-                              style: FlutterFlowTheme.of(context).titleSmall,
+                              style: AppTheme.of(context).titleSmall,
                             ),
                           ),
                           Padding(
@@ -286,7 +286,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                 'Nome',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -326,7 +326,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Descrição:',
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -343,7 +343,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                 'Desc',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -383,7 +383,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Quantidade:',
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -400,7 +400,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                 '0',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -441,7 +441,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
                                 'Valor Calculado:',
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',
@@ -460,7 +460,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                   '0',
                                 )}€',
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',

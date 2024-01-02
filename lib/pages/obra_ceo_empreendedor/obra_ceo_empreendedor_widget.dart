@@ -129,18 +129,18 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
             },
           ).then((value) => safeSetState(() {}));
         },
-        backgroundColor: FlutterFlowTheme.of(context).secondary,
+        backgroundColor: AppTheme.of(context).secondary,
         elevation: 8,
         child: Icon(
           Icons.add_rounded,
-          color: FlutterFlowTheme.of(context).primaryText,
+          color: AppTheme.of(context).primaryText,
           size: 36,
         ),
       ),
       appBar: AppBar(
         backgroundColor: Color(0xFF181818),
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
+        leading: CustomIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30,
           borderWidth: 1,
@@ -156,7 +156,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
         ),
         title: Text(
           'Obra',
-          style: FlutterFlowTheme.of(context).headlineMedium.override(
+          style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20,
               ),
@@ -270,7 +270,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     ),
                                                     textAlign: TextAlign.start,
                                                     maxLines: 1,
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .displaySmall
                                                         .override(
@@ -294,7 +294,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                         ?.toString(),
                                                     '0',
                                                   )}€',
-                                                  style: FlutterFlowTheme.of(
+                                                  style: AppTheme.of(
                                                           context)
                                                       .displaySmall
                                                       .override(
@@ -370,7 +370,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                 .languageCode,
                                                       ),
                                                       style:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .displaySmall
                                                               .override(
@@ -422,7 +422,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                       progressColor:
                                                           Color(0xFF168B8B),
                                                       backgroundColor:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .secondaryText,
                                                       barRadius:
@@ -450,7 +450,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                 .languageCode,
                                                       ),
                                                       style:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .displaySmall
                                                               .override(
@@ -483,12 +483,12 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             child: Text(
                                               'Completa',
                                               textAlign: TextAlign.start,
-                                              style: FlutterFlowTheme.of(
+                                              style: AppTheme.of(
                                                       context)
                                                   .displaySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: FlutterFlowTheme.of(
+                                                    color: AppTheme.of(
                                                             context)
                                                         .success,
                                                     fontSize: 9,
@@ -507,12 +507,12 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             child: Text(
                                               'Cancelada',
                                               textAlign: TextAlign.start,
-                                              style: FlutterFlowTheme.of(
+                                              style: AppTheme.of(
                                                       context)
                                                   .displaySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: FlutterFlowTheme.of(
+                                                    color: AppTheme.of(
                                                             context)
                                                         .error,
                                                     fontSize: 9,
@@ -531,7 +531,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             child: Text(
                                               'Pode gastar mais ${((widget.obra!.budget! - widget.obra!.usedBudget!) / (((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
                                               textAlign: TextAlign.start,
-                                              style: FlutterFlowTheme.of(
+                                              style: AppTheme.of(
                                                       context)
                                                   .displaySmall
                                                   .override(
@@ -573,7 +573,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                         width: 50,
                         height: 50,
                         child: SpinKitFadingFour(
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: AppTheme.of(context).primary,
                           size: 50,
                         ),
                       ),
@@ -617,7 +617,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                               Text(
                                                 'Trabalhadores',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .headlineMedium,
                                               ),
                                             ],
@@ -640,7 +640,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .primary,
                                                       size: 50,
@@ -678,7 +678,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                           height: 50,
                                                           child:
                                                               SpinKitFadingFour(
-                                                            color: FlutterFlowTheme
+                                                            color: AppTheme
                                                                     .of(context)
                                                                 .primary,
                                                             size: 50,
@@ -734,7 +734,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                   height: 50,
                                                                   child:
                                                                       SpinKitFadingFour(
-                                                                    color: FlutterFlowTheme.of(
+                                                                    color: AppTheme.of(
                                                                             context)
                                                                         .primary,
                                                                     size: 50,
@@ -887,7 +887,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                               }(),
                                                                               '...',
                                                                             ),
-                                                                            style: FlutterFlowTheme.of(context).displaySmall.override(
+                                                                            style: AppTheme.of(context).displaySmall.override(
                                                                                   fontFamily: 'Readex Pro',
                                                                                   fontSize: 15,
                                                                                   fontWeight: FontWeight.normal,
@@ -914,7 +914,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 gridViewUsersRow.name,
                                                                                 'Nome',
                                                                               ),
-                                                                              style: FlutterFlowTheme.of(context).displaySmall.override(
+                                                                              style: AppTheme.of(context).displaySmall.override(
                                                                                     fontFamily: 'Readex Pro',
                                                                                     fontSize: 22,
                                                                                     fontWeight: FontWeight.normal,
@@ -953,7 +953,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                               Text(
                                                 'Tarefas',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .headlineMedium,
                                               ),
                                             ],
@@ -983,7 +983,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .primary,
                                                       size: 50,
@@ -1127,7 +1127,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                             .name,
                                                                         'Tarefa',
                                                                       ),
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AppTheme.of(
                                                                               context)
                                                                           .displaySmall
                                                                           .override(
@@ -1149,7 +1149,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                                                 child: Icon(
                                                                                   Icons.done,
-                                                                                  color: FlutterFlowTheme.of(context).success,
+                                                                                  color: AppTheme.of(context).success,
                                                                                   size: 18,
                                                                                 ),
                                                                               ),
@@ -1162,7 +1162,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                                                 child: Icon(
                                                                                   Icons.clear,
-                                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                                  color: AppTheme.of(context).error,
                                                                                   size: 18,
                                                                                 ),
                                                                               ),
@@ -1175,7 +1175,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                                                 child: Icon(
                                                                                   Icons.keyboard_control,
-                                                                                  color: FlutterFlowTheme.of(context).warning,
+                                                                                  color: AppTheme.of(context).warning,
                                                                                   size: 18,
                                                                                 ),
                                                                               ),
@@ -1186,7 +1186,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                     Icon(
                                                                       Icons
                                                                           .arrow_forward_ios_rounded,
-                                                                      color: FlutterFlowTheme.of(
+                                                                      color: AppTheme.of(
                                                                               context)
                                                                           .secondaryText,
                                                                       size: 16,
@@ -1239,7 +1239,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 width: 50,
                                                                                 height: 50,
                                                                                 child: SpinKitFadingFour(
-                                                                                  color: FlutterFlowTheme.of(context).primary,
+                                                                                  color: AppTheme.of(context).primary,
                                                                                   size: 50,
                                                                                 ),
                                                                               ),
@@ -1256,7 +1256,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                               textUsersRow?.name,
                                                                               'Nome',
                                                                             ),
-                                                                            style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                            style: AppTheme.of(context).bodySmall.override(
                                                                                   fontFamily: 'Inter',
                                                                                   fontSize: 18,
                                                                                 ),
@@ -1293,7 +1293,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                               Text(
                                                 'Movimentos',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .headlineMedium,
                                               ),
                                             ],
@@ -1321,7 +1321,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .primary,
                                                       size: 50,
@@ -1454,7 +1454,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                       ).maybeHandleOverflow(
                                                                           maxChars:
                                                                               15),
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AppTheme.of(
                                                                               context)
                                                                           .displaySmall
                                                                           .override(
@@ -1469,15 +1469,15 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                               .isStocked!
                                                                           ? 'Stock'
                                                                           : '-${listViewMovementRow.cost?.toString()}€',
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AppTheme.of(
                                                                               context)
                                                                           .headlineSmall
                                                                           .override(
                                                                             fontFamily:
                                                                                 'Readex Pro',
                                                                             color: listViewMovementRow.isStocked!
-                                                                                ? FlutterFlowTheme.of(context).success
-                                                                                : FlutterFlowTheme.of(context).error,
+                                                                                ? AppTheme.of(context).success
+                                                                                : AppTheme.of(context).error,
                                                                           ),
                                                                     ),
                                                                   ],
@@ -1507,7 +1507,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                         locale:
                                                                             FFLocalizations.of(context).languageCode,
                                                                       ),
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AppTheme.of(
                                                                               context)
                                                                           .bodySmall,
                                                                     ),
@@ -1527,7 +1527,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                               child: Text(
                                                                                 'Quantidade',
                                                                                 textAlign: TextAlign.end,
-                                                                                style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                                style: AppTheme.of(context).bodySmall.override(
                                                                                       fontFamily: 'Inter',
                                                                                       color: Color(0xB3FFFFFF),
                                                                                       fontWeight: FontWeight.w300,
@@ -1553,7 +1553,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                     width: 50,
                                                                                     height: 50,
                                                                                     child: SpinKitFadingFour(
-                                                                                      color: FlutterFlowTheme.of(context).primary,
+                                                                                      color: AppTheme.of(context).primary,
                                                                                       size: 50,
                                                                                     ),
                                                                                   ),
@@ -1567,7 +1567,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                   '0',
                                                                                 ),
                                                                                 textAlign: TextAlign.end,
-                                                                                style: FlutterFlowTheme.of(context).headlineSmall,
+                                                                                style: AppTheme.of(context).headlineSmall,
                                                                               );
                                                                             },
                                                                           ),
@@ -1602,7 +1602,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                               Text(
                                                 'Pedidos',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .headlineMedium,
                                               ),
                                             ],
@@ -1629,7 +1629,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .primary,
                                                       size: 50,
@@ -1804,7 +1804,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                         replacement:
                                                                             '…',
                                                                       ),
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AppTheme.of(
                                                                               context)
                                                                           .displaySmall
                                                                           .override(
@@ -1826,7 +1826,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                                                 child: Icon(
                                                                                   Icons.done,
-                                                                                  color: FlutterFlowTheme.of(context).success,
+                                                                                  color: AppTheme.of(context).success,
                                                                                   size: 18,
                                                                                 ),
                                                                               ),
@@ -1839,7 +1839,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                                                 child: Icon(
                                                                                   Icons.clear,
-                                                                                  color: FlutterFlowTheme.of(context).error,
+                                                                                  color: AppTheme.of(context).error,
                                                                                   size: 18,
                                                                                 ),
                                                                               ),
@@ -1852,7 +1852,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                                                                                 child: Icon(
                                                                                   Icons.keyboard_control,
-                                                                                  color: FlutterFlowTheme.of(context).warning,
+                                                                                  color: AppTheme.of(context).warning,
                                                                                   size: 18,
                                                                                 ),
                                                                               ),
@@ -1863,7 +1863,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                     Icon(
                                                                       Icons
                                                                           .arrow_forward_ios_rounded,
-                                                                      color: FlutterFlowTheme.of(
+                                                                      color: AppTheme.of(
                                                                               context)
                                                                           .secondaryText,
                                                                       size: 16,
@@ -1904,7 +1904,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                           'Quantidade',
                                                                           textAlign:
                                                                               TextAlign.end,
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: AppTheme.of(context)
                                                                               .bodySmall
                                                                               .override(
                                                                                 fontFamily: 'Inter',
@@ -1929,7 +1929,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                           ),
                                                                           textAlign:
                                                                               TextAlign.end,
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: AppTheme.of(context)
                                                                               .headlineSmall
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',
@@ -1967,7 +1967,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                               Text(
                                                 'Materiais',
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .headlineMedium,
                                               ),
                                             ],
@@ -1997,7 +1997,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .primary,
                                                       size: 50,
@@ -2129,7 +2129,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                             .name,
                                                                         'Material',
                                                                       ),
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: AppTheme.of(
                                                                               context)
                                                                           .displaySmall
                                                                           .override(
@@ -2142,7 +2142,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                     Icon(
                                                                       Icons
                                                                           .arrow_forward_ios_rounded,
-                                                                      color: FlutterFlowTheme.of(
+                                                                      color: AppTheme.of(
                                                                               context)
                                                                           .secondaryText,
                                                                       size: 16,
@@ -2183,7 +2183,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                           'Quantidade',
                                                                           textAlign:
                                                                               TextAlign.end,
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: AppTheme.of(context)
                                                                               .bodySmall
                                                                               .override(
                                                                                 fontFamily: 'Inter',
@@ -2207,7 +2207,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                           )}${listViewMaterialRow.isUnits! ? ' un.' : ' Kg'}',
                                                                           textAlign:
                                                                               TextAlign.end,
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: AppTheme.of(context)
                                                                               .headlineSmall
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',

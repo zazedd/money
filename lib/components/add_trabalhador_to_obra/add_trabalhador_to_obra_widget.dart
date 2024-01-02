@@ -64,7 +64,7 @@ class _AddTrabalhadorToObraWidgetState
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -96,7 +96,7 @@ class _AddTrabalhadorToObraWidgetState
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -106,7 +106,7 @@ class _AddTrabalhadorToObraWidgetState
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
                     'Adicionar Trabalhador',
-                    style: FlutterFlowTheme.of(context).headlineSmall,
+                    style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
@@ -136,7 +136,7 @@ class _AddTrabalhadorToObraWidgetState
                                       width: 50.0,
                                       height: 50.0,
                                       child: SpinKitFadingFour(
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .primary,
                                         size: 50.0,
                                       ),
@@ -145,7 +145,7 @@ class _AddTrabalhadorToObraWidgetState
                                 }
                                 List<UsersRow> dropDownUsersRowList =
                                     snapshot.data!;
-                                return FlutterFlowDropDown<String>(
+                                return DropDown<String>(
                                   controller: _model.dropDownValueController ??=
                                       FormFieldController<String>(
                                     _model.dropDownValue ??= '',
@@ -164,18 +164,18 @@ class _AddTrabalhadorToObraWidgetState
                                       MediaQuery.sizeOf(context).width * 0.93,
                                   height: 50.0,
                                   textStyle:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                      AppTheme.of(context).bodyMedium,
                                   hintText: 'Selecione um Trabalhador...',
                                   icon: Icon(
                                     Icons.keyboard_arrow_down_rounded,
-                                    color: FlutterFlowTheme.of(context)
+                                    color: AppTheme.of(context)
                                         .secondaryText,
                                     size: 24.0,
                                   ),
                                   fillColor: Colors.black,
                                   elevation: 2.0,
                                   borderColor:
-                                      FlutterFlowTheme.of(context).alternate,
+                                      AppTheme.of(context).alternate,
                                   borderWidth: 2.0,
                                   borderRadius: 8.0,
                                   margin: EdgeInsetsDirectional.fromSTEB(
@@ -243,12 +243,12 @@ class _AddTrabalhadorToObraWidgetState
                                 'Trabalhador adicionado com sucesso.',
                                 style: TextStyle(
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
                               backgroundColor:
-                                  FlutterFlowTheme.of(context).success,
+                                  AppTheme.of(context).success,
                             ),
                           );
                         } else {
@@ -259,12 +259,12 @@ class _AddTrabalhadorToObraWidgetState
                                 'O trabalhador já está na obra!',
                                 style: TextStyle(
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
                               backgroundColor:
-                                  FlutterFlowTheme.of(context).error,
+                                  AppTheme.of(context).error,
                             ),
                           );
                         }
@@ -280,9 +280,9 @@ class _AddTrabalhadorToObraWidgetState
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).success,
+                        color: AppTheme.of(context).success,
                         textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
+                            AppTheme.of(context).titleSmall.override(
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                 ),

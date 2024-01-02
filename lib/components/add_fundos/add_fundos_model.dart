@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'add_fundos_widget.dart' show AddFundosWidget;
 import 'package:flutter/material.dart';
 
-class AddFundosModel extends FlutterFlowModel<AddFundosWidget> {
+class AddFundosModel extends WidgetModel<AddFundosWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for desc widget.

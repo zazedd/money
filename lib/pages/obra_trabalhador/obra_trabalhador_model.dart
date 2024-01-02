@@ -3,7 +3,7 @@ import 'obra_trabalhador_widget.dart' show ObraTrabalhadorWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class ObraTrabalhadorModel extends FlutterFlowModel<ObraTrabalhadorWidget> {
+class ObraTrabalhadorModel extends WidgetModel<ObraTrabalhadorWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for Carousel widget.

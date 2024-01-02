@@ -77,7 +77,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: AppTheme.of(context).secondaryText,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
@@ -87,7 +87,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
                 'O que pretende adicionar?',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                style: AppTheme.of(context).headlineSmall,
               ),
             ),
             Expanded(
@@ -130,9 +130,9 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: AppTheme.of(context).primary,
                         textStyle:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
+                            AppTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Readex Pro',
                                   fontSize: 14.0,
                                 ),
@@ -171,9 +171,9 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).accent2,
+                        color: AppTheme.of(context).accent2,
                         textStyle:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
+                            AppTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Readex Pro',
                                   fontSize: 14.0,
                                 ),
@@ -212,9 +212,9 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).accent1,
+                        color: AppTheme.of(context).accent1,
                         textStyle:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
+                            AppTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Readex Pro',
                                   fontSize: 14.0,
                                 ),
@@ -253,9 +253,9 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).secondary,
+                        color: AppTheme.of(context).secondary,
                         textStyle:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
+                            AppTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Readex Pro',
                                   fontSize: 14.0,
                                 ),

@@ -4,7 +4,7 @@ import 'add_trabalhador_to_obra_widget.dart' show AddTrabalhadorToObraWidget;
 import 'package:flutter/material.dart';
 
 class AddTrabalhadorToObraModel
-    extends FlutterFlowModel<AddTrabalhadorToObraWidget> {
+    extends WidgetModel<AddTrabalhadorToObraWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for DropDown widget.

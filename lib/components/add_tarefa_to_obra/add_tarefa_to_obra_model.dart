@@ -3,7 +3,7 @@ import '/geral/form_field_controller.dart';
 import 'add_tarefa_to_obra_widget.dart' show AddTarefaToObraWidget;
 import 'package:flutter/material.dart';
 
-class AddTarefaToObraModel extends FlutterFlowModel<AddTarefaToObraWidget> {
+class AddTarefaToObraModel extends WidgetModel<AddTarefaToObraWidget> {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();

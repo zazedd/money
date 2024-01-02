@@ -3,7 +3,7 @@ import 'modificar_material_obra_widget.dart' show ModificarMaterialObraWidget;
 import 'package:flutter/material.dart';
 
 class ModificarMaterialObraModel
-    extends FlutterFlowModel<ModificarMaterialObraWidget> {
+    extends WidgetModel<ModificarMaterialObraWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for Slider widget.

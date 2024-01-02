@@ -78,7 +78,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -117,7 +117,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                         width: 50.0,
                         height: 4.0,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: AppTheme.of(context).secondaryText,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
@@ -128,7 +128,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                         EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                     child: Text(
                       'Modificar Obra',
-                      style: FlutterFlowTheme.of(context).headlineSmall,
+                      style: AppTheme.of(context).headlineSmall,
                     ),
                   ),
                   Padding(
@@ -152,9 +152,9 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 decoration: InputDecoration(
                                   labelText: 'Nome',
                                   labelStyle:
-                                      FlutterFlowTheme.of(context).bodySmall,
+                                      AppTheme.of(context).bodySmall,
                                   hintStyle:
-                                      FlutterFlowTheme.of(context).bodySmall,
+                                      AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
@@ -189,7 +189,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20.0, 2.0, 20.0, 24.0),
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: AppTheme.of(context).bodyMedium,
                                 validator: _model.nomeController1Validator
                                     .asValidator(context),
                               ),
@@ -217,9 +217,9 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               decoration: InputDecoration(
                                 labelText: 'Budget',
                                 labelStyle:
-                                    FlutterFlowTheme.of(context).bodySmall,
+                                    AppTheme.of(context).bodySmall,
                                 hintStyle:
-                                    FlutterFlowTheme.of(context).bodySmall,
+                                    AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
@@ -253,7 +253,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 contentPadding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 2.0, 20.0, 24.0),
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                               validator: _model.nomeController2Validator
                                   .asValidator(context),
                             ),
@@ -280,9 +280,9 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               decoration: InputDecoration(
                                 labelText: 'Descrição',
                                 labelStyle:
-                                    FlutterFlowTheme.of(context).bodySmall,
+                                    AppTheme.of(context).bodySmall,
                                 hintStyle:
-                                    FlutterFlowTheme.of(context).bodySmall,
+                                    AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
                                     color: Color(0x00000000),
@@ -316,7 +316,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 contentPadding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 2.0, 20.0, 24.0),
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                               maxLines: 3,
                               validator: _model.descControllerValidator
                                   .asValidator(context),
@@ -352,7 +352,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                     height: 50.0,
                                     child: SpinKitFadingFour(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          AppTheme.of(context).primary,
                                       size: 50.0,
                                     ),
                                   ),
@@ -360,7 +360,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               }
                               List<UsersRow> dropDownUsersRowList =
                                   snapshot.data!;
-                              return FlutterFlowDropDown<String>(
+                              return DropDown<String>(
                                 controller: _model.dropDownValueController ??=
                                     FormFieldController<String>(
                                   _model.dropDownValue ??= dropDownUsersRowList
@@ -383,18 +383,18 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
                                 textStyle:
-                                    FlutterFlowTheme.of(context).bodyMedium,
+                                    AppTheme.of(context).bodyMedium,
                                 hintText: 'Selecione um Empreiteiro..',
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
-                                  color: FlutterFlowTheme.of(context)
+                                  color: AppTheme.of(context)
                                       .secondaryText,
                                   size: 24.0,
                                 ),
                                 fillColor: Colors.black,
                                 elevation: 2.0,
                                 borderColor:
-                                    FlutterFlowTheme.of(context).alternate,
+                                    AppTheme.of(context).alternate,
                                 borderWidth: 2.0,
                                 borderRadius: 8.0,
                                 margin: EdgeInsetsDirectional.fromSTEB(
@@ -431,11 +431,11 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                     context,
                                     child!,
                                     headerBackgroundColor:
-                                        FlutterFlowTheme.of(context).primary,
+                                        AppTheme.of(context).primary,
                                     headerForegroundColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        AppTheme.of(context).info,
                                     headerTextStyle:
-                                        FlutterFlowTheme.of(context)
+                                        AppTheme.of(context)
                                             .headlineLarge
                                             .override(
                                               fontFamily: 'Readex Pro',
@@ -443,17 +443,17 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                               fontWeight: FontWeight.w600,
                                             ),
                                     pickerBackgroundColor:
-                                        FlutterFlowTheme.of(context)
+                                        AppTheme.of(context)
                                             .secondaryBackground,
                                     pickerForegroundColor:
-                                        FlutterFlowTheme.of(context)
+                                        AppTheme.of(context)
                                             .primaryText,
                                     selectedDateTimeBackgroundColor:
-                                        FlutterFlowTheme.of(context).primary,
+                                        AppTheme.of(context).primary,
                                     selectedDateTimeForegroundColor:
-                                        FlutterFlowTheme.of(context).info,
+                                        AppTheme.of(context).info,
                                     actionButtonForegroundColor:
-                                        FlutterFlowTheme.of(context)
+                                        AppTheme.of(context)
                                             .primaryText,
                                     iconSize: 24.0,
                                   );
@@ -477,8 +477,8 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).primary,
+                              textStyle: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -509,11 +509,11 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                       context,
                                       child!,
                                       headerBackgroundColor:
-                                          FlutterFlowTheme.of(context).primary,
+                                          AppTheme.of(context).primary,
                                       headerForegroundColor:
-                                          FlutterFlowTheme.of(context).info,
+                                          AppTheme.of(context).info,
                                       headerTextStyle:
-                                          FlutterFlowTheme.of(context)
+                                          AppTheme.of(context)
                                               .headlineLarge
                                               .override(
                                                 fontFamily: 'Readex Pro',
@@ -521,17 +521,17 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                                 fontWeight: FontWeight.w600,
                                               ),
                                       pickerBackgroundColor:
-                                          FlutterFlowTheme.of(context)
+                                          AppTheme.of(context)
                                               .secondaryBackground,
                                       pickerForegroundColor:
-                                          FlutterFlowTheme.of(context)
+                                          AppTheme.of(context)
                                               .primaryText,
                                       selectedDateTimeBackgroundColor:
-                                          FlutterFlowTheme.of(context).primary,
+                                          AppTheme.of(context).primary,
                                       selectedDateTimeForegroundColor:
-                                          FlutterFlowTheme.of(context).info,
+                                          AppTheme.of(context).info,
                                       actionButtonForegroundColor:
-                                          FlutterFlowTheme.of(context)
+                                          AppTheme.of(context)
                                               .primaryText,
                                       iconSize: 24.0,
                                     );
@@ -555,8 +555,8 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context).primary,
+                                textStyle: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',
@@ -639,12 +639,12 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 'Obra atualizada com sucesso.',
                                 style: TextStyle(
                                   color:
-                                      FlutterFlowTheme.of(context).primaryText,
+                                      AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
                               backgroundColor:
-                                  FlutterFlowTheme.of(context).success,
+                                  AppTheme.of(context).success,
                             ),
                           );
                         },
@@ -659,9 +659,9 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               24.0, 0.0, 24.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).success,
+                          color: AppTheme.of(context).success,
                           textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
+                              AppTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter',
                                     color: Colors.white,
                                   ),

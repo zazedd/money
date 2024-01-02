@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'register_page_widget.dart' show RegisterPageWidget;
 import 'package:flutter/material.dart';
 
-class RegisterPageModel extends FlutterFlowModel<RegisterPageWidget> {
+class RegisterPageModel extends WidgetModel<RegisterPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for name widget.

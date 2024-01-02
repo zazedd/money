@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'visualizar_pedido_widget.dart' show VisualizarPedidoWidget;
 import 'package:flutter/material.dart';
 
-class VisualizarPedidoModel extends FlutterFlowModel<VisualizarPedidoWidget> {
+class VisualizarPedidoModel extends WidgetModel<VisualizarPedidoWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

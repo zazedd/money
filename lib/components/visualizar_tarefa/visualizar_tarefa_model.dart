@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'visualizar_tarefa_widget.dart' show VisualizarTarefaWidget;
 import 'package:flutter/material.dart';
 
-class VisualizarTarefaModel extends FlutterFlowModel<VisualizarTarefaWidget> {
+class VisualizarTarefaModel extends WidgetModel<VisualizarTarefaWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'validar_pedido_widget.dart' show ValidarPedidoWidget;
 import 'package:flutter/material.dart';
 
-class ValidarPedidoModel extends FlutterFlowModel<ValidarPedidoWidget> {
+class ValidarPedidoModel extends WidgetModel<ValidarPedidoWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

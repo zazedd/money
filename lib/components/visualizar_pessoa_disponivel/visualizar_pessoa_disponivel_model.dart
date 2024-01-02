@@ -4,7 +4,7 @@ import 'visualizar_pessoa_disponivel_widget.dart'
 import 'package:flutter/material.dart';
 
 class VisualizarPessoaDisponivelModel
-    extends FlutterFlowModel<VisualizarPessoaDisponivelWidget> {
+    extends WidgetModel<VisualizarPessoaDisponivelWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

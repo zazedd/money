@@ -4,7 +4,7 @@ import 'add_material_to_storage_widget.dart' show AddMaterialToStorageWidget;
 import 'package:flutter/material.dart';
 
 class AddMaterialToStorageModel
-    extends FlutterFlowModel<AddMaterialToStorageWidget> {
+    extends WidgetModel<AddMaterialToStorageWidget> {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();

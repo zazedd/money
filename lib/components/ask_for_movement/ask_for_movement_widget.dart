@@ -68,7 +68,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -103,7 +103,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -113,7 +113,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
                     'O Pedido precisa de Transação?',
-                    style: FlutterFlowTheme.of(context).headlineSmall,
+                    style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
                 Expanded(
@@ -145,8 +145,8 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).error,
-                                  textStyle: FlutterFlowTheme.of(context)
+                                  color: AppTheme.of(context).error,
+                                  textStyle: AppTheme.of(context)
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Readex Pro',
@@ -219,8 +219,8 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).success,
-                                  textStyle: FlutterFlowTheme.of(context)
+                                  color: AppTheme.of(context).success,
+                                  textStyle: AppTheme.of(context)
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Readex Pro',

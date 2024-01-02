@@ -3,7 +3,7 @@ import 'home_page_trabalhador_widget.dart' show HomePageTrabalhadorWidget;
 import 'package:flutter/material.dart';
 
 class HomePageTrabalhadorModel
-    extends FlutterFlowModel<HomePageTrabalhadorWidget> {
+    extends WidgetModel<HomePageTrabalhadorWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

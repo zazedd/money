@@ -4,7 +4,7 @@ import 'add_movimento_to_obra_widget.dart' show AddMovimentoToObraWidget;
 import 'package:flutter/material.dart';
 
 class AddMovimentoToObraModel
-    extends FlutterFlowModel<AddMovimentoToObraWidget> {
+    extends WidgetModel<AddMovimentoToObraWidget> {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();

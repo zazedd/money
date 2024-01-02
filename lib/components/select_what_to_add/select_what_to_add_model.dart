@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'select_what_to_add_widget.dart' show SelectWhatToAddWidget;
 import 'package:flutter/material.dart';
 
-class SelectWhatToAddModel extends FlutterFlowModel<SelectWhatToAddWidget> {
+class SelectWhatToAddModel extends WidgetModel<SelectWhatToAddWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

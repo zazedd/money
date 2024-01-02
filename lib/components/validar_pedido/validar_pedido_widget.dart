@@ -63,7 +63,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -98,7 +98,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -108,7 +108,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
                     'Validar Pedido',
-                    style: FlutterFlowTheme.of(context).headlineSmall,
+                    style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
@@ -144,7 +144,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Nome:',
-                              style: FlutterFlowTheme.of(context).titleSmall,
+                              style: AppTheme.of(context).titleSmall,
                             ),
                           ),
                           Padding(
@@ -156,7 +156,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 'Nome',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -196,7 +196,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Descrição:',
-                              style: FlutterFlowTheme.of(context)
+                              style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -213,7 +213,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 'Desc',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -254,7 +254,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Quantidade:',
-                              style: FlutterFlowTheme.of(context).titleSmall,
+                              style: AppTheme.of(context).titleSmall,
                             ),
                           ),
                           Padding(
@@ -266,7 +266,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 '0',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -307,7 +307,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
                                 'Valor Calculado:',
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',
@@ -329,7 +329,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                   '0',
                                 ),
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
@@ -370,13 +370,13 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                     content: Text(
                                       'Pedido rejeitado.',
                                       style: TextStyle(
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .primaryText,
                                       ),
                                     ),
                                     duration: Duration(milliseconds: 4000),
                                     backgroundColor:
-                                        FlutterFlowTheme.of(context).error,
+                                        AppTheme.of(context).error,
                                   ),
                                 );
                               },
@@ -391,8 +391,8 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).error,
-                                textStyle: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context).error,
+                                textStyle: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',
@@ -464,8 +464,8 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).success,
-                                textStyle: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context).success,
+                                textStyle: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',

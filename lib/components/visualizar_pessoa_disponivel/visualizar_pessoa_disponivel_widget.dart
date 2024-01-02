@@ -64,7 +64,7 @@ class _VisualizarPessoaDisponivelWidgetState
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -97,7 +97,7 @@ class _VisualizarPessoaDisponivelWidgetState
                         width: 50.0,
                         height: 4.0,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: AppTheme.of(context).secondaryText,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
@@ -114,7 +114,7 @@ class _VisualizarPessoaDisponivelWidgetState
                             widget.user?.name,
                             'name',
                           ),
-                          style: FlutterFlowTheme.of(context).headlineSmall,
+                          style: AppTheme.of(context).headlineSmall,
                         ),
                       ),
                     ],
@@ -152,7 +152,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   10.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 'Cargo:',
-                                style: FlutterFlowTheme.of(context).titleSmall,
+                                style: AppTheme.of(context).titleSmall,
                               ),
                             ),
                             Padding(
@@ -172,7 +172,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   'Trabalhador',
                                 ),
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: AppTheme.of(context).bodyMedium,
                               ),
                             ),
                           ],
@@ -212,7 +212,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
                                 'Sobre:',
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',
@@ -229,7 +229,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   '\"\"',
                                 ),
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: AppTheme.of(context).bodyMedium,
                               ),
                             ),
                           ],
@@ -269,7 +269,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
                                 'Obras:',
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',
@@ -283,7 +283,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               child: Text(
                                 bottomSheetTaskRowList.length.toString(),
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                                style: AppTheme.of(context).bodyMedium,
                               ),
                             ),
                           ],

@@ -138,18 +138,18 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
             },
           ).then((value) => safeSetState(() {}));
         },
-        backgroundColor: FlutterFlowTheme.of(context).secondary,
+        backgroundColor: AppTheme.of(context).secondary,
         elevation: 8.0,
         child: Icon(
           Icons.post_add_rounded,
-          color: FlutterFlowTheme.of(context).primaryText,
+          color: AppTheme.of(context).primaryText,
           size: 32.0,
         ),
       ),
       appBar: AppBar(
         backgroundColor: Color(0xFF181818),
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
+        leading: CustomIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30.0,
           borderWidth: 1.0,
@@ -165,7 +165,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
         ),
         title: Text(
           'Movimentos',
-          style: FlutterFlowTheme.of(context).headlineMedium.override(
+          style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20.0,
               ),
@@ -207,7 +207,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                           width: 50.0,
                           height: 50.0,
                           child: SpinKitFadingFour(
-                            color: FlutterFlowTheme.of(context).primary,
+                            color: AppTheme.of(context).primary,
                             size: 50.0,
                           ),
                         ),
@@ -244,7 +244,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                               rowBankRow?.name,
                               'Nome',
                             ),
-                            style: FlutterFlowTheme.of(context)
+                            style: AppTheme.of(context)
                                 .displaySmall
                                 .override(
                                   fontFamily: 'Readex Pro',
@@ -266,7 +266,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                   '0',
                                 )}€',
                                 textAlign: TextAlign.end,
-                                style: FlutterFlowTheme.of(context)
+                                style: AppTheme.of(context)
                                     .headlineSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
@@ -297,7 +297,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                             20.0, 15.0, 0.0, 0.0),
                         child: Text(
                           'Últimos 30 dias',
-                          style: FlutterFlowTheme.of(context)
+                          style: AppTheme.of(context)
                               .displaySmall
                               .override(
                                 fontFamily: 'Readex Pro',
@@ -332,7 +332,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                     height: 50.0,
                                     child: SpinKitFadingFour(
                                       color:
-                                          FlutterFlowTheme.of(context).primary,
+                                          AppTheme.of(context).primary,
                                       size: 50.0,
                                     ),
                                   ),
@@ -364,7 +364,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                       Text(
                                         'Receitas',
                                         textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AppTheme.of(context)
                                             .headlineSmall,
                                       ),
                                       Padding(
@@ -378,12 +378,12 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                 .toString();
                                           }(incomeCardFundsBankRowList.map((e) => e.quant).withoutNulls.toList())}',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .displaySmall
                                               .override(
                                                 fontFamily: 'Readex Pro',
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .success,
                                                 fontSize: 25.0,
                                               ),
@@ -414,12 +414,12 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                               }(incomeCardFundsBankRowList.map((e) => e.quant).withoutNulls.toList())}%',
                                               textAlign: TextAlign.start,
                                               style:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily: 'Inter',
                                                         color:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .success,
                                                       ),
@@ -427,7 +427,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                             Icon(
                                               Icons.trending_up_rounded,
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .success,
                                               size: 24.0,
                                             ),
@@ -458,7 +458,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                       width: 50.0,
                                       height: 50.0,
                                       child: SpinKitFadingFour(
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .primary,
                                         size: 50.0,
                                       ),
@@ -491,7 +491,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                         Text(
                                           'Despesas',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .headlineSmall,
                                         ),
                                         Padding(
@@ -506,11 +506,11 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                   .toString();
                                             }(spendingCardMovementRowList.map((e) => e.cost).withoutNulls.toList())}',
                                             textAlign: TextAlign.start,
-                                            style: FlutterFlowTheme.of(context)
+                                            style: AppTheme.of(context)
                                                 .displaySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .error,
                                                   fontSize: 25.0,
@@ -542,11 +542,11 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                 }(spendingCardMovementRowList.map((e) => e.cost).withoutNulls.toList())}%',
                                                 textAlign: TextAlign.start,
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily: 'Inter',
-                                                          color: FlutterFlowTheme
+                                                          color: AppTheme
                                                                   .of(context)
                                                               .error,
                                                         ),
@@ -554,7 +554,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                               Icon(
                                                 Icons.trending_up_rounded,
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .error,
                                                 size: 24.0,
                                               ),
@@ -601,7 +601,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                 children: [
                                   Text(
                                     'Movimentos',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .headlineMedium,
                                   ),
                                 ],
@@ -620,7 +620,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primary,
                                           size: 50.0,
                                         ),
@@ -688,7 +688,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                             decoration: BoxDecoration(
                                               gradient: LinearGradient(
                                                 colors: [
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .error,
                                                   Color(0x54F06A6A)
                                                 ],
@@ -729,14 +729,14 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                                 .name,
                                                             'nome',
                                                           ),
-                                                          style: FlutterFlowTheme
+                                                          style: AppTheme
                                                                   .of(context)
                                                               .headlineSmall,
                                                         ),
                                                         Icon(
                                                           Icons
                                                               .arrow_forward_ios_rounded,
-                                                          color: FlutterFlowTheme
+                                                          color: AppTheme
                                                                   .of(context)
                                                               .primaryText,
                                                           size: 16.0,
@@ -756,13 +756,13 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                           '0',
                                                         )}€',
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .primaryText,
                                                                 ),
@@ -794,7 +794,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                             ),
                                                             '1/1/2000',
                                                           ),
-                                                          style: FlutterFlowTheme
+                                                          style: AppTheme
                                                                   .of(context)
                                                               .titleSmall,
                                                         ),
@@ -815,7 +815,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                                 textAlign:
                                                                     TextAlign
                                                                         .end,
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .bodySmall
                                                                     .override(
@@ -839,7 +839,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                               ),
                                                               textAlign:
                                                                   TextAlign.end,
-                                                              style: FlutterFlowTheme
+                                                              style: AppTheme
                                                                       .of(context)
                                                                   .headlineSmall,
                                                             ),
@@ -873,7 +873,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                 children: [
                                   Text(
                                     'Fundos',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: AppTheme.of(context)
                                         .headlineMedium,
                                   ),
                                 ],
@@ -892,7 +892,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .primary,
                                           size: 50.0,
                                         ),
@@ -960,7 +960,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                             decoration: BoxDecoration(
                                               gradient: LinearGradient(
                                                 colors: [
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .success,
                                                   Color(0x542ABD10)
                                                 ],
@@ -994,13 +994,13 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                           '0',
                                                         )}€',
                                                         style:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: AppTheme.of(
                                                                           context)
                                                                       .primaryText,
                                                                 ),
@@ -1026,7 +1026,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                                 .desc,
                                                             'isso',
                                                           ),
-                                                          style: FlutterFlowTheme
+                                                          style: AppTheme
                                                                   .of(context)
                                                               .titleSmall,
                                                         ),

@@ -72,7 +72,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: AppTheme.of(context).secondaryText,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
@@ -82,7 +82,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
                 'Pretende adicionar, remover ou modificar?',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                style: AppTheme.of(context).headlineSmall,
               ),
             ),
             Expanded(
@@ -124,8 +124,8 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).tertiary,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).tertiary,
+                              textStyle: AppTheme.of(context)
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Readex Pro',
@@ -171,8 +171,8 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).success,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).success,
+                              textStyle: AppTheme.of(context)
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Readex Pro',
@@ -218,8 +218,8 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).error,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).error,
+                              textStyle: AppTheme.of(context)
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Readex Pro',

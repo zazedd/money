@@ -4,7 +4,7 @@ import 'add_material_to_obra_pt2_widget.dart' show AddMaterialToObraPt2Widget;
 import 'package:flutter/material.dart';
 
 class AddMaterialToObraPt2Model
-    extends FlutterFlowModel<AddMaterialToObraPt2Widget> {
+    extends WidgetModel<AddMaterialToObraPt2Widget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for Slider widget.

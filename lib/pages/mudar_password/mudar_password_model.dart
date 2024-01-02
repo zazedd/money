@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'mudar_password_widget.dart' show MudarPasswordWidget;
 import 'package:flutter/material.dart';
 
-class MudarPasswordModel extends FlutterFlowModel<MudarPasswordWidget> {
+class MudarPasswordModel extends WidgetModel<MudarPasswordWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for emailAddress widget.

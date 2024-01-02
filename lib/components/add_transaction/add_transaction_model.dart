@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'add_transaction_widget.dart' show AddTransactionWidget;
 import 'package:flutter/material.dart';
 
-class AddTransactionModel extends FlutterFlowModel<AddTransactionWidget> {
+class AddTransactionModel extends WidgetModel<AddTransactionWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for nome widget.

@@ -122,18 +122,18 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
             },
           ).then((value) => safeSetState(() {}));
         },
-        backgroundColor: FlutterFlowTheme.of(context).secondary,
+        backgroundColor: AppTheme.of(context).secondary,
         elevation: 8,
         child: Icon(
           Icons.add_rounded,
-          color: FlutterFlowTheme.of(context).primaryText,
+          color: AppTheme.of(context).primaryText,
           size: 36,
         ),
       ),
       appBar: AppBar(
         backgroundColor: Color(0xFF181818),
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
+        leading: CustomIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30,
           borderWidth: 1,
@@ -149,7 +149,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
         ),
         title: Text(
           'Obra',
-          style: FlutterFlowTheme.of(context).headlineMedium.override(
+          style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20,
               ),
@@ -223,7 +223,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                 maxChars: 18,
                                                 replacement: '…',
                                               ),
-                                              style: FlutterFlowTheme.of(
+                                              style: AppTheme.of(
                                                       context)
                                                   .displaySmall
                                                   .override(
@@ -270,7 +270,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                       .languageCode,
                                                 ),
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
                                                           fontFamily:
@@ -294,7 +294,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                 progressColor:
                                                     Color(0xFF168B8B),
                                                 backgroundColor:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .secondaryText,
                                                 barRadius: Radius.circular(16),
                                                 padding: EdgeInsets.zero,
@@ -316,7 +316,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                       .languageCode,
                                                 ),
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
                                                           fontFamily:
@@ -377,7 +377,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       children: [
                                         Text(
                                           'As suas Tarefas',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .headlineMedium,
                                         ),
                                       ],
@@ -406,7 +406,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                               height: 50,
                                               child: SpinKitFadingFour(
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .primary,
                                                 size: 50,
                                               ),
@@ -519,7 +519,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                   replacement:
                                                                       '…',
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .displaySmall
                                                                     .override(
@@ -550,7 +550,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                               Icon(
                                                                             Icons.done,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).success,
+                                                                                AppTheme.of(context).success,
                                                                             size:
                                                                                 18,
                                                                           ),
@@ -574,7 +574,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                               Icon(
                                                                             Icons.clear,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).error,
+                                                                                AppTheme.of(context).error,
                                                                             size:
                                                                                 18,
                                                                           ),
@@ -598,7 +598,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                               Icon(
                                                                             Icons.keyboard_control,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).warning,
+                                                                                AppTheme.of(context).warning,
                                                                             size:
                                                                                 18,
                                                                           ),
@@ -610,7 +610,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                               Icon(
                                                                 Icons
                                                                     .arrow_forward_ios_rounded,
-                                                                color: FlutterFlowTheme.of(
+                                                                color: AppTheme.of(
                                                                         context)
                                                                     .secondaryText,
                                                                 size: 16,
@@ -642,7 +642,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       children: [
                                         Text(
                                           'Os seus Pedidos',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: AppTheme.of(context)
                                               .headlineMedium,
                                         ),
                                       ],
@@ -671,7 +671,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                               height: 50,
                                               child: SpinKitFadingFour(
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .primary,
                                                 size: 50,
                                               ),
@@ -786,7 +786,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                   replacement:
                                                                       '…',
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
+                                                                style: AppTheme.of(
                                                                         context)
                                                                     .displaySmall
                                                                     .override(
@@ -817,7 +817,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                               Icon(
                                                                             Icons.done,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).success,
+                                                                                AppTheme.of(context).success,
                                                                             size:
                                                                                 18,
                                                                           ),
@@ -841,7 +841,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                               Icon(
                                                                             Icons.clear,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).error,
+                                                                                AppTheme.of(context).error,
                                                                             size:
                                                                                 18,
                                                                           ),
@@ -865,7 +865,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                               Icon(
                                                                             Icons.keyboard_control,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).warning,
+                                                                                AppTheme.of(context).warning,
                                                                             size:
                                                                                 18,
                                                                           ),
@@ -877,7 +877,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                               Icon(
                                                                 Icons
                                                                     .arrow_forward_ios_rounded,
-                                                                color: FlutterFlowTheme.of(
+                                                                color: AppTheme.of(
                                                                         context)
                                                                     .secondaryText,
                                                                 size: 16,
@@ -914,7 +914,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                     textAlign:
                                                                         TextAlign
                                                                             .end,
-                                                                    style: FlutterFlowTheme.of(
+                                                                    style: AppTheme.of(
                                                                             context)
                                                                         .bodySmall
                                                                         .override(
@@ -944,7 +944,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                                     textAlign:
                                                                         TextAlign
                                                                             .end,
-                                                                    style: FlutterFlowTheme.of(
+                                                                    style: AppTheme.of(
                                                                             context)
                                                                         .headlineSmall
                                                                         .override(

@@ -5,7 +5,7 @@ import 'add_more_material_from_request_widget.dart'
 import 'package:flutter/material.dart';
 
 class AddMoreMaterialFromRequestModel
-    extends FlutterFlowModel<AddMoreMaterialFromRequestWidget> {
+    extends WidgetModel<AddMoreMaterialFromRequestWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for nome widget.

@@ -4,7 +4,7 @@ import '/geral/form_field_controller.dart';
 import 'criar_obra_widget.dart' show CriarObraWidget;
 import 'package:flutter/material.dart';
 
-class CriarObraModel extends FlutterFlowModel<CriarObraWidget> {
+class CriarObraModel extends WidgetModel<CriarObraWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for name widget.

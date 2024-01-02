@@ -84,7 +84,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                 width: 50.0,
                 height: 50.0,
                 child: SpinKitFadingFour(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: AppTheme.of(context).primary,
                   size: 50.0,
                 ),
               ),
@@ -102,9 +102,9 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
               alignment: AlignmentDirectional(-1.0, 0.0),
               child: Text(
                 'Home',
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                style: AppTheme.of(context).headlineMedium.override(
                       fontFamily: 'Readex Pro',
-                      color: FlutterFlowTheme.of(context).info,
+                      color: AppTheme.of(context).info,
                       fontSize: 20.0,
                     ),
               ),
@@ -140,7 +140,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                         width: 50.0,
                         height: 50.0,
                         child: SpinKitFadingFour(
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: AppTheme.of(context).primary,
                           size: 50.0,
                         ),
                       ),
@@ -253,7 +253,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       maxLines: 1,
-                                                      style: FlutterFlowTheme
+                                                      style: AppTheme
                                                               .of(context)
                                                           .displaySmall
                                                           .override(
@@ -274,7 +274,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                           ?.toString(),
                                                       '0',
                                                     )}€ usados de ${listViewWorkRow.budget?.toString()}€',
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .displaySmall
                                                         .override(
@@ -341,7 +341,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                                       context)
                                                                   .languageCode,
                                                         ),
-                                                        style: FlutterFlowTheme
+                                                        style: AppTheme
                                                                 .of(context)
                                                             .displaySmall
                                                             .override(
@@ -393,7 +393,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                         progressColor:
                                                             Color(0xFF168B8B),
                                                         backgroundColor:
-                                                            FlutterFlowTheme.of(
+                                                            AppTheme.of(
                                                                     context)
                                                                 .secondaryText,
                                                         barRadius:
@@ -426,7 +426,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                                       context)
                                                                   .languageCode,
                                                         ),
-                                                        style: FlutterFlowTheme
+                                                        style: AppTheme
                                                                 .of(context)
                                                             .displaySmall
                                                             .override(
@@ -453,7 +453,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                       child: Text(
                                         'Pode gastar mais ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
                                         textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: AppTheme.of(context)
                                             .displaySmall
                                             .override(
                                               fontFamily: 'Readex Pro',

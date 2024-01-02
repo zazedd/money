@@ -58,7 +58,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -93,7 +93,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -103,7 +103,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
                     'Adicionar Fundos',
-                    style: FlutterFlowTheme.of(context).headlineSmall,
+                    style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
                 Container(
@@ -124,9 +124,9 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             decoration: InputDecoration(
                               labelText: 'Descrição',
                               labelStyle:
-                                  FlutterFlowTheme.of(context).bodySmall,
+                                  AppTheme.of(context).bodySmall,
                               alignLabelWithHint: false,
-                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                              hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
@@ -160,7 +160,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 2.0, 20.0, 24.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: AppTheme.of(context).bodyMedium,
                             maxLines: 3,
                             validator: _model.descControllerValidator
                                 .asValidator(context),
@@ -189,8 +189,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             decoration: InputDecoration(
                               labelText: 'Valor',
                               labelStyle:
-                                  FlutterFlowTheme.of(context).bodySmall,
-                              hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                                  AppTheme.of(context).bodySmall,
+                              hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: Color(0x00000000),
@@ -224,7 +224,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 2.0, 20.0, 24.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyMedium,
+                            style: AppTheme.of(context).bodyMedium,
                             keyboardType: TextInputType.number,
                             validator: _model.nomeControllerValidator
                                 .asValidator(context),
@@ -266,13 +266,13 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                                   content: Text(
                                     'Fundos adicionados com sucesso!',
                                     style: TextStyle(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .primaryText,
                                     ),
                                   ),
                                   duration: Duration(milliseconds: 4000),
                                   backgroundColor:
-                                      FlutterFlowTheme.of(context).success,
+                                      AppTheme.of(context).success,
                                 ),
                               );
                             },
@@ -287,8 +287,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).primary,
+                              textStyle: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',

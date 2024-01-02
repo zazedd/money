@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'sub_material_widget.dart' show SubMaterialWidget;
 import 'package:flutter/material.dart';
 
-class SubMaterialModel extends FlutterFlowModel<SubMaterialWidget> {
+class SubMaterialModel extends WidgetModel<SubMaterialWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for nome widget.

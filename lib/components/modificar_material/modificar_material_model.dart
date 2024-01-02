@@ -3,7 +3,7 @@ import '/geral/form_field_controller.dart';
 import 'modificar_material_widget.dart' show ModificarMaterialWidget;
 import 'package:flutter/material.dart';
 
-class ModificarMaterialModel extends FlutterFlowModel<ModificarMaterialWidget> {
+class ModificarMaterialModel extends WidgetModel<ModificarMaterialWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for nome widget.

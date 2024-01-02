@@ -3,7 +3,7 @@ import '/geral/form_field_controller.dart';
 import 'modificar_tarefa_widget.dart' show ModificarTarefaWidget;
 import 'package:flutter/material.dart';
 
-class ModificarTarefaModel extends FlutterFlowModel<ModificarTarefaWidget> {
+class ModificarTarefaModel extends WidgetModel<ModificarTarefaWidget> {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();

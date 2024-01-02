@@ -69,7 +69,7 @@ class _ModificarMaterialObraWidgetState
               width: 50.0,
               height: 50.0,
               child: SpinKitFadingFour(
-                color: FlutterFlowTheme.of(context).primary,
+                color: AppTheme.of(context).primary,
                 size: 50.0,
               ),
             ),
@@ -104,7 +104,7 @@ class _ModificarMaterialObraWidgetState
                       width: 50.0,
                       height: 4.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryText,
+                        color: AppTheme.of(context).secondaryText,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -114,7 +114,7 @@ class _ModificarMaterialObraWidgetState
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
                     'Modificar Material',
-                    style: FlutterFlowTheme.of(context).headlineSmall,
+                    style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
                 Padding(
@@ -150,7 +150,7 @@ class _ModificarMaterialObraWidgetState
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Nome:',
-                              style: FlutterFlowTheme.of(context).titleSmall,
+                              style: AppTheme.of(context).titleSmall,
                             ),
                           ),
                           Padding(
@@ -162,7 +162,7 @@ class _ModificarMaterialObraWidgetState
                                 'Nome',
                               ),
                               textAlign: TextAlign.start,
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: AppTheme.of(context).bodyMedium,
                             ),
                           ),
                         ],
@@ -193,7 +193,7 @@ class _ModificarMaterialObraWidgetState
                             width: 50.0,
                             height: 50.0,
                             child: SpinKitFadingFour(
-                              color: FlutterFlowTheme.of(context).primary,
+                              color: AppTheme.of(context).primary,
                               size: 50.0,
                             ),
                           ),
@@ -223,7 +223,7 @@ class _ModificarMaterialObraWidgetState
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 'Quantidade',
-                                style: FlutterFlowTheme.of(context).titleSmall,
+                                style: AppTheme.of(context).titleSmall,
                               ),
                             ),
                             Expanded(
@@ -236,8 +236,8 @@ class _ModificarMaterialObraWidgetState
                                   ),
                                   child: Slider(
                                     activeColor:
-                                        FlutterFlowTheme.of(context).primary,
-                                    inactiveColor: FlutterFlowTheme.of(context)
+                                        AppTheme.of(context).primary,
+                                    inactiveColor: AppTheme.of(context)
                                         .primaryText,
                                     min: 0.0,
                                     max: valueOrDefault<double>(
@@ -311,13 +311,13 @@ class _ModificarMaterialObraWidgetState
                                   content: Text(
                                     'Material removido da obra.',
                                     style: TextStyle(
-                                      color: FlutterFlowTheme.of(context)
+                                      color: AppTheme.of(context)
                                           .primaryText,
                                     ),
                                   ),
                                   duration: Duration(milliseconds: 4000),
                                   backgroundColor:
-                                      FlutterFlowTheme.of(context).error,
+                                      AppTheme.of(context).error,
                                 ),
                               );
                             },
@@ -332,8 +332,8 @@ class _ModificarMaterialObraWidgetState
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).error,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).error,
+                              textStyle: AppTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Inter',
@@ -385,13 +385,13 @@ class _ModificarMaterialObraWidgetState
                                     content: Text(
                                       'Quantidade atualizada com sucesso.',
                                       style: TextStyle(
-                                        color: FlutterFlowTheme.of(context)
+                                        color: AppTheme.of(context)
                                             .primaryText,
                                       ),
                                     ),
                                     duration: Duration(milliseconds: 4000),
                                     backgroundColor:
-                                        FlutterFlowTheme.of(context).success,
+                                        AppTheme.of(context).success,
                                   ),
                                 );
                               },
@@ -406,8 +406,8 @@ class _ModificarMaterialObraWidgetState
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
+                                color: AppTheme.of(context).primary,
+                                textStyle: AppTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Inter',

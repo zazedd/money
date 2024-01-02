@@ -3,7 +3,7 @@ import 'home_page_ceo_widget.dart' show HomePageCEOWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class HomePageCEOModel extends FlutterFlowModel<HomePageCEOWidget> {
+class HomePageCEOModel extends WidgetModel<HomePageCEOWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for Carousel widget.

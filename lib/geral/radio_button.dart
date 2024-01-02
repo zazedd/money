@@ -1,7 +1,5 @@
 /*
  * Copyright 2020 https://github.com/TercyoStorck
- *
- * Source code has been modified by FlutterFlow, Inc.
  * 
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met:
@@ -28,8 +26,8 @@
 import 'form_field_controller.dart';
 import 'package:flutter/material.dart';
 
-class FlutterFlowRadioButton extends StatefulWidget {
-  const FlutterFlowRadioButton({
+class CustomRadioButton extends StatefulWidget {
+  const CustomRadioButton({
     super.key,
     required this.options,
     required this.onChanged,
@@ -65,10 +63,10 @@ class FlutterFlowRadioButton extends StatefulWidget {
   final WrapCrossAlignment verticalAlignment;
 
   @override
-  State<FlutterFlowRadioButton> createState() => _FlutterFlowRadioButtonState();
+  State<CustomRadioButton> createState() => _CustomRadioButtonState();
 }
 
-class _FlutterFlowRadioButtonState extends State<FlutterFlowRadioButton> {
+class _CustomRadioButtonState extends State<CustomRadioButton> {
   bool get enabled => widget.onChanged != null;
   FormFieldController<String> get controller => widget.controller;
   void Function()? _listener;
@@ -86,7 +84,7 @@ class _FlutterFlowRadioButtonState extends State<FlutterFlowRadioButton> {
   }
 
   @override
-  void didUpdateWidget(FlutterFlowRadioButton oldWidget) {
+  void didUpdateWidget(CustomRadioButton oldWidget) {
     super.didUpdateWidget(oldWidget);
     final oldWidgetEnabled = oldWidget.onChanged != null;
     if (oldWidgetEnabled != enabled) {

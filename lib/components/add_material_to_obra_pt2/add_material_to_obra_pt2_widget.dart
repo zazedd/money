@@ -74,7 +74,7 @@ class _AddMaterialToObraPt2WidgetState
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: AppTheme.of(context).secondaryText,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
@@ -84,7 +84,7 @@ class _AddMaterialToObraPt2WidgetState
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
                 'Adicionar Material',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                style: AppTheme.of(context).headlineSmall,
               ),
             ),
             Padding(
@@ -104,7 +104,7 @@ class _AddMaterialToObraPt2WidgetState
                         width: 50.0,
                         height: 50.0,
                         child: SpinKitFadingFour(
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: AppTheme.of(context).primary,
                           size: 50.0,
                         ),
                       ),
@@ -134,7 +134,7 @@ class _AddMaterialToObraPt2WidgetState
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Quantidade',
-                            style: FlutterFlowTheme.of(context).titleSmall,
+                            style: AppTheme.of(context).titleSmall,
                           ),
                         ),
                         Expanded(
@@ -146,9 +146,9 @@ class _AddMaterialToObraPt2WidgetState
                               ),
                               child: Slider(
                                 activeColor:
-                                    FlutterFlowTheme.of(context).primary,
+                                    AppTheme.of(context).primary,
                                 inactiveColor:
-                                    FlutterFlowTheme.of(context).primaryText,
+                                    AppTheme.of(context).primaryText,
                                 min: 1.0,
                                 max: valueOrDefault<double>(
                                   containerMatWorkRowList.isNotEmpty
@@ -216,11 +216,11 @@ class _AddMaterialToObraPt2WidgetState
                         content: Text(
                           'Quantidade adicionada com sucesso!',
                           style: TextStyle(
-                            color: FlutterFlowTheme.of(context).primaryText,
+                            color: AppTheme.of(context).primaryText,
                           ),
                         ),
                         duration: Duration(milliseconds: 4000),
-                        backgroundColor: FlutterFlowTheme.of(context).success,
+                        backgroundColor: AppTheme.of(context).success,
                       ),
                     );
 
@@ -237,8 +237,8 @@ class _AddMaterialToObraPt2WidgetState
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).success,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                    color: AppTheme.of(context).success,
+                    textStyle: AppTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter',
                           color: Colors.white,
                         ),

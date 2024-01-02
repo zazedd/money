@@ -85,11 +85,11 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
             },
           ).then((value) => safeSetState(() {}));
         },
-        backgroundColor: FlutterFlowTheme.of(context).secondary,
+        backgroundColor: AppTheme.of(context).secondary,
         elevation: 8.0,
         child: Icon(
           Icons.add,
-          color: FlutterFlowTheme.of(context).primaryText,
+          color: AppTheme.of(context).primaryText,
           size: 32.0,
         ),
       ),
@@ -98,9 +98,9 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
         automaticallyImplyLeading: false,
         title: Text(
           'Materiais',
-          style: FlutterFlowTheme.of(context).headlineMedium.override(
+          style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
-                color: FlutterFlowTheme.of(context).info,
+                color: AppTheme.of(context).info,
                 fontSize: 20.0,
               ),
         ),
@@ -127,7 +127,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                         children: [
                           Text(
                             'Total de Materiais',
-                            style: FlutterFlowTheme.of(context).headlineMedium,
+                            style: AppTheme.of(context).headlineMedium,
                           ),
                         ],
                       ),
@@ -144,7 +144,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                               width: 50.0,
                               height: 50.0,
                               child: SpinKitFadingFour(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: AppTheme.of(context).primary,
                                 size: 50.0,
                               ),
                             ),
@@ -227,7 +227,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                   'Nome',
                                                 ),
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
                                                           fontFamily:
@@ -238,7 +238,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                               Icon(
                                                 Icons.add_rounded,
                                                 color:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .secondaryText,
                                                 size: 20.0,
                                               ),
@@ -264,7 +264,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                   child: Text(
                                                     'Quantidade',
                                                     textAlign: TextAlign.end,
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .bodySmall
                                                         .override(
@@ -290,7 +290,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                       '0',
                                                     )}${listViewMaterialRow.isUnits! ? ' un.' : ' Kg'}',
                                                     textAlign: TextAlign.end,
-                                                    style: FlutterFlowTheme.of(
+                                                    style: AppTheme.of(
                                                             context)
                                                         .headlineSmall,
                                                   ),

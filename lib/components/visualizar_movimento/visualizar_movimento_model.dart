@@ -3,7 +3,7 @@ import 'visualizar_movimento_widget.dart' show VisualizarMovimentoWidget;
 import 'package:flutter/material.dart';
 
 class VisualizarMovimentoModel
-    extends FlutterFlowModel<VisualizarMovimentoWidget> {
+    extends WidgetModel<VisualizarMovimentoWidget> {
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}

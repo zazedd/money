@@ -83,7 +83,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                 width: 50.0,
                 height: 50.0,
                 child: SpinKitFadingFour(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: AppTheme.of(context).primary,
                   size: 50.0,
                 ),
               ),
@@ -102,9 +102,9 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
               child: Text(
                 'Home',
                 textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                style: AppTheme.of(context).headlineMedium.override(
                       fontFamily: 'Readex Pro',
-                      color: FlutterFlowTheme.of(context).info,
+                      color: AppTheme.of(context).info,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w500,
                     ),
@@ -141,7 +141,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                         width: 50.0,
                         height: 50.0,
                         child: SpinKitFadingFour(
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: AppTheme.of(context).primary,
                           size: 50.0,
                         ),
                       ),
@@ -236,7 +236,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                   replacement: '…',
                                                 ),
                                                 style:
-                                                    FlutterFlowTheme.of(context)
+                                                    AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
                                                           fontFamily: 'Outfit',
@@ -292,7 +292,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                             context)
                                                         .languageCode,
                                                   ),
-                                                  style: FlutterFlowTheme.of(
+                                                  style: AppTheme.of(
                                                           context)
                                                       .displaySmall
                                                       .override(
@@ -359,7 +359,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                             context)
                                                         .languageCode,
                                                   ),
-                                                  style: FlutterFlowTheme.of(
+                                                  style: AppTheme.of(
                                                           context)
                                                       .displaySmall
                                                       .override(

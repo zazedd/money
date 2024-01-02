@@ -3,8 +3,8 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'form_field_controller.dart';
 import 'package:flutter/material.dart';
 
-class FlutterFlowDropDown<T> extends StatefulWidget {
-  const FlutterFlowDropDown({
+class DropDown<T> extends StatefulWidget {
+  const DropDown({
     Key? key,
     required this.controller,
     this.hintText,
@@ -60,10 +60,10 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
   final bool isMultiSelect;
 
   @override
-  State<FlutterFlowDropDown<T>> createState() => _FlutterFlowDropDownState<T>();
+  State<DropDown<T>> createState() => _DropDownState<T>();
 }
 
-class _FlutterFlowDropDownState<T> extends State<FlutterFlowDropDown<T>> {
+class _DropDownState<T> extends State<DropDown<T>> {
   final TextEditingController _textEditingController = TextEditingController();
 
   void Function() get listener => widget.isMultiSelect

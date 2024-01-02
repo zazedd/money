@@ -2,7 +2,7 @@ import '/geral/util.dart';
 import 'add_more_material_widget.dart' show AddMoreMaterialWidget;
 import 'package:flutter/material.dart';
 
-class AddMoreMaterialModel extends FlutterFlowModel<AddMoreMaterialWidget> {
+class AddMoreMaterialModel extends WidgetModel<AddMoreMaterialWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for nome widget.

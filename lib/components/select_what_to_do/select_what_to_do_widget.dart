@@ -71,7 +71,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: AppTheme.of(context).secondaryText,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
@@ -81,7 +81,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
                 'O que pretender fazer?',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                style: AppTheme.of(context).headlineSmall,
               ),
             ),
             Expanded(
@@ -123,8 +123,8 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                   24.0, 0.0, 24.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
+                              color: AppTheme.of(context).primary,
+                              textStyle: AppTheme.of(context)
                                   .headlineSmall
                                   .override(
                                     fontFamily: 'Readex Pro',
@@ -167,7 +167,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               content: Text(
                                                 'Obra cancelada.',
                                                 style: TextStyle(
-                                                  color: FlutterFlowTheme.of(
+                                                  color: AppTheme.of(
                                                           context)
                                                       .primaryText,
                                                 ),
@@ -175,7 +175,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               duration:
                                                   Duration(milliseconds: 4000),
                                               backgroundColor:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .error,
                                             ),
                                           );
@@ -194,10 +194,10 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
+                                          color: AppTheme.of(context)
                                               .error,
                                           textStyle:
-                                              FlutterFlowTheme.of(context)
+                                              AppTheme.of(context)
                                                   .headlineSmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
@@ -239,7 +239,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                     'Obra concluída!',
                                                     style: TextStyle(
                                                       color:
-                                                          FlutterFlowTheme.of(
+                                                          AppTheme.of(
                                                                   context)
                                                               .primaryText,
                                                     ),
@@ -247,7 +247,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                   duration: Duration(
                                                       milliseconds: 4000),
                                                   backgroundColor:
-                                                      FlutterFlowTheme.of(
+                                                      AppTheme.of(
                                                               context)
                                                           .success,
                                                 ),
@@ -266,10 +266,10 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .success,
                                               textStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .headlineSmall
                                                       .override(
                                                         fontFamily:
@@ -309,14 +309,14 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                             'Obra resumida.',
                                             style: TextStyle(
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  AppTheme.of(context)
                                                       .primaryText,
                                             ),
                                           ),
                                           duration:
                                               Duration(milliseconds: 4000),
                                           backgroundColor:
-                                              FlutterFlowTheme.of(context)
+                                              AppTheme.of(context)
                                                   .secondary,
                                         ),
                                       );
@@ -331,8 +331,8 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
-                                          FlutterFlowTheme.of(context).tertiary,
-                                      textStyle: FlutterFlowTheme.of(context)
+                                          AppTheme.of(context).tertiary,
+                                      textStyle: AppTheme.of(context)
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'Readex Pro',
