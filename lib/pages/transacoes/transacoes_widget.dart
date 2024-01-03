@@ -1,7 +1,5 @@
 import '/backend/supabase/supabase.dart';
 import '/components/add_fundos/add_fundos_widget.dart';
-import '/components/visualizar_fundo/visualizar_fundo_widget.dart';
-import '/components/visualizar_movimento/visualizar_movimento_widget.dart';
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
@@ -14,6 +12,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+
+import 'negative_movements_listview.dart';
+import 'fund_listview.dart';
+
 import 'transacoes_model.dart';
 export 'transacoes_model.dart';
 
@@ -625,221 +627,12 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                       ),
                                     );
                                   }
-                                  return ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    primary: false,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.vertical,
-                                    itemCount: listViewMovementRowList.length,
-                                    itemBuilder: (context, listViewIndex) {
-                                      final listViewMovementRow =
-                                          listViewMovementRowList[
-                                              listViewIndex];
-                                      return Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 12.0),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            await showModalBottomSheet(
-                                              isScrollControlled: true,
-                                              backgroundColor:
-                                                  Colors.transparent,
-                                              enableDrag: false,
-                                              context: context,
-                                              builder: (context) {
-                                                return Padding(
-                                                  padding:
-                                                      MediaQuery.viewInsetsOf(
-                                                          context),
-                                                  child: Container(
-                                                    height: 425.0,
-                                                    child:
-                                                        VisualizarMovimentoWidget(
-                                                      mov: listViewMovementRow
-                                                          .id,
-                                                    ),
-                                                  ),
-                                                );
-                                              },
-                                            ).then(
-                                                (value) => safeSetState(() {}));
-                                          },
-                                          child: Container(
-                                            width: 100.0,
-                                            decoration: BoxDecoration(
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  AppTheme.of(context).error,
-                                                  Color(0x54F06A6A)
-                                                ],
-                                                stops: [0.0, 1.0],
-                                                begin: AlignmentDirectional(
-                                                    -1.0, 0.0),
-                                                end: AlignmentDirectional(
-                                                    1.0, 0),
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(20.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsets.all(12.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 4.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Text(
-                                                          valueOrDefault<
-                                                              String>(
-                                                            listViewMovementRow
-                                                                .name,
-                                                            'nome',
-                                                          ),
-                                                          style: AppTheme.of(
-                                                                  context)
-                                                              .headlineSmall,
-                                                        ),
-                                                        Icon(
-                                                          Icons
-                                                              .arrow_forward_ios_rounded,
-                                                          color: AppTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                          size: 16.0,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Text(
-                                                        '-${valueOrDefault<String>(
-                                                          listViewMovementRow
-                                                              .cost
-                                                              ?.toString(),
-                                                          '0',
-                                                        )}€',
-                                                        style:
-                                                            AppTheme.of(context)
-                                                                .displaySmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: AppTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 4.0,
-                                                                0.0, 0.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Text(
-                                                          valueOrDefault<
-                                                              String>(
-                                                            dateTimeFormat(
-                                                              'd/M/yy',
-                                                              listViewMovementRow
-                                                                  .date,
-                                                              locale: FFLocalizations
-                                                                      .of(context)
-                                                                  .languageCode,
-                                                            ),
-                                                            '1/1/2000',
-                                                          ),
-                                                          style: AppTheme.of(
-                                                                  context)
-                                                              .titleSmall,
-                                                        ),
-                                                        Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          4.0,
-                                                                          0.0),
-                                                              child: Text(
-                                                                'Quantidade',
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .end,
-                                                                style: AppTheme.of(
-                                                                        context)
-                                                                    .bodySmall
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Inter',
-                                                                      color: Color(
-                                                                          0xB3FFFFFF),
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w300,
-                                                                    ),
-                                                              ),
-                                                            ),
-                                                            Text(
-                                                              valueOrDefault<
-                                                                  String>(
-                                                                listViewMovementRow
-                                                                    .quantity
-                                                                    ?.toString(),
-                                                                '0',
-                                                              ),
-                                                              textAlign:
-                                                                  TextAlign.end,
-                                                              style: AppTheme.of(
-                                                                      context)
-                                                                  .headlineSmall,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                  ).animateOnPageLoad(animationsMap[
-                                      'listViewOnPageLoadAnimation1']!);
+                                  return negative_movements_listview(
+                                          state: this,
+                                          listViewMovementRowList:
+                                              listViewMovementRowList)
+                                      .animateOnPageLoad(animationsMap[
+                                          'listViewOnPageLoadAnimation1']!);
                                 },
                               ),
                             ),
@@ -893,134 +686,12 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                       ),
                                     );
                                   }
-                                  return ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    primary: false,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.vertical,
-                                    itemCount: listViewFundsBankRowList.length,
-                                    itemBuilder: (context, listViewIndex) {
-                                      final listViewFundsBankRow =
-                                          listViewFundsBankRowList[
-                                              listViewIndex];
-                                      return Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 12.0),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            await showModalBottomSheet(
-                                              isScrollControlled: true,
-                                              backgroundColor:
-                                                  Colors.transparent,
-                                              enableDrag: false,
-                                              context: context,
-                                              builder: (context) {
-                                                return Padding(
-                                                  padding:
-                                                      MediaQuery.viewInsetsOf(
-                                                          context),
-                                                  child: Container(
-                                                    height: 340.0,
-                                                    child:
-                                                        VisualizarFundoWidget(
-                                                      fundo:
-                                                          listViewFundsBankRow,
-                                                    ),
-                                                  ),
-                                                );
-                                              },
-                                            ).then(
-                                                (value) => safeSetState(() {}));
-                                          },
-                                          child: Container(
-                                            width: 100.0,
-                                            decoration: BoxDecoration(
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  AppTheme.of(context).success,
-                                                  Color(0x542ABD10)
-                                                ],
-                                                stops: [0.0, 1.0],
-                                                begin: AlignmentDirectional(
-                                                    -1.0, 0.0),
-                                                end: AlignmentDirectional(
-                                                    1.0, 0),
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(20.0),
-                                            ),
-                                            child: Padding(
-                                              padding: EdgeInsets.all(12.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    children: [
-                                                      Text(
-                                                        '+${valueOrDefault<String>(
-                                                          listViewFundsBankRow
-                                                              .quant
-                                                              ?.toString(),
-                                                          '0',
-                                                        )}€',
-                                                        style:
-                                                            AppTheme.of(context)
-                                                                .displaySmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: AppTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 4.0,
-                                                                0.0, 0.0),
-                                                    child: Row(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Text(
-                                                          valueOrDefault<
-                                                              String>(
-                                                            listViewFundsBankRow
-                                                                .desc,
-                                                            'isso',
-                                                          ),
-                                                          style: AppTheme.of(
-                                                                  context)
-                                                              .titleSmall,
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                  ).animateOnPageLoad(animationsMap[
-                                      'listViewOnPageLoadAnimation2']!);
+                                  return fund_listview(
+                                          state: this,
+                                          listViewFundsBankRowList:
+                                              listViewFundsBankRowList)
+                                      .animateOnPageLoad(animationsMap[
+                                          'listViewOnPageLoadAnimation2']!);
                                 },
                               ),
                             ),
