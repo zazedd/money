@@ -4,6 +4,8 @@ import '/components/add_movimento_to_obra/add_movimento_to_obra_widget.dart';
 import '/components/add_tarefa_to_obra/add_tarefa_to_obra_widget.dart';
 import '/components/add_trabalhador_to_obra/add_trabalhador_to_obra_widget.dart';
 import '/geral/theme.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +57,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFF2B2B2B),
+        color: colors.get("secondary_background", Color(0xFF2B2B2B)),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -131,11 +133,10 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: AppTheme.of(context).primary,
-                        textStyle:
-                            AppTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  fontSize: 14.0,
-                                ),
+                        textStyle: AppTheme.of(context).headlineSmall.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 14.0,
+                            ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
@@ -172,11 +173,10 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: AppTheme.of(context).accent2,
-                        textStyle:
-                            AppTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  fontSize: 14.0,
-                                ),
+                        textStyle: AppTheme.of(context).headlineSmall.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 14.0,
+                            ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
@@ -213,11 +213,10 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: AppTheme.of(context).accent1,
-                        textStyle:
-                            AppTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  fontSize: 14.0,
-                                ),
+                        textStyle: AppTheme.of(context).headlineSmall.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 14.0,
+                            ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
@@ -254,11 +253,10 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: AppTheme.of(context).secondary,
-                        textStyle:
-                            AppTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  fontSize: 14.0,
-                                ),
+                        textStyle: AppTheme.of(context).headlineSmall.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 14.0,
+                            ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,

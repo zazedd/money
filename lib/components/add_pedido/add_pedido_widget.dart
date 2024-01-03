@@ -3,6 +3,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,7 +61,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFF2B2B2B),
+        color: colors.get("secondary_background", Color(0xFF2B2B2B)),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -116,33 +118,32 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Nome do Material',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -183,28 +184,28 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -251,28 +252,28 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -330,8 +331,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                             ),
                           ),
                           duration: Duration(milliseconds: 4000),
-                          backgroundColor:
-                              AppTheme.of(context).secondary,
+                          backgroundColor: AppTheme.of(context).secondary,
                         ),
                       );
                     },
@@ -347,11 +347,10 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: AppTheme.of(context).primary,
-                      textStyle:
-                          AppTheme.of(context).titleSmall.override(
-                                fontFamily: 'Inter',
-                                color: Colors.white,
-                              ),
+                      textStyle: AppTheme.of(context).titleSmall.override(
+                            fontFamily: 'Inter',
+                            color: Colors.white,
+                          ),
                       elevation: 3.0,
                       borderSide: BorderSide(
                         color: Colors.transparent,

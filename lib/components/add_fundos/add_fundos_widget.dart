@@ -2,6 +2,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'add_fundos_model.dart';
@@ -71,7 +73,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -123,34 +125,33 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Descrição',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               alignLabelWithHint: false,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -188,33 +189,32 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Valor',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -266,13 +266,11 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                                   content: Text(
                                     'Fundos adicionados com sucesso!',
                                     style: TextStyle(
-                                      color: AppTheme.of(context)
-                                          .primaryText,
+                                      color: AppTheme.of(context).primaryText,
                                     ),
                                   ),
                                   duration: Duration(milliseconds: 4000),
-                                  backgroundColor:
-                                      AppTheme.of(context).success,
+                                  backgroundColor: AppTheme.of(context).success,
                                 ),
                               );
                             },
@@ -288,12 +286,11 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: AppTheme.of(context).primary,
-                              textStyle: AppTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
+                              textStyle:
+                                  AppTheme.of(context).titleSmall.override(
+                                        fontFamily: 'Inter',
+                                        color: Colors.white,
+                                      ),
                               elevation: 3.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,

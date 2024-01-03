@@ -1,6 +1,8 @@
 import '/backend/supabase/supabase.dart';
 import '/components/modificar_obra/modificar_obra_widget.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +51,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFF2B2B2B),
+        color: colors.get("secondary_background", Color(0xFF2B2B2B)),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -124,12 +126,11 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: AppTheme.of(context).primary,
-                              textStyle: AppTheme.of(context)
-                                  .headlineSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 14.0,
-                                  ),
+                              textStyle:
+                                  AppTheme.of(context).headlineSmall.override(
+                                        fontFamily: 'Readex Pro',
+                                        fontSize: 14.0,
+                                      ),
                               elevation: 3.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,
@@ -167,16 +168,14 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               content: Text(
                                                 'Obra cancelada.',
                                                 style: TextStyle(
-                                                  color: AppTheme.of(
-                                                          context)
+                                                  color: AppTheme.of(context)
                                                       .primaryText,
                                                 ),
                                               ),
                                               duration:
                                                   Duration(milliseconds: 4000),
                                               backgroundColor:
-                                                  AppTheme.of(context)
-                                                      .error,
+                                                  AppTheme.of(context).error,
                                             ),
                                           );
                                         },
@@ -194,15 +193,13 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           iconPadding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: AppTheme.of(context)
-                                              .error,
-                                          textStyle:
-                                              AppTheme.of(context)
-                                                  .headlineSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 14.0,
-                                                  ),
+                                          color: AppTheme.of(context).error,
+                                          textStyle: AppTheme.of(context)
+                                              .headlineSmall
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 14.0,
+                                              ),
                                           elevation: 3.0,
                                           borderSide: BorderSide(
                                             color: Colors.transparent,
@@ -239,16 +236,14 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                     'Obra concluída!',
                                                     style: TextStyle(
                                                       color:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .primaryText,
                                                     ),
                                                   ),
                                                   duration: Duration(
                                                       milliseconds: 4000),
                                                   backgroundColor:
-                                                      AppTheme.of(
-                                                              context)
+                                                      AppTheme.of(context)
                                                           .success,
                                                 ),
                                               );
@@ -266,16 +261,13 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
-                                                  AppTheme.of(context)
-                                                      .success,
-                                              textStyle:
-                                                  AppTheme.of(context)
-                                                      .headlineSmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        fontSize: 14.0,
-                                                      ),
+                                                  AppTheme.of(context).success,
+                                              textStyle: AppTheme.of(context)
+                                                  .headlineSmall
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    fontSize: 14.0,
+                                                  ),
                                               elevation: 3.0,
                                               borderSide: BorderSide(
                                                 color: Colors.transparent,
@@ -308,16 +300,14 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           content: Text(
                                             'Obra resumida.',
                                             style: TextStyle(
-                                              color:
-                                                  AppTheme.of(context)
-                                                      .primaryText,
+                                              color: AppTheme.of(context)
+                                                  .primaryText,
                                             ),
                                           ),
                                           duration:
                                               Duration(milliseconds: 4000),
                                           backgroundColor:
-                                              AppTheme.of(context)
-                                                  .secondary,
+                                              AppTheme.of(context).secondary,
                                         ),
                                       );
                                     },
@@ -330,8 +320,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color:
-                                          AppTheme.of(context).tertiary,
+                                      color: AppTheme.of(context).tertiary,
                                       textStyle: AppTheme.of(context)
                                           .headlineSmall
                                           .override(

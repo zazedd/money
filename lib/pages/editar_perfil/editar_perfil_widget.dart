@@ -4,6 +4,8 @@ import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -53,9 +55,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         leading: CustomIconButton(
           borderColor: Colors.transparent,
@@ -72,7 +74,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
           },
         ),
         title: Text(
-          'Editar Perfil',
+          lang.get("profile_account_edit", 'Editar Perfil'),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 color: AppTheme.of(context).info,
@@ -220,8 +222,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color:
-                              AppTheme.of(context).secondaryBackground,
+                          color: AppTheme.of(context).secondaryBackground,
                           textStyle: AppTheme.of(context).bodySmall,
                           elevation: 0.0,
                           borderSide: BorderSide(
@@ -256,28 +257,27 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0x00000000),
+                              color: colors.get("background", Colors.black),
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0x00000000),
+                              color: colors.get("background", Colors.black),
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0x00000000),
+                              color: colors.get("background", Colors.black),
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           filled: true,
-                          fillColor:
-                              AppTheme.of(context).secondaryBackground,
+                          fillColor: AppTheme.of(context).secondaryBackground,
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
@@ -310,9 +310,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: AppTheme.of(context).primary,
-                          textStyle: AppTheme.of(context)
-                              .titleSmall
-                              .override(
+                          textStyle: AppTheme.of(context).titleSmall.override(
                                 fontFamily: 'Inter',
                                 color: AppTheme.of(context).primaryText,
                               ),

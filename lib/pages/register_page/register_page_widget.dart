@@ -1,6 +1,8 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +62,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -126,8 +128,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: AppTheme.of(context)
-                                              .secondary,
+                                          color: AppTheme.of(context).secondary,
                                           fontSize: 28.0,
                                         ),
                                   ),
@@ -161,35 +162,37 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText: 'Nome Completo',
-                                    labelStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    labelStyle: AppTheme.of(context).bodySmall,
                                     hintText: 'Introduza o seu nome...',
-                                    hintStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
@@ -200,8 +203,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         EdgeInsetsDirectional.fromSTEB(
                                             20.0, 24.0, 20.0, 24.0),
                                   ),
-                                  style:
-                                      AppTheme.of(context).bodyMedium,
+                                  style: AppTheme.of(context).bodyMedium,
                                   validator: _model.nameControllerValidator
                                       .asValidator(context),
                                 ),
@@ -215,35 +217,37 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText: 'Email',
-                                    labelStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    labelStyle: AppTheme.of(context).bodySmall,
                                     hintText: 'Introduza o seu email...',
-                                    hintStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
@@ -254,8 +258,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         EdgeInsetsDirectional.fromSTEB(
                                             20.0, 24.0, 20.0, 24.0),
                                   ),
-                                  style:
-                                      AppTheme.of(context).bodyMedium,
+                                  style: AppTheme.of(context).bodyMedium,
                                   validator: _model
                                       .emailAddressControllerValidator
                                       .asValidator(context),
@@ -270,35 +273,37 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   obscureText: !_model.passwordCreateVisibility,
                                   decoration: InputDecoration(
                                     labelText: 'Password',
-                                    labelStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    labelStyle: AppTheme.of(context).bodySmall,
                                     hintText: 'Introduza a sua password...',
-                                    hintStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
@@ -318,14 +323,13 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         _model.passwordCreateVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        color: AppTheme.of(context)
-                                            .secondaryText,
+                                        color:
+                                            AppTheme.of(context).secondaryText,
                                         size: 20.0,
                                       ),
                                     ),
                                   ),
-                                  style:
-                                      AppTheme.of(context).bodyMedium,
+                                  style: AppTheme.of(context).bodyMedium,
                                   validator: _model
                                       .passwordCreateControllerValidator
                                       .asValidator(context),
@@ -341,35 +345,37 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                       !_model.passwordConfirmVisibility,
                                   decoration: InputDecoration(
                                     labelText: 'Confirmar Password',
-                                    labelStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    labelStyle: AppTheme.of(context).bodySmall,
                                     hintText: 'Confirme a sua password...',
-                                    hintStyle:
-                                        AppTheme.of(context).bodySmall,
+                                    hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: Color(0x00000000),
+                                        color: colors.get(
+                                            "background", Colors.black),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(20.0),
@@ -389,14 +395,13 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         _model.passwordConfirmVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        color: AppTheme.of(context)
-                                            .secondaryText,
+                                        color:
+                                            AppTheme.of(context).secondaryText,
                                         size: 20.0,
                                       ),
                                     ),
                                   ),
-                                  style:
-                                      AppTheme.of(context).bodyMedium,
+                                  style: AppTheme.of(context).bodyMedium,
                                   validator: _model
                                       .passwordConfirmControllerValidator
                                       .asValidator(context),
@@ -461,10 +466,9 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: AppTheme.of(context)
-                                            .primary,
-                                        textStyle: AppTheme.of(context)
-                                            .titleSmall,
+                                        color: AppTheme.of(context).primary,
+                                        textStyle:
+                                            AppTheme.of(context).titleSmall,
                                         elevation: 3.0,
                                         borderSide: BorderSide(
                                           color: Colors.transparent,
@@ -516,8 +520,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         children: [
                                           Icon(
                                             Icons.arrow_back_rounded,
-                                            color: AppTheme.of(context)
-                                                .primary,
+                                            color: AppTheme.of(context).primary,
                                             size: 24.0,
                                           ),
                                           Padding(
@@ -526,22 +529,19 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                                     4.0, 0.0, 24.0, 0.0),
                                             child: Text(
                                               'Login',
-                                              style:
-                                                  AppTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        color:
-                                                            AppTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                      ),
+                                              style: AppTheme.of(context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Inter',
+                                                    color: AppTheme.of(context)
+                                                        .primary,
+                                                  ),
                                             ),
                                           ),
                                           Text(
                                             'Já tem uma conta?',
-                                            style: AppTheme.of(context)
-                                                .bodyMedium,
+                                            style:
+                                                AppTheme.of(context).bodyMedium,
                                           ),
                                         ],
                                       ),

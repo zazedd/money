@@ -5,6 +5,8 @@ import '/components/visualizar_movimento/visualizar_movimento_widget.dart';
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/custom_functions.dart' as functions;
 import 'package:carousel_slider/carousel_slider.dart';
@@ -119,7 +121,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await showModalBottomSheet(
@@ -147,7 +149,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         leading: CustomIconButton(
           borderColor: Colors.transparent,
@@ -164,7 +166,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
           },
         ),
         title: Text(
-          'Movimentos',
+          lang.get("moviments_title", "Movimentos"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20.0,
@@ -185,7 +187,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                 width: double.infinity,
                 height: 50.0,
                 decoration: BoxDecoration(
-                  color: Color(0xFF2B2B2B),
+                  color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 3.0,
@@ -244,9 +246,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                               rowBankRow?.name,
                               'Nome',
                             ),
-                            style: AppTheme.of(context)
-                                .displaySmall
-                                .override(
+                            style: AppTheme.of(context).displaySmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                   fontSize: 20.0,
@@ -266,13 +266,12 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                   '0',
                                 )}€',
                                 textAlign: TextAlign.end,
-                                style: AppTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 15.0,
-                                      fontWeight: FontWeight.w300,
-                                    ),
+                                style:
+                                    AppTheme.of(context).headlineSmall.override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 15.0,
+                                          fontWeight: FontWeight.w300,
+                                        ),
                               ),
                             ),
                           ),
@@ -297,9 +296,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                             20.0, 15.0, 0.0, 0.0),
                         child: Text(
                           'Últimos 30 dias',
-                          style: AppTheme.of(context)
-                              .displaySmall
-                              .override(
+                          style: AppTheme.of(context).displaySmall.override(
                                 fontFamily: 'Readex Pro',
                                 fontSize: 20.0,
                               ),
@@ -331,8 +328,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                     width: 50.0,
                                     height: 50.0,
                                     child: SpinKitFadingFour(
-                                      color:
-                                          AppTheme.of(context).primary,
+                                      color: AppTheme.of(context).primary,
                                       size: 50.0,
                                     ),
                                   ),
@@ -364,8 +360,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                       Text(
                                         'Receitas',
                                         textAlign: TextAlign.start,
-                                        style: AppTheme.of(context)
-                                            .headlineSmall,
+                                        style:
+                                            AppTheme.of(context).headlineSmall,
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -382,9 +378,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                               .displaySmall
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color:
-                                                    AppTheme.of(context)
-                                                        .success,
+                                                color: AppTheme.of(context)
+                                                    .success,
                                                 fontSize: 25.0,
                                               ),
                                         ),
@@ -413,22 +408,18 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                     .toStringAsFixed(2);
                                               }(incomeCardFundsBankRowList.map((e) => e.quant).withoutNulls.toList())}%',
                                               textAlign: TextAlign.start,
-                                              style:
-                                                  AppTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        color:
-                                                            AppTheme.of(
-                                                                    context)
-                                                                .success,
-                                                      ),
+                                              style: AppTheme.of(context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Inter',
+                                                    color: AppTheme.of(context)
+                                                        .success,
+                                                  ),
                                             ),
                                             Icon(
                                               Icons.trending_up_rounded,
                                               color:
-                                                  AppTheme.of(context)
-                                                      .success,
+                                                  AppTheme.of(context).success,
                                               size: 24.0,
                                             ),
                                           ],
@@ -458,8 +449,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                       width: 50.0,
                                       height: 50.0,
                                       child: SpinKitFadingFour(
-                                        color: AppTheme.of(context)
-                                            .primary,
+                                        color: AppTheme.of(context).primary,
                                         size: 50.0,
                                       ),
                                     ),
@@ -510,8 +500,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                 .displaySmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: AppTheme.of(
-                                                          context)
+                                                  color: AppTheme.of(context)
                                                       .error,
                                                   fontSize: 25.0,
                                                 ),
@@ -541,21 +530,19 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                       .toStringAsFixed(2);
                                                 }(spendingCardMovementRowList.map((e) => e.cost).withoutNulls.toList())}%',
                                                 textAlign: TextAlign.start,
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: AppTheme
-                                                                  .of(context)
+                                                style: AppTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Inter',
+                                                      color:
+                                                          AppTheme.of(context)
                                                               .error,
-                                                        ),
+                                                    ),
                                               ),
                                               Icon(
                                                 Icons.trending_up_rounded,
                                                 color:
-                                                    AppTheme.of(context)
-                                                        .error,
+                                                    AppTheme.of(context).error,
                                                 size: 24.0,
                                               ),
                                             ],
@@ -600,9 +587,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Movimentos',
-                                    style: AppTheme.of(context)
-                                        .headlineMedium,
+                                    lang.get("moviments_title", "Movimentos"),
+                                    style: AppTheme.of(context).headlineMedium,
                                   ),
                                 ],
                               ),
@@ -620,8 +606,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: AppTheme.of(context)
-                                              .primary,
+                                          color: AppTheme.of(context).primary,
                                           size: 50.0,
                                         ),
                                       ),
@@ -688,8 +673,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                             decoration: BoxDecoration(
                                               gradient: LinearGradient(
                                                 colors: [
-                                                  AppTheme.of(context)
-                                                      .error,
+                                                  AppTheme.of(context).error,
                                                   Color(0x54F06A6A)
                                                 ],
                                                 stops: [0.0, 1.0],
@@ -729,15 +713,15 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                                 .name,
                                                             'nome',
                                                           ),
-                                                          style: AppTheme
-                                                                  .of(context)
+                                                          style: AppTheme.of(
+                                                                  context)
                                                               .headlineSmall,
                                                         ),
                                                         Icon(
                                                           Icons
                                                               .arrow_forward_ios_rounded,
-                                                          color: AppTheme
-                                                                  .of(context)
+                                                          color: AppTheme.of(
+                                                                  context)
                                                               .primaryText,
                                                           size: 16.0,
                                                         ),
@@ -756,8 +740,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                           '0',
                                                         )}€',
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -794,8 +777,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                             ),
                                                             '1/1/2000',
                                                           ),
-                                                          style: AppTheme
-                                                                  .of(context)
+                                                          style: AppTheme.of(
+                                                                  context)
                                                               .titleSmall,
                                                         ),
                                                         Row(
@@ -839,8 +822,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                               ),
                                                               textAlign:
                                                                   TextAlign.end,
-                                                              style: AppTheme
-                                                                      .of(context)
+                                                              style: AppTheme.of(
+                                                                      context)
                                                                   .headlineSmall,
                                                             ),
                                                           ],
@@ -872,9 +855,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Fundos',
-                                    style: AppTheme.of(context)
-                                        .headlineMedium,
+                                    lang.get("moviments_funds", "Fundos"),
+                                    style: AppTheme.of(context).headlineMedium,
                                   ),
                                 ],
                               ),
@@ -892,8 +874,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: AppTheme.of(context)
-                                              .primary,
+                                          color: AppTheme.of(context).primary,
                                           size: 50.0,
                                         ),
                                       ),
@@ -960,8 +941,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                             decoration: BoxDecoration(
                                               gradient: LinearGradient(
                                                 colors: [
-                                                  AppTheme.of(context)
-                                                      .success,
+                                                  AppTheme.of(context).success,
                                                   Color(0x542ABD10)
                                                 ],
                                                 stops: [0.0, 1.0],
@@ -994,8 +974,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                           '0',
                                                         )}€',
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -1026,8 +1005,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                                                 .desc,
                                                             'isso',
                                                           ),
-                                                          style: AppTheme
-                                                                  .of(context)
+                                                          style: AppTheme.of(
+                                                                  context)
                                                               .titleSmall,
                                                         ),
                                                       ],

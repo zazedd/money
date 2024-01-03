@@ -2,6 +2,8 @@ import '/backend/supabase/supabase.dart';
 import '/components/add_material_to_storage/add_material_to_storage_widget.dart';
 import '/components/select_add_mod/select_add_mod_widget.dart';
 import '/geral/animations.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +69,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await showModalBottomSheet(
@@ -94,7 +96,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         title: Text(
           'Materiais',
@@ -126,7 +128,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            'Total de Materiais',
+                            lang.get("material_total", "Total de Materiais"),
                             style: AppTheme.of(context).headlineMedium,
                           ),
                         ],
@@ -200,7 +202,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                 child: Container(
                                   width: 100.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF2B2B2B),
+                                    color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
@@ -226,20 +228,17 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                   listViewMaterialRow.name,
                                                   'Nome',
                                                 ),
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .displaySmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 23.0,
-                                                        ),
+                                                style: AppTheme.of(context)
+                                                    .displaySmall
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      fontSize: 23.0,
+                                                    ),
                                               ),
                                               Icon(
                                                 Icons.add_rounded,
-                                                color:
-                                                    AppTheme.of(context)
-                                                        .secondaryText,
+                                                color: AppTheme.of(context)
+                                                    .secondaryText,
                                                 size: 20.0,
                                               ),
                                             ],
@@ -264,8 +263,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                   child: Text(
                                                     'Quantidade',
                                                     textAlign: TextAlign.end,
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    style: AppTheme.of(context)
                                                         .bodySmall
                                                         .override(
                                                           fontFamily: 'Inter',
@@ -290,8 +288,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                       '0',
                                                     )}${listViewMaterialRow.isUnits! ? ' un.' : ' Kg'}',
                                                     textAlign: TextAlign.end,
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    style: AppTheme.of(context)
                                                         .headlineSmall,
                                                   ),
                                                 ),

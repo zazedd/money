@@ -2,6 +2,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import 'package:flutter/material.dart';
 import 'add_movimento_to_obra_model.dart';
 export 'add_movimento_to_obra_model.dart';
@@ -63,7 +65,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFF2B2B2B),
+        color: colors.get("secondary_background", Color(0xFF2B2B2B)),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -120,33 +122,32 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Nome',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -186,28 +187,28 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -246,28 +247,28 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -307,28 +308,28 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -393,13 +394,11 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                                   content: Text(
                                     'Movimento adicionado com sucesso!',
                                     style: TextStyle(
-                                      color: AppTheme.of(context)
-                                          .primaryText,
+                                      color: AppTheme.of(context).primaryText,
                                     ),
                                   ),
                                   duration: Duration(milliseconds: 4000),
-                                  backgroundColor:
-                                      AppTheme.of(context).success,
+                                  backgroundColor: AppTheme.of(context).success,
                                 ),
                               );
 
@@ -417,12 +416,11 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: AppTheme.of(context).primary,
-                              textStyle: AppTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
+                              textStyle:
+                                  AppTheme.of(context).titleSmall.override(
+                                        fontFamily: 'Inter',
+                                        color: Colors.white,
+                                      ),
                               elevation: 3.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,

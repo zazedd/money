@@ -2,6 +2,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/drop_down.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import '/geral/widgets.dart';
 import '/geral/form_field_controller.dart';
 import 'package:flutter/material.dart';
@@ -74,7 +76,7 @@ class _AddTrabalhadorToObraWidgetState
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -136,8 +138,7 @@ class _AddTrabalhadorToObraWidgetState
                                       width: 50.0,
                                       height: 50.0,
                                       child: SpinKitFadingFour(
-                                        color: AppTheme.of(context)
-                                            .primary,
+                                        color: AppTheme.of(context).primary,
                                         size: 50.0,
                                       ),
                                     ),
@@ -163,19 +164,16 @@ class _AddTrabalhadorToObraWidgetState
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.93,
                                   height: 50.0,
-                                  textStyle:
-                                      AppTheme.of(context).bodyMedium,
+                                  textStyle: AppTheme.of(context).bodyMedium,
                                   hintText: 'Selecione um Trabalhador...',
                                   icon: Icon(
                                     Icons.keyboard_arrow_down_rounded,
-                                    color: AppTheme.of(context)
-                                        .secondaryText,
+                                    color: AppTheme.of(context).secondaryText,
                                     size: 24.0,
                                   ),
                                   fillColor: Colors.black,
                                   elevation: 2.0,
-                                  borderColor:
-                                      AppTheme.of(context).alternate,
+                                  borderColor: AppTheme.of(context).alternate,
                                   borderWidth: 2.0,
                                   borderRadius: 8.0,
                                   margin: EdgeInsetsDirectional.fromSTEB(
@@ -242,13 +240,11 @@ class _AddTrabalhadorToObraWidgetState
                               content: Text(
                                 'Trabalhador adicionado com sucesso.',
                                 style: TextStyle(
-                                  color:
-                                      AppTheme.of(context).primaryText,
+                                  color: AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
-                              backgroundColor:
-                                  AppTheme.of(context).success,
+                              backgroundColor: AppTheme.of(context).success,
                             ),
                           );
                         } else {
@@ -258,13 +254,11 @@ class _AddTrabalhadorToObraWidgetState
                               content: Text(
                                 'O trabalhador já está na obra!',
                                 style: TextStyle(
-                                  color:
-                                      AppTheme.of(context).primaryText,
+                                  color: AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
-                              backgroundColor:
-                                  AppTheme.of(context).error,
+                              backgroundColor: AppTheme.of(context).error,
                             ),
                           );
                         }
@@ -281,11 +275,10 @@ class _AddTrabalhadorToObraWidgetState
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: AppTheme.of(context).success,
-                        textStyle:
-                            AppTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Inter',
-                                  color: Colors.white,
-                                ),
+                        textStyle: AppTheme.of(context).titleSmall.override(
+                              fontFamily: 'Inter',
+                              color: Colors.white,
+                            ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,

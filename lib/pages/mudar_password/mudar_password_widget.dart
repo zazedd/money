@@ -1,6 +1,8 @@
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -50,9 +52,9 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         leading: CustomIconButton(
           borderColor: Colors.transparent,
@@ -69,7 +71,7 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
           },
         ),
         title: Text(
-          'Mudar Password',
+          lang.get("profile_account_change_password", 'Mudar Password'),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20.0,
@@ -123,21 +125,21 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0x00000000),
+                        color: colors.get("background", Colors.black),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     errorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0x00000000),
+                        color: colors.get("background", Colors.black),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0x00000000),
+                        color: colors.get("background", Colors.black),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),

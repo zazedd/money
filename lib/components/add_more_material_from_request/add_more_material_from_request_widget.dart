@@ -5,6 +5,8 @@ import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'add_more_material_from_request_model.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 export 'add_more_material_from_request_model.dart';
 
 class AddMoreMaterialFromRequestWidget extends StatefulWidget {
@@ -103,7 +105,7 @@ class _AddMoreMaterialFromRequestWidgetState
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -157,35 +159,37 @@ class _AddMoreMaterialFromRequestWidgetState
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Nome',
-                                labelStyle:
-                                    AppTheme.of(context).bodySmall,
+                                labelStyle: AppTheme.of(context).bodySmall,
                                 hintText: 'Nome',
-                                hintStyle:
-                                    AppTheme.of(context).bodySmall,
+                                hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
@@ -222,33 +226,32 @@ class _AddMoreMaterialFromRequestWidgetState
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Quantidade',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -284,33 +287,32 @@ class _AddMoreMaterialFromRequestWidgetState
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Custo',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -464,8 +466,8 @@ class _AddMoreMaterialFromRequestWidgetState
                                       content: Text(
                                         'Quantidade adicionada com sucesso!',
                                         style: TextStyle(
-                                          color: AppTheme.of(context)
-                                              .primaryText,
+                                          color:
+                                              AppTheme.of(context).primaryText,
                                         ),
                                       ),
                                       duration: Duration(milliseconds: 4000),
@@ -488,12 +490,11 @@ class _AddMoreMaterialFromRequestWidgetState
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: AppTheme.of(context).success,
-                                  textStyle: AppTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        color: Colors.white,
-                                      ),
+                                  textStyle:
+                                      AppTheme.of(context).titleSmall.override(
+                                            fontFamily: 'Inter',
+                                            color: Colors.white,
+                                          ),
                                   elevation: 3.0,
                                   borderSide: BorderSide(
                                     color: Colors.transparent,

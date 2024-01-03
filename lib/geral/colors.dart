@@ -18,8 +18,8 @@ class ColorMap {
     Map<String, dynamic> r = jsonDecode(body);
     r.forEach((key, value) {
       var ss = value as String;
+      print(value);
       Color cor = Color(int.parse(ss, radix: 16));
-      print(ss);
       colors[key] = cor;
     });
   }

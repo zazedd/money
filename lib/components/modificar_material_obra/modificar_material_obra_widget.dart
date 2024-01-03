@@ -1,6 +1,8 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -82,7 +84,7 @@ class _ModificarMaterialObraWidgetState
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -235,10 +237,9 @@ class _ModificarMaterialObraWidgetState
                                         ShowValueIndicator.always,
                                   ),
                                   child: Slider(
-                                    activeColor:
-                                        AppTheme.of(context).primary,
-                                    inactiveColor: AppTheme.of(context)
-                                        .primaryText,
+                                    activeColor: AppTheme.of(context).primary,
+                                    inactiveColor:
+                                        AppTheme.of(context).primaryText,
                                     min: 0.0,
                                     max: valueOrDefault<double>(
                                       containerMatWorkRowList.isNotEmpty
@@ -311,13 +312,11 @@ class _ModificarMaterialObraWidgetState
                                   content: Text(
                                     'Material removido da obra.',
                                     style: TextStyle(
-                                      color: AppTheme.of(context)
-                                          .primaryText,
+                                      color: AppTheme.of(context).primaryText,
                                     ),
                                   ),
                                   duration: Duration(milliseconds: 4000),
-                                  backgroundColor:
-                                      AppTheme.of(context).error,
+                                  backgroundColor: AppTheme.of(context).error,
                                 ),
                               );
                             },
@@ -333,12 +332,11 @@ class _ModificarMaterialObraWidgetState
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: AppTheme.of(context).error,
-                              textStyle: AppTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
+                              textStyle:
+                                  AppTheme.of(context).titleSmall.override(
+                                        fontFamily: 'Inter',
+                                        color: Colors.white,
+                                      ),
                               elevation: 3.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,
@@ -385,8 +383,7 @@ class _ModificarMaterialObraWidgetState
                                     content: Text(
                                       'Quantidade atualizada com sucesso.',
                                       style: TextStyle(
-                                        color: AppTheme.of(context)
-                                            .primaryText,
+                                        color: AppTheme.of(context).primaryText,
                                       ),
                                     ),
                                     duration: Duration(milliseconds: 4000),
@@ -407,12 +404,11 @@ class _ModificarMaterialObraWidgetState
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: AppTheme.of(context).primary,
-                                textStyle: AppTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Inter',
-                                      color: Colors.white,
-                                    ),
+                                textStyle:
+                                    AppTheme.of(context).titleSmall.override(
+                                          fontFamily: 'Inter',
+                                          color: Colors.white,
+                                        ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
                                   color: Colors.transparent,

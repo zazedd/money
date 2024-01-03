@@ -1,6 +1,8 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -78,7 +80,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: colors.get("background", Colors.black),
             body: Center(
               child: SizedBox(
                 width: 50.0,
@@ -94,9 +96,9 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
         List<TaskRow> homePageEmpreendedorTaskRowList = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: Colors.black,
+          backgroundColor: colors.get("background", Colors.black),
           appBar: AppBar(
-            backgroundColor: Color(0xFF181818),
+            backgroundColor: colors.get("background2", Color(0xFF181818)),
             automaticallyImplyLeading: false,
             title: Align(
               alignment: AlignmentDirectional(-1.0, 0.0),
@@ -187,7 +189,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                             width: double.infinity,
                             height: 130.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFF2B2B2B),
+                              color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 3.0,
@@ -253,18 +255,19 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       maxLines: 1,
-                                                      style: AppTheme
-                                                              .of(context)
-                                                          .displaySmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF14181B),
-                                                            fontSize: 25.0,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                          ),
+                                                      style:
+                                                          AppTheme.of(context)
+                                                              .displaySmall
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Outfit',
+                                                                color: Color(
+                                                                    0xFF14181B),
+                                                                fontSize: 25.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                              ),
                                                       minFontSize: 15.0,
                                                     ),
                                                   ),
@@ -273,14 +276,15 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                       listViewWorkRow.usedBudget
                                                           ?.toString(),
                                                       '0',
-                                                    )}€ usados de ${listViewWorkRow.budget?.toString()}€',
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    )}€ ${lang.get("home_work_budget", "usados de")} ${listViewWorkRow.budget?.toString()}€',
+                                                    style: AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
-                                                          color: Colors.black,
+                                                          color: colors.get(
+                                                              "background",
+                                                              Colors.black),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -295,7 +299,9 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                     1.0, 0.0),
                                                 child: Icon(
                                                   Icons.arrow_forward,
-                                                  color: Colors.black,
+                                                  color: colors.get(
+                                                      "background",
+                                                      Colors.black),
                                                   size: 24.0,
                                                 ),
                                               ),
@@ -341,17 +347,18 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                                       context)
                                                                   .languageCode,
                                                         ),
-                                                        style: AppTheme
-                                                                .of(context)
-                                                            .displaySmall
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
-                                                              fontSize: 10.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .normal,
-                                                            ),
+                                                        style:
+                                                            AppTheme.of(context)
+                                                                .displaySmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontSize:
+                                                                      10.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
+                                                                ),
                                                       ),
                                                     ),
                                                   ),
@@ -393,8 +400,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                         progressColor:
                                                             Color(0xFF168B8B),
                                                         backgroundColor:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .secondaryText,
                                                         barRadius:
                                                             Radius.circular(
@@ -426,17 +432,18 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                                       context)
                                                                   .languageCode,
                                                         ),
-                                                        style: AppTheme
-                                                                .of(context)
-                                                            .displaySmall
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Readex Pro',
-                                                              fontSize: 10.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .normal,
-                                                            ),
+                                                        style:
+                                                            AppTheme.of(context)
+                                                                .displaySmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontSize:
+                                                                      10.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
+                                                                ),
                                                       ),
                                                     ),
                                                   ),
@@ -451,7 +458,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 7.0, 0.0, 0.0),
                                       child: Text(
-                                        'Pode gastar mais ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
+                                        '${lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
                                         textAlign: TextAlign.start,
                                         style: AppTheme.of(context)
                                             .displaySmall

@@ -1,6 +1,8 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'visualizar_pessoa_disponivel_model.dart';
@@ -74,7 +76,7 @@ class _VisualizarPessoaDisponivelWidgetState
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -212,9 +214,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
                                 'Sobre:',
-                                style: AppTheme.of(context)
-                                    .titleSmall
-                                    .override(
+                                style: AppTheme.of(context).titleSmall.override(
                                       fontFamily: 'Inter',
                                       fontSize: 16.0,
                                     ),
@@ -269,9 +269,7 @@ class _VisualizarPessoaDisponivelWidgetState
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
                                 'Obras:',
-                                style: AppTheme.of(context)
-                                    .titleSmall
-                                    .override(
+                                style: AppTheme.of(context).titleSmall.override(
                                       fontFamily: 'Inter',
                                       fontSize: 16.0,
                                     ),

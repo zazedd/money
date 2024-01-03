@@ -3,6 +3,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -58,7 +60,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: colors.get("background", Colors.black),
             body: Center(
               child: SizedBox(
                 width: 50.0,
@@ -77,7 +79,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
             : null;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: Colors.black,
+          backgroundColor: colors.get("background", Colors.black),
           body: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -129,8 +131,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         width: 50.0,
                                         height: 50.0,
                                         child: SpinKitFadingFour(
-                                          color: AppTheme.of(context)
-                                              .primary,
+                                          color: AppTheme.of(context).primary,
                                           size: 50.0,
                                         ),
                                       ),
@@ -231,8 +232,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                     .headlineSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: AppTheme.of(context)
-                                          .primaryText,
+                                      color: AppTheme.of(context).primaryText,
                                     ),
                               ),
                             ],
@@ -249,9 +249,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                   profilePageUsersRow?.email,
                                   'Email',
                                 ),
-                                style: AppTheme.of(context)
-                                    .bodyMedium
-                                    .override(
+                                style: AppTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Inter',
                                       color: Color(0xB3FFFFFF),
                                       fontWeight: FontWeight.w500,
@@ -276,7 +274,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Minha Conta',
+                              lang.get("profile_account", 'Minha Conta'),
                               style: AppTheme.of(context).headlineSmall,
                             ),
                           ],
@@ -307,8 +305,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           width: MediaQuery.sizeOf(context).width * 0.9,
                           height: 60.0,
                           decoration: BoxDecoration(
-                            color:
-                                AppTheme.of(context).primaryBackground,
+                            color: AppTheme.of(context).primaryBackground,
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(
                               color: AppTheme.of(context).alternate,
@@ -323,7 +320,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Editar Perfil',
+                                  lang.get(
+                                      "profile_account_edit", 'Editar Perfil'),
                                   style: AppTheme.of(context)
                                       .displaySmall
                                       .override(
@@ -384,8 +382,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               width: MediaQuery.sizeOf(context).width * 0.9,
                               height: 60.0,
                               decoration: BoxDecoration(
-                                color: AppTheme.of(context)
-                                    .primaryBackground,
+                                color: AppTheme.of(context).primaryBackground,
                                 borderRadius: BorderRadius.circular(8.0),
                                 border: Border.all(
                                   color: AppTheme.of(context).alternate,
@@ -466,12 +463,10 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                               child: Container(
                                 height: 60.0,
                                 decoration: BoxDecoration(
-                                  color: AppTheme.of(context)
-                                      .primaryBackground,
+                                  color: AppTheme.of(context).primaryBackground,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color:
-                                        AppTheme.of(context).alternate,
+                                    color: AppTheme.of(context).alternate,
                                     width: 2.0,
                                   ),
                                 ),
@@ -532,12 +527,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 child: Container(
                                   height: 60.0,
                                   decoration: BoxDecoration(
-                                    color: AppTheme.of(context)
-                                        .primaryBackground,
+                                    color:
+                                        AppTheme.of(context).primaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                     border: Border.all(
-                                      color: AppTheme.of(context)
-                                          .alternate,
+                                      color: AppTheme.of(context).alternate,
                                       width: 2.0,
                                     ),
                                   ),

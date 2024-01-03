@@ -2,6 +2,8 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/auth/user_role.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/language.dart';
@@ -56,7 +58,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -113,8 +115,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         .displaySmall
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: AppTheme.of(context)
-                                              .secondary,
+                                          color: AppTheme.of(context).secondary,
                                           fontSize: 28.0,
                                         ),
                                   ),
@@ -158,16 +159,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           decoration: InputDecoration(
                                             labelText: 'Email',
                                             labelStyle:
-                                                AppTheme.of(context)
-                                                    .bodySmall,
+                                                AppTheme.of(context).bodySmall,
                                             hintText:
                                                 'Introduza o seu email...',
                                             hintStyle:
-                                                AppTheme.of(context)
-                                                    .bodySmall,
+                                                AppTheme.of(context).bodySmall,
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -175,7 +175,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -183,7 +184,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             ),
                                             errorBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -192,7 +194,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -204,8 +207,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 2.0, 20.0, 24.0),
                                           ),
-                                          style: AppTheme.of(context)
-                                              .bodyMedium,
+                                          style:
+                                              AppTheme.of(context).bodyMedium,
                                           validator: _model
                                               .emailLoginControllerValidator
                                               .asValidator(context),
@@ -224,16 +227,15 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           decoration: InputDecoration(
                                             labelText: 'Password',
                                             labelStyle:
-                                                AppTheme.of(context)
-                                                    .bodySmall,
+                                                AppTheme.of(context).bodySmall,
                                             hintText:
                                                 'Introduza a sua password...',
                                             hintStyle:
-                                                AppTheme.of(context)
-                                                    .bodySmall,
+                                                AppTheme.of(context).bodySmall,
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -241,7 +243,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -249,7 +252,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             ),
                                             errorBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -258,7 +262,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
                                               borderSide: BorderSide(
-                                                color: Color(0x00000000),
+                                                color: colors.get(
+                                                    "background", Colors.black),
                                                 width: 1.0,
                                               ),
                                               borderRadius:
@@ -288,8 +293,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               ),
                                             ),
                                           ),
-                                          style: AppTheme.of(context)
-                                              .bodyMedium,
+                                          style:
+                                              AppTheme.of(context).bodyMedium,
                                           validator: _model
                                               .passwordLoginControllerValidator
                                               .asValidator(context),
@@ -356,11 +361,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             iconPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: AppTheme.of(context)
-                                                .primary,
+                                            color: AppTheme.of(context).primary,
                                             textStyle:
-                                                AppTheme.of(context)
-                                                    .titleSmall,
+                                                AppTheme.of(context).titleSmall,
                                             elevation: 3.0,
                                             borderSide: BorderSide(
                                               color: Colors.transparent,
@@ -392,15 +395,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color: Color(0x001A1F24),
-                                              textStyle:
-                                                  AppTheme.of(context)
-                                                      .bodySmall
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        decoration:
-                                                            TextDecoration
-                                                                .underline,
-                                                      ),
+                                              textStyle: AppTheme.of(context)
+                                                  .bodySmall
+                                                  .override(
+                                                    fontFamily: 'Inter',
+                                                    decoration: TextDecoration
+                                                        .underline,
+                                                  ),
                                               elevation: 0.0,
                                               borderSide: BorderSide(
                                                 color: Colors.transparent,
@@ -449,9 +450,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           children: [
                                             Text(
                                               'Não tem conta?',
-                                              style:
-                                                  AppTheme.of(context)
-                                                      .bodyMedium,
+                                              style: AppTheme.of(context)
+                                                  .bodyMedium,
                                             ),
                                             Padding(
                                               padding: EdgeInsetsDirectional
@@ -459,22 +459,20 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                       24.0, 0.0, 4.0, 0.0),
                                               child: Text(
                                                 'Sign Up',
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color: AppTheme
-                                                                  .of(context)
+                                                style: AppTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Inter',
+                                                      color:
+                                                          AppTheme.of(context)
                                                               .primary,
-                                                        ),
+                                                    ),
                                               ),
                                             ),
                                             Icon(
                                               Icons.arrow_forward_rounded,
                                               color:
-                                                  AppTheme.of(context)
-                                                      .primary,
+                                                  AppTheme.of(context).primary,
                                               size: 24.0,
                                             ),
                                           ],

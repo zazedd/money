@@ -2,6 +2,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'visualizar_tarefa_model.dart';
@@ -73,7 +75,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -108,7 +110,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                       child: Text(
-                        'Tarefa',
+                        lang.get("work_tasks", "Tarefas"),
                         style: AppTheme.of(context).headlineSmall,
                       ),
                     ),
@@ -138,8 +140,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: AppTheme.of(
-                                                          context)
+                                                  color: AppTheme.of(context)
                                                       .success,
                                                 ),
                                           ),
@@ -148,8 +149,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                     ),
                                     Icon(
                                       Icons.done,
-                                      color:
-                                          AppTheme.of(context).success,
+                                      color: AppTheme.of(context).success,
                                       size: 20.0,
                                     ),
                                   ],
@@ -179,8 +179,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: AppTheme.of(
-                                                          context)
+                                                  color: AppTheme.of(context)
                                                       .warning,
                                                 ),
                                           ),
@@ -189,8 +188,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                     ),
                                     Icon(
                                       Icons.keyboard_control_sharp,
-                                      color:
-                                          AppTheme.of(context).warning,
+                                      color: AppTheme.of(context).warning,
                                       size: 20.0,
                                     ),
                                   ],
@@ -220,8 +218,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                                 .headlineSmall
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: AppTheme.of(
-                                                          context)
+                                                  color: AppTheme.of(context)
                                                       .error,
                                                 ),
                                           ),
@@ -380,9 +377,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Descrição:',
-                              style: AppTheme.of(context)
-                                  .titleSmall
-                                  .override(
+                              style: AppTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter',
                                     fontSize: 18.0,
                                   ),
@@ -437,9 +432,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
                               'Data de Fim:',
-                              style: AppTheme.of(context)
-                                  .titleSmall
-                                  .override(
+                              style: AppTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter',
                                     fontSize: 18.0,
                                   ),
@@ -501,8 +494,8 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                       content: Text(
                                         'Obrigado por concluír a sua tarefa.',
                                         style: TextStyle(
-                                          color: AppTheme.of(context)
-                                              .primaryText,
+                                          color:
+                                              AppTheme.of(context).primaryText,
                                         ),
                                       ),
                                       duration: Duration(milliseconds: 4000),
@@ -523,12 +516,11 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: AppTheme.of(context).success,
-                                  textStyle: AppTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        color: Colors.white,
-                                      ),
+                                  textStyle:
+                                      AppTheme.of(context).titleSmall.override(
+                                            fontFamily: 'Inter',
+                                            color: Colors.white,
+                                          ),
                                   elevation: 3.0,
                                   borderSide: BorderSide(
                                     color: Colors.transparent,

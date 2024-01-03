@@ -2,6 +2,8 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -77,7 +79,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: colors.get("background", Colors.black),
             body: Center(
               child: SizedBox(
                 width: 50.0,
@@ -93,9 +95,9 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
         List<TaskRow> homePageTrabalhadorTaskRowList = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: Colors.black,
+          backgroundColor: colors.get("background", Colors.black),
           appBar: AppBar(
-            backgroundColor: Color(0xFF181818),
+            backgroundColor: colors.get("background2", Color(0xFF181818)),
             automaticallyImplyLeading: false,
             title: Align(
               alignment: AlignmentDirectional(-1.0, 0.0),
@@ -188,7 +190,8 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                             width: double.infinity,
                             height: 130.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFF2B2B2B),
+                              color: colors.get(
+                                  "secondary_background", Color(0xFF2B2B2B)),
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 3.0,
@@ -235,17 +238,15 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                   maxChars: 18,
                                                   replacement: '…',
                                                 ),
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .displaySmall
-                                                        .override(
-                                                          fontFamily: 'Outfit',
-                                                          color:
-                                                              Color(0xFF14181B),
-                                                          fontSize: 25.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
+                                                style: AppTheme.of(context)
+                                                    .displaySmall
+                                                    .override(
+                                                      fontFamily: 'Outfit',
+                                                      color: Color(0xFF14181B),
+                                                      fontSize: 25.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
                                               ),
                                               Expanded(
                                                 child: Align(
@@ -254,7 +255,9 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                           1.0, 0.0),
                                                   child: Icon(
                                                     Icons.arrow_forward,
-                                                    color: Colors.black,
+                                                    color: colors.get(
+                                                        "background",
+                                                        Colors.black),
                                                     size: 24.0,
                                                   ),
                                                 ),
@@ -267,7 +270,8 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0xFF2B2B2B),
+                                      color: colors.get("secondary_background",
+                                          Color(0xFF2B2B2B)),
                                     ),
                                     child: Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
@@ -292,8 +296,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                             context)
                                                         .languageCode,
                                                   ),
-                                                  style: AppTheme.of(
-                                                          context)
+                                                  style: AppTheme.of(context)
                                                       .displaySmall
                                                       .override(
                                                         fontFamily:
@@ -359,8 +362,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                             context)
                                                         .languageCode,
                                                   ),
-                                                  style: AppTheme.of(
-                                                          context)
+                                                  style: AppTheme.of(context)
                                                       .displaySmall
                                                       .override(
                                                         fontFamily:

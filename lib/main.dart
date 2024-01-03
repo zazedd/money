@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Money',
+      title: lang.get("title", 'Money'),
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -158,7 +158,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = userTabs?.keys.toList()[i] ?? 'materiais';
         }),
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         selectedItemColor: Color(0xFF1ED3D3),
         unselectedItemColor: Color(0xFFB2B2B2),
         showSelectedLabels: true,
@@ -172,8 +172,8 @@ class _NavBarPageState extends State<NavBarPage> {
                 label: key == 'profilePage'
                     ? 'Perfil'
                     : key == 'materiais'
-                        ? 'Materiais'
-                        : 'Home',
+                        ? lang.get("materal_title", 'Materiais')
+                        : lang.get("home_home", 'Home'),
                 tooltip: '',
               );
             }).toList() ??
@@ -181,7 +181,7 @@ class _NavBarPageState extends State<NavBarPage> {
               BottomNavigationBarItem(
                   icon: getIcon('homePageTrabalhador'),
                   activeIcon: getActiveIcon('homePageTrabalhador'),
-                  label: 'Home')
+                  label: lang.get("home_home", 'Home'))
             ],
       ),
     );

@@ -1,6 +1,8 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
@@ -117,7 +119,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           context.pushNamed('criarObra');
@@ -131,12 +133,12 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         title: Align(
           alignment: AlignmentDirectional(-1.0, 0.0),
           child: Text(
-            'Home',
+            lang.get("home_home", 'Home'),
             textAlign: TextAlign.start,
             style: AppTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
@@ -190,7 +192,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                             width: double.infinity,
                             height: 50.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFF2B2B2B),
+                              color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 3.0,
@@ -338,7 +340,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                     width: double.infinity,
                                     height: 130.0,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFF2B2B2B),
+                                      color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                                       boxShadow: [
                                         BoxShadow(
                                           blurRadius: 3.0,
@@ -418,8 +420,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                   TextAlign
                                                                       .start,
                                                               maxLines: 1,
-                                                              style: AppTheme
-                                                                      .of(context)
+                                                              style: AppTheme.of(
+                                                                      context)
                                                                   .displaySmall
                                                                   .override(
                                                                     fontFamily:
@@ -441,9 +443,9 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                   .usedBudget
                                                                   ?.toString(),
                                                               '0',
-                                                            )}€ usados de ${carouselWorkRow.budget?.toString()}€',
-                                                            style: AppTheme
-                                                                    .of(context)
+                                                            )}€ ${lang.get("home_work_budget", "usados de")} ${carouselWorkRow.budget?.toString()}€',
+                                                            style: AppTheme.of(
+                                                                    context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -468,7 +470,9 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                 1.0, 0.0),
                                                         child: Icon(
                                                           Icons.arrow_forward,
-                                                          color: Colors.black,
+                                                          color: colors.get(
+                                                              "background",
+                                                              Colors.black),
                                                           size: 24.0,
                                                         ),
                                                       ),
@@ -645,8 +649,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -680,8 +683,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -711,12 +713,11 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Pode gastar mais ${((carouselWorkRow.budget! - carouselWorkRow.usedBudget!) / (((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
+                                                        '${lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((carouselWorkRow.budget! - carouselWorkRow.usedBudget!) / (((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${lang.get("day", "dia")}s',
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -782,7 +783,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Estatísticas',
+                                    lang.get("home_statistics", 'Estatísticas'),
                                     style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
@@ -807,8 +808,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                           width: 50.0,
                                           height: 50.0,
                                           child: SpinKitFadingFour(
-                                            color: AppTheme.of(context)
-                                                .primary,
+                                            color: AppTheme.of(context).primary,
                                             size: 50.0,
                                           ),
                                         ),
@@ -847,10 +847,11 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Text(
-                                                    'Obras em Curso',
+                                                    lang.get(
+                                                        "home_statistics_work_ongoing",
+                                                        "Obras em curso"),
                                                     textAlign: TextAlign.start,
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    style: AppTheme.of(context)
                                                         .headlineSmall
                                                         .override(
                                                           fontFamily:
@@ -877,8 +878,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -903,10 +903,11 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Text(
-                                                    'Obras Completas',
+                                                    lang.get(
+                                                        "home_statistics_work_finished",
+                                                        "Obras completas"),
                                                     textAlign: TextAlign.start,
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    style: AppTheme.of(context)
                                                         .headlineSmall
                                                         .override(
                                                           fontFamily:
@@ -933,8 +934,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -955,10 +955,11 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Text(
-                                                  'Obras Canceladas',
+                                                  lang.get(
+                                                      "home_statistics_work_canceled",
+                                                      "Obras canceladas"),
                                                   textAlign: TextAlign.start,
-                                                  style: AppTheme.of(
-                                                          context)
+                                                  style: AppTheme.of(context)
                                                       .headlineSmall
                                                       .override(
                                                         fontFamily:
@@ -985,8 +986,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .displaySmall
                                                               .override(
                                                                 fontFamily:
@@ -1030,7 +1030,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Últimos 30 dias',
+                                    lang.get("home_statistics_last_30days",
+                                        'Últimos 30 dias'),
                                     style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
@@ -1065,8 +1066,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 width: 50.0,
                                                 height: 50.0,
                                                 child: SpinKitFadingFour(
-                                                  color: AppTheme.of(
-                                                          context)
+                                                  color: AppTheme.of(context)
                                                       .primary,
                                                   size: 50.0,
                                                 ),
@@ -1102,10 +1102,11 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Receitas',
+                                                    lang.get(
+                                                        "home_statistics_revenues",
+                                                        "Receitas"),
                                                     textAlign: TextAlign.start,
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    style: AppTheme.of(context)
                                                         .headlineSmall,
                                                   ),
                                                   Padding(
@@ -1125,8 +1126,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .displaySmall
                                                               .override(
                                                                 fontFamily:
@@ -1168,8 +1168,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                           }(incomeCardFundsBankRowList.map((e) => e.quant).withoutNulls.toList())}%',
                                                           textAlign:
                                                               TextAlign.start,
-                                                          style: AppTheme
-                                                                  .of(context)
+                                                          style: AppTheme.of(
+                                                                  context)
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
@@ -1182,8 +1182,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         Icon(
                                                           Icons
                                                               .trending_up_rounded,
-                                                          color: AppTheme
-                                                                  .of(context)
+                                                          color: AppTheme.of(
+                                                                  context)
                                                               .success,
                                                           size: 24.0,
                                                         ),
@@ -1215,8 +1215,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                   width: 50.0,
                                                   height: 50.0,
                                                   child: SpinKitFadingFour(
-                                                    color: AppTheme.of(
-                                                            context)
+                                                    color: AppTheme.of(context)
                                                         .primary,
                                                     size: 50.0,
                                                   ),
@@ -1251,12 +1250,13 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      'Despesas',
+                                                      lang.get(
+                                                          "home_statistics_expenses",
+                                                          "Despesas"),
                                                       textAlign:
                                                           TextAlign.start,
                                                       style:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .headlineSmall,
                                                     ),
                                                     Padding(
@@ -1279,8 +1279,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                         textAlign:
                                                             TextAlign.start,
                                                         style:
-                                                            AppTheme.of(
-                                                                    context)
+                                                            AppTheme.of(context)
                                                                 .displaySmall
                                                                 .override(
                                                                   fontFamily:
@@ -1323,8 +1322,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                             }(spendingCardMovementRowList.map((e) => e.cost).withoutNulls.toList())}%',
                                                             textAlign:
                                                                 TextAlign.start,
-                                                            style: AppTheme
-                                                                    .of(context)
+                                                            style: AppTheme.of(
+                                                                    context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
@@ -1337,8 +1336,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                           Icon(
                                                             Icons
                                                                 .trending_up_rounded,
-                                                            color: AppTheme
-                                                                    .of(context)
+                                                            color: AppTheme.of(
+                                                                    context)
                                                                 .error,
                                                             size: 24.0,
                                                           ),

@@ -1,5 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/radio_button.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
@@ -55,7 +57,7 @@ class _AddMaterialToStorageWidgetState
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color(0xFF2B2B2B),
+        color: colors.get("secondary_background", Color(0xFF2B2B2B)),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -112,33 +114,32 @@ class _AddMaterialToStorageWidgetState
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Nome',
-                              labelStyle:
-                                  AppTheme.of(context).bodySmall,
+                              labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0x00000000),
+                                  color: colors.get("background", Colors.black),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(20.0),
@@ -178,28 +179,28 @@ class _AddMaterialToStorageWidgetState
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -238,28 +239,28 @@ class _AddMaterialToStorageWidgetState
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             errorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Color(0x00000000),
+                                color: colors.get("background", Colors.black),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(20.0),
@@ -291,8 +292,7 @@ class _AddMaterialToStorageWidgetState
                   buttonPosition: RadioButtonPosition.left,
                   direction: Axis.horizontal,
                   radioButtonColor: AppTheme.of(context).primary,
-                  inactiveRadioButtonColor:
-                      AppTheme.of(context).secondaryText,
+                  inactiveRadioButtonColor: AppTheme.of(context).secondaryText,
                   toggleable: false,
                   horizontalAlignment: WrapAlignment.start,
                   verticalAlignment: WrapCrossAlignment.start,
@@ -336,11 +336,10 @@ class _AddMaterialToStorageWidgetState
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: AppTheme.of(context).success,
-                      textStyle:
-                          AppTheme.of(context).titleSmall.override(
-                                fontFamily: 'Inter',
-                                color: Colors.white,
-                              ),
+                      textStyle: AppTheme.of(context).titleSmall.override(
+                            fontFamily: 'Inter',
+                            color: Colors.white,
+                          ),
                       elevation: 3.0,
                       borderSide: BorderSide(
                         color: Colors.transparent,

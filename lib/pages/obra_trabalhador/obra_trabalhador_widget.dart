@@ -5,6 +5,8 @@ import '/components/visualizar_pedido/visualizar_pedido_widget.dart';
 import '/components/visualizar_tarefa/visualizar_tarefa_widget.dart';
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -102,7 +104,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await showModalBottomSheet(
@@ -131,7 +133,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         leading: CustomIconButton(
           borderColor: Colors.transparent,
@@ -148,7 +150,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
           },
         ),
         title: Text(
-          'Obra',
+          lang.get("work_title", "Obra"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20,
@@ -176,7 +178,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                         width: double.infinity,
                         height: 130,
                         decoration: BoxDecoration(
-                          color: Color(0xFF2B2B2B),
+                          color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -223,8 +225,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                 maxChars: 18,
                                                 replacement: '…',
                                               ),
-                                              style: AppTheme.of(
-                                                      context)
+                                              style: AppTheme.of(context)
                                                   .displaySmall
                                                   .override(
                                                     fontFamily: 'Outfit',
@@ -269,16 +270,14 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                           context)
                                                       .languageCode,
                                                 ),
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .displaySmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 10,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
+                                                style: AppTheme.of(context)
+                                                    .displaySmall
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                    ),
                                               ),
                                             ),
                                           ),
@@ -315,16 +314,14 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                           context)
                                                       .languageCode,
                                                 ),
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .displaySmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 10,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
+                                                style: AppTheme.of(context)
+                                                    .displaySmall
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                    ),
                                               ),
                                             ),
                                           ),
@@ -348,7 +345,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
               child: Container(
                 width: MediaQuery.sizeOf(context).width,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: colors.get("background", Colors.black),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0),
                     bottomRight: Radius.circular(0),
@@ -405,9 +402,8 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                               width: 50,
                                               height: 50,
                                               child: SpinKitFadingFour(
-                                                color:
-                                                    AppTheme.of(context)
-                                                        .primary,
+                                                color: AppTheme.of(context)
+                                                    .primary,
                                                 size: 50,
                                               ),
                                             ),
@@ -641,7 +637,8 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          'Os seus Pedidos',
+                                          lang.get("work_requests",
+                                              "Os seus pedidos"),
                                           style: AppTheme.of(context)
                                               .headlineMedium,
                                         ),
@@ -670,9 +667,8 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                               width: 50,
                                               height: 50,
                                               child: SpinKitFadingFour(
-                                                color:
-                                                    AppTheme.of(context)
-                                                        .primary,
+                                                color: AppTheme.of(context)
+                                                    .primary,
                                                 size: 50,
                                               ),
                                             ),

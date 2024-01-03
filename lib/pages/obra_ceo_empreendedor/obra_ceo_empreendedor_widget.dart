@@ -10,6 +10,8 @@ import '/components/visualizar_pessoa_disponivel/visualizar_pessoa_disponivel_wi
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -108,7 +110,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await showModalBottomSheet(
@@ -138,7 +140,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         leading: CustomIconButton(
           borderColor: Colors.transparent,
@@ -207,7 +209,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                           width: double.infinity,
                           height: 130,
                           decoration: BoxDecoration(
-                            color: Color(0xFF2B2B2B),
+                            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
                             boxShadow: [
                               BoxShadow(
                                 blurRadius: 3,
@@ -270,8 +272,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     ),
                                                     textAlign: TextAlign.start,
                                                     maxLines: 1,
-                                                    style: AppTheme.of(
-                                                            context)
+                                                    style: AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
                                                           fontFamily: 'Outfit',
@@ -294,13 +295,14 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                         ?.toString(),
                                                     '0',
                                                   )}€',
-                                                  style: AppTheme.of(
-                                                          context)
+                                                  style: AppTheme.of(context)
                                                       .displaySmall
                                                       .override(
                                                         fontFamily:
                                                             'Readex Pro',
-                                                        color: Colors.black,
+                                                        color: colors.get(
+                                                            "background",
+                                                            Colors.black),
                                                         fontSize: 12,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -320,7 +322,9 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                   width: 30,
                                                   height: 30,
                                                   decoration: BoxDecoration(
-                                                    color: Colors.black,
+                                                    color: colors.get(
+                                                        "background",
+                                                        Colors.black),
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Icon(
@@ -370,8 +374,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                 .languageCode,
                                                       ),
                                                       style:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .displaySmall
                                                               .override(
                                                                 fontFamily:
@@ -422,8 +425,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                       progressColor:
                                                           Color(0xFF168B8B),
                                                       backgroundColor:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .secondaryText,
                                                       barRadius:
                                                           Radius.circular(16),
@@ -450,8 +452,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                                 .languageCode,
                                                       ),
                                                       style:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .displaySmall
                                                               .override(
                                                                 fontFamily:
@@ -483,13 +484,11 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             child: Text(
                                               'Completa',
                                               textAlign: TextAlign.start,
-                                              style: AppTheme.of(
-                                                      context)
+                                              style: AppTheme.of(context)
                                                   .displaySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: AppTheme.of(
-                                                            context)
+                                                    color: AppTheme.of(context)
                                                         .success,
                                                     fontSize: 9,
                                                     fontWeight: FontWeight.w500,
@@ -507,13 +506,11 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             child: Text(
                                               'Cancelada',
                                               textAlign: TextAlign.start,
-                                              style: AppTheme.of(
-                                                      context)
+                                              style: AppTheme.of(context)
                                                   .displaySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: AppTheme.of(
-                                                            context)
+                                                    color: AppTheme.of(context)
                                                         .error,
                                                     fontSize: 9,
                                                     fontWeight: FontWeight.w500,
@@ -531,12 +528,12 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             child: Text(
                                               'Pode gastar mais ${((widget.obra!.budget! - widget.obra!.usedBudget!) / (((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
                                               textAlign: TextAlign.start,
-                                              style: AppTheme.of(
-                                                      context)
+                                              style: AppTheme.of(context)
                                                   .displaySmall
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0x8BABB9BF),
+                                                    color: colors.get("accent3",
+                                                        Color(0x8BABB9BF)),
                                                     fontSize: 9,
                                                     fontWeight: FontWeight.w500,
                                                   ),
@@ -583,7 +580,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                   return Container(
                     width: MediaQuery.sizeOf(context).width,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: colors.get("background", Colors.black),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0),
                         bottomRight: Radius.circular(0),
@@ -615,10 +612,10 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Trabalhadores',
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .headlineMedium,
+                                                lang.get("work_workers",
+                                                    "Trabalhadores"),
+                                                style: AppTheme.of(context)
+                                                    .headlineMedium,
                                               ),
                                             ],
                                           ),
@@ -640,8 +637,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .primary,
                                                       size: 50,
                                                     ),
@@ -678,8 +674,8 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                           height: 50,
                                                           child:
                                                               SpinKitFadingFour(
-                                                            color: AppTheme
-                                                                    .of(context)
+                                                            color: AppTheme.of(
+                                                                    context)
                                                                 .primary,
                                                             size: 50,
                                                           ),
@@ -951,10 +947,10 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Tarefas',
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .headlineMedium,
+                                                lang.get(
+                                                    "work_tasks", "Tarefas"),
+                                                style: AppTheme.of(context)
+                                                    .headlineMedium,
                                               ),
                                             ],
                                           ),
@@ -983,8 +979,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .primary,
                                                       size: 50,
                                                     ),
@@ -1291,10 +1286,10 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Movimentos',
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .headlineMedium,
+                                                lang.get("moviments_title",
+                                                    "Movimentos"),
+                                                style: AppTheme.of(context)
+                                                    .headlineMedium,
                                               ),
                                             ],
                                           ),
@@ -1321,8 +1316,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .primary,
                                                       size: 50,
                                                     ),
@@ -1601,9 +1595,8 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             children: [
                                               Text(
                                                 'Pedidos',
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .headlineMedium,
+                                                style: AppTheme.of(context)
+                                                    .headlineMedium,
                                               ),
                                             ],
                                           ),
@@ -1629,8 +1622,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .primary,
                                                       size: 50,
                                                     ),
@@ -1966,9 +1958,8 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             children: [
                                               Text(
                                                 'Materiais',
-                                                style:
-                                                    AppTheme.of(context)
-                                                        .headlineMedium,
+                                                style: AppTheme.of(context)
+                                                    .headlineMedium,
                                               ),
                                             ],
                                           ),
@@ -1997,8 +1988,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                     height: 50,
                                                     child: SpinKitFadingFour(
                                                       color:
-                                                          AppTheme.of(
-                                                                  context)
+                                                          AppTheme.of(context)
                                                               .primary,
                                                       size: 50,
                                                     ),

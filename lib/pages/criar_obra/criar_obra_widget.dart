@@ -2,6 +2,8 @@ import '/backend/supabase/supabase.dart';
 import '/geral/drop_down.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
+import '/geral/language.dart';
+import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/form_field_controller.dart';
@@ -61,9 +63,9 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.black,
+      backgroundColor: colors.get("background", Colors.black),
       appBar: AppBar(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         leading: CustomIconButton(
           borderColor: Colors.transparent,
@@ -120,28 +122,28 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     errorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
@@ -168,28 +170,28 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     errorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
@@ -221,28 +223,28 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     errorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.black,
+                        color: colors.get("background", Colors.black),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
@@ -294,16 +296,14 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                                     AppTheme.of(context).primary,
                                 headerForegroundColor:
                                     AppTheme.of(context).info,
-                                headerTextStyle: AppTheme.of(context)
-                                    .headlineLarge
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      fontSize: 32.0,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                                headerTextStyle:
+                                    AppTheme.of(context).headlineLarge.override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 32.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                 pickerBackgroundColor:
-                                    AppTheme.of(context)
-                                        .secondaryBackground,
+                                    AppTheme.of(context).secondaryBackground,
                                 pickerForegroundColor:
                                     AppTheme.of(context).primaryText,
                                 selectedDateTimeBackgroundColor:
@@ -335,11 +335,10 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: AppTheme.of(context).primary,
-                          textStyle:
-                              AppTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
+                          textStyle: AppTheme.of(context).titleSmall.override(
+                                fontFamily: 'Inter',
+                                color: Colors.white,
+                              ),
                           elevation: 3.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,
@@ -380,8 +379,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                   pickerBackgroundColor:
-                                      AppTheme.of(context)
-                                          .secondaryBackground,
+                                      AppTheme.of(context).secondaryBackground,
                                   pickerForegroundColor:
                                       AppTheme.of(context).primaryText,
                                   selectedDateTimeBackgroundColor:
@@ -413,9 +411,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: AppTheme.of(context).primary,
-                            textStyle: AppTheme.of(context)
-                                .titleSmall
-                                .override(
+                            textStyle: AppTheme.of(context).titleSmall.override(
                                   fontFamily: 'Inter',
                                   color: Colors.white,
                                 ),
@@ -491,8 +487,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                           color: AppTheme.of(context).secondaryText,
                           size: 24.0,
                         ),
-                        fillColor:
-                            AppTheme.of(context).secondaryBackground,
+                        fillColor: AppTheme.of(context).secondaryBackground,
                         elevation: 2.0,
                         borderColor: AppTheme.of(context).alternate,
                         borderWidth: 2.0,
@@ -552,8 +547,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                               ),
                             ),
                             duration: Duration(milliseconds: 4000),
-                            backgroundColor:
-                                AppTheme.of(context).secondary,
+                            backgroundColor: AppTheme.of(context).secondary,
                           ),
                         );
 

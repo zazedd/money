@@ -4,6 +4,8 @@ import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/form_field_controller.dart';
+import '/geral/colors.dart';
+import '/geral/language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'modificar_obra_model.dart';
@@ -92,7 +94,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
         return Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Color(0xFF2B2B2B),
+            color: colors.get("secondary_background", Color(0xFF2B2B2B)),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
@@ -151,34 +153,36 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Nome',
-                                  labelStyle:
-                                      AppTheme.of(context).bodySmall,
-                                  hintStyle:
-                                      AppTheme.of(context).bodySmall,
+                                  labelStyle: AppTheme.of(context).bodySmall,
+                                  hintStyle: AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: colors.get(
+                                          "background", Colors.black),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: colors.get(
+                                          "background", Colors.black),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: colors.get(
+                                          "background", Colors.black),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: colors.get(
+                                          "background", Colors.black),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(20.0),
@@ -216,34 +220,36 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Budget',
-                                labelStyle:
-                                    AppTheme.of(context).bodySmall,
-                                hintStyle:
-                                    AppTheme.of(context).bodySmall,
+                                labelStyle: AppTheme.of(context).bodySmall,
+                                hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
@@ -279,34 +285,36 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Descrição',
-                                labelStyle:
-                                    AppTheme.of(context).bodySmall,
-                                hintStyle:
-                                    AppTheme.of(context).bodySmall,
+                                labelStyle: AppTheme.of(context).bodySmall,
+                                hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 focusedErrorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    color: Color(0x00000000),
+                                    color:
+                                        colors.get("background", Colors.black),
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(20.0),
@@ -351,8 +359,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                     width: 50.0,
                                     height: 50.0,
                                     child: SpinKitFadingFour(
-                                      color:
-                                          AppTheme.of(context).primary,
+                                      color: AppTheme.of(context).primary,
                                       size: 50.0,
                                     ),
                                   ),
@@ -382,19 +389,16 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                     setState(() => _model.dropDownValue = val),
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
-                                textStyle:
-                                    AppTheme.of(context).bodyMedium,
+                                textStyle: AppTheme.of(context).bodyMedium,
                                 hintText: 'Selecione um Empreiteiro..',
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
-                                  color: AppTheme.of(context)
-                                      .secondaryText,
+                                  color: AppTheme.of(context).secondaryText,
                                   size: 24.0,
                                 ),
                                 fillColor: Colors.black,
                                 elevation: 2.0,
-                                borderColor:
-                                    AppTheme.of(context).alternate,
+                                borderColor: AppTheme.of(context).alternate,
                                 borderWidth: 2.0,
                                 borderRadius: 8.0,
                                 margin: EdgeInsetsDirectional.fromSTEB(
@@ -434,27 +438,23 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                         AppTheme.of(context).primary,
                                     headerForegroundColor:
                                         AppTheme.of(context).info,
-                                    headerTextStyle:
-                                        AppTheme.of(context)
-                                            .headlineLarge
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 32.0,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                    pickerBackgroundColor:
-                                        AppTheme.of(context)
-                                            .secondaryBackground,
+                                    headerTextStyle: AppTheme.of(context)
+                                        .headlineLarge
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          fontSize: 32.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                    pickerBackgroundColor: AppTheme.of(context)
+                                        .secondaryBackground,
                                     pickerForegroundColor:
-                                        AppTheme.of(context)
-                                            .primaryText,
+                                        AppTheme.of(context).primaryText,
                                     selectedDateTimeBackgroundColor:
                                         AppTheme.of(context).primary,
                                     selectedDateTimeForegroundColor:
                                         AppTheme.of(context).info,
                                     actionButtonForegroundColor:
-                                        AppTheme.of(context)
-                                            .primaryText,
+                                        AppTheme.of(context).primaryText,
                                     iconSize: 24.0,
                                   );
                                 },
@@ -478,12 +478,11 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: AppTheme.of(context).primary,
-                              textStyle: AppTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
+                              textStyle:
+                                  AppTheme.of(context).titleSmall.override(
+                                        fontFamily: 'Inter',
+                                        color: Colors.white,
+                                      ),
                               elevation: 3.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,
@@ -512,27 +511,24 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                           AppTheme.of(context).primary,
                                       headerForegroundColor:
                                           AppTheme.of(context).info,
-                                      headerTextStyle:
-                                          AppTheme.of(context)
-                                              .headlineLarge
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                fontSize: 32.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
+                                      headerTextStyle: AppTheme.of(context)
+                                          .headlineLarge
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 32.0,
+                                            fontWeight: FontWeight.w600,
+                                          ),
                                       pickerBackgroundColor:
                                           AppTheme.of(context)
                                               .secondaryBackground,
                                       pickerForegroundColor:
-                                          AppTheme.of(context)
-                                              .primaryText,
+                                          AppTheme.of(context).primaryText,
                                       selectedDateTimeBackgroundColor:
                                           AppTheme.of(context).primary,
                                       selectedDateTimeForegroundColor:
                                           AppTheme.of(context).info,
                                       actionButtonForegroundColor:
-                                          AppTheme.of(context)
-                                              .primaryText,
+                                          AppTheme.of(context).primaryText,
                                       iconSize: 24.0,
                                     );
                                   },
@@ -556,12 +552,11 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: AppTheme.of(context).primary,
-                                textStyle: AppTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Inter',
-                                      color: Colors.white,
-                                    ),
+                                textStyle:
+                                    AppTheme.of(context).titleSmall.override(
+                                          fontFamily: 'Inter',
+                                          color: Colors.white,
+                                        ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
                                   color: Colors.transparent,
@@ -638,13 +633,11 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               content: Text(
                                 'Obra atualizada com sucesso.',
                                 style: TextStyle(
-                                  color:
-                                      AppTheme.of(context).primaryText,
+                                  color: AppTheme.of(context).primaryText,
                                 ),
                               ),
                               duration: Duration(milliseconds: 4000),
-                              backgroundColor:
-                                  AppTheme.of(context).success,
+                              backgroundColor: AppTheme.of(context).success,
                             ),
                           );
                         },
@@ -660,11 +653,10 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: AppTheme.of(context).success,
-                          textStyle:
-                              AppTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Inter',
-                                    color: Colors.white,
-                                  ),
+                          textStyle: AppTheme.of(context).titleSmall.override(
+                                fontFamily: 'Inter',
+                                color: Colors.white,
+                              ),
                           elevation: 3.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,
