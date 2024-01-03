@@ -7,11 +7,19 @@ class ColorMap {
   Map<String, Color> colors = Map();
 
   Future<void> fetchData() async {
-    var json =
-        SupabaseBackend.client.storage.from('jsons').download('cores.json');
-    var value = await json;
-    setCores(utf8.decode(value));
-    print("Fetched Language Data");
+    try {
+      var json =
+          SupabaseBackend.client.storage.from('jsons').download('cores.json');
+      var value = await json;
+
+      setCores(utf8.decode(value));
+      print("Fetched Language Data");
+    } catch (e) {
+      colors = {};
+      print(
+          "cores.json could not be fetched, default color values will be used instead.");
+      return;
+    }
   }
 
   void setCores(String body) {

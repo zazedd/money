@@ -109,7 +109,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    lang.get("WELCOME", 'err'),
+                                    lang.get("login_title", 'err'),
                                     textAlign: TextAlign.center,
                                     style: AppTheme.of(context)
                                         .displaySmall

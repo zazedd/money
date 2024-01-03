@@ -6,11 +6,18 @@ class Language {
   Map<String, String> linguagem = Map();
 
   Future<void> fetchData() async {
-    var json =
-        SupabaseBackend.client.storage.from('jsons').download('textos.json');
-    var value = await json; // await the download
-    setTextos(utf8.decode(value));
-    print("Fetched Language Data");
+    try {
+      var json =
+          SupabaseBackend.client.storage.from('jsons').download('textos.json');
+      var value = await json; // await the download
+
+      setTextos(utf8.decode(value));
+      print("Fetched Language Data");
+    } catch (e) {
+      linguagem = {};
+      print(
+          "textos.json could not be fetched, default strings will be used instead");
+    }
   }
 
   void setTextos(String body) {
