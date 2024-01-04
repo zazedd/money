@@ -95,7 +95,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                 child: Text(
-                  'Fazer Pedido',
+                  lang.get("add_request_title", "Fazer Pedido"),
                   style: AppTheme.of(context).headlineSmall,
                 ),
               ),
@@ -117,7 +117,8 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                             focusNode: _model.nomeFocusNode1,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Nome do Material',
+                              labelText: lang.get(
+                                  "add_request_name", "Nome do Material"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
