@@ -257,7 +257,7 @@ class works_carousel extends StatelessWidget {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 7.0, 0.0, 0.0),
                                 child: Text(
-                                  'Completa',
+                                  lang.get("completed", "Completa"),
                                   textAlign: TextAlign.start,
                                   style: AppTheme.of(context)
                                       .displaySmall
@@ -277,7 +277,7 @@ class works_carousel extends StatelessWidget {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 7.0, 0.0, 0.0),
                                 child: Text(
-                                  'Cancelada',
+                                  lang.get("canceled", "Cancelada"),
                                   textAlign: TextAlign.start,
                                   style: AppTheme.of(context)
                                       .displaySmall
