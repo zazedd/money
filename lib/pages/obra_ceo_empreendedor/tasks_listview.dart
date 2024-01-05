@@ -2,6 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/modificar_tarefa/modificar_tarefa_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -181,7 +182,7 @@ class tasks_listview extends StatelessWidget {
                                 return Text(
                                   valueOrDefault<String>(
                                     textUsersRow?.name,
-                                    'Nome',
+                                    lang.get("name", "Nome"),
                                   ),
                                   style:
                                       AppTheme.of(context).bodySmall.override(

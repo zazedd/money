@@ -242,7 +242,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                     child: Text(
                                       valueOrDefault<String>(
                                         baBankRow?.name,
-                                        'Nome',
+                                        lang.get("name", "Nome"),
                                       ),
                                       style: AppTheme.of(context)
                                           .displaySmall

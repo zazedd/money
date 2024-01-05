@@ -5,6 +5,7 @@ import '/geral/util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import '/geral/language.dart';
 
 class workers_grid extends StatelessWidget {
   const workers_grid({
@@ -154,7 +155,7 @@ class workers_grid extends StatelessWidget {
                             child: Text(
                               valueOrDefault<String>(
                                 gridViewUsersRow.name,
-                                'Nome',
+                                lang.get("name", "Nome"),
                               ),
                               style: AppTheme.of(context).displaySmall.override(
                                     fontFamily: 'Readex Pro',

@@ -246,7 +246,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                           child: Text(
                             valueOrDefault<String>(
                               rowBankRow?.name,
-                              'Nome',
+                              lang.get("name", "Nome"),
                             ),
                             style: AppTheme.of(context).displaySmall.override(
                                   fontFamily: 'Readex Pro',
@@ -297,7 +297,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 15.0, 0.0, 0.0),
                         child: Text(
-                          'Últimos 30 dias',
+                          lang.get("home_statistics_last_30days", "Últimos 30 dias"),
                           style: AppTheme.of(context).displaySmall.override(
                                 fontFamily: 'Readex Pro',
                                 fontSize: 20.0,

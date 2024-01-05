@@ -99,7 +99,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
         backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         title: Text(
-          'Materiais',
+          lang.get("materials", "Materiais"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 color: AppTheme.of(context).info,
@@ -226,7 +226,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                               Text(
                                                 valueOrDefault<String>(
                                                   listViewMaterialRow.name,
-                                                  'Nome',
+                                                  lang.get("name", "Nome"),
                                                 ),
                                                 style: AppTheme.of(context)
                                                     .displaySmall
@@ -261,7 +261,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                       .fromSTEB(
                                                           0.0, 0.0, 4.0, 0.0),
                                                   child: Text(
-                                                    'Quantidade',
+                                                    lang.get("quantity", "Quantidade"),
                                                     textAlign: TextAlign.end,
                                                     style: AppTheme.of(context)
                                                         .bodySmall

@@ -458,7 +458,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 7.0, 0.0, 0.0),
                                       child: Text(
-                                        '${lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
+                                        '${lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${lang.get("days", "dias")}',
                                         textAlign: TextAlign.start,
                                         style: AppTheme.of(context)
                                             .displaySmall

@@ -82,7 +82,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
           },
         ),
         title: Text(
-          'Criar Obra',
+          lang.get("work_create_title", "Criar Obra"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 color: AppTheme.of(context).info,
@@ -102,7 +102,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
               Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Text(
-                  'Dados Básicos',
+                  lang.get("basic_data", "Dados Básicos"),
                   style: AppTheme.of(context).headlineMedium.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
@@ -117,7 +117,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                   focusNode: _model.nameFocusNode1,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'Nome',
+                    labelText: lang.get("name", "Nome"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -165,7 +165,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                   focusNode: _model.nameFocusNode2,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'Descrição',
+                    labelText: lang.get("description", "Descrição"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -218,7 +218,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                   ),
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: 'Budget (Opcional)',
+                    labelText: lang.get("work_create_budget", "Budget (Opcional)"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -327,7 +327,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                             });
                           }
                         },
-                        text: 'Data de Início',
+                        text: lang.get("date_init", "Data de Início"),
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -403,7 +403,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                               });
                             }
                           },
-                          text: 'Data de Fim',
+                          text: lang.get("date_end", "Data de Fim"),
                           options: FFButtonOptions(
                             height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -431,7 +431,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
               Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Text(
-                  'Empreiteiro',
+                  lang.get("contractor", "Empreiteiro"),
                   style: AppTheme.of(context).headlineMedium.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
@@ -481,7 +481,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                         width: MediaQuery.sizeOf(context).width * 0.93,
                         height: 50.0,
                         textStyle: AppTheme.of(context).bodyMedium,
-                        hintText: 'Selecione..',
+                        hintText: lang.get("work_create_select", "Selecione..."),
                         icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: AppTheme.of(context).secondaryText,
@@ -541,7 +541,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              'Obra criada com sucesso.',
+                              lang.get("work_added", "Obra criada com sucesso."),
                               style: TextStyle(
                                 color: AppTheme.of(context).primaryText,
                               ),
@@ -553,7 +553,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
 
                         setState(() {});
                       },
-                      text: 'Criar',
+                      text: lang.get("create_btn", "Criar"),
                       icon: Icon(
                         Icons.arrow_forward_ios,
                         size: 15.0,

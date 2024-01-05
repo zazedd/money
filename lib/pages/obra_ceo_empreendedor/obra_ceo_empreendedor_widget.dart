@@ -157,7 +157,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
           },
         ),
         title: Text(
-          'Obra',
+          lang.get("work_title", "Obra"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20,
@@ -266,7 +266,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                   child: AutoSizeText(
                                                     valueOrDefault<String>(
                                                       widget.obra?.name,
-                                                      'Nome',
+                                                      lang.get("name", "Nome"),
                                                     ).maybeHandleOverflow(
                                                       maxChars: 16,
                                                       replacement: '…',
@@ -483,7 +483,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 7, 0, 0),
                                             child: Text(
-                                              'Completa',
+                                              lang.get("completed", "Completa"),
                                               textAlign: TextAlign.start,
                                               style: AppTheme.of(context)
                                                   .displaySmall
@@ -505,7 +505,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 7, 0, 0),
                                             child: Text(
-                                              'Cancelada',
+                                              lang.get("canceled", "Cancelada"),
                                               textAlign: TextAlign.start,
                                               style: AppTheme.of(context)
                                                   .displaySmall
@@ -527,7 +527,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 7, 0, 0),
                                             child: Text(
-                                              'Pode gastar mais ${((widget.obra!.budget! - widget.obra!.usedBudget!) / (((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} dias',
+                                              'Pode gastar mais ${((widget.obra!.budget! - widget.obra!.usedBudget!) / (((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}€/dia durante ${((widget.obra!.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${lang.get("days", "dias")}',
                                               textAlign: TextAlign.start,
                                               style: AppTheme.of(context)
                                                   .displaySmall
@@ -789,8 +789,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                lang.get("moviments_title",
-                                                    "Movimentos"),
+                                                lang.get("moviments_title", "Movimentos"),
                                                 style: AppTheme.of(context)
                                                     .headlineMedium,
                                               ),
@@ -867,7 +866,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Pedidos',
+                                                lang.get("requests", "Pedidos"),
                                                 style: AppTheme.of(context)
                                                     .headlineMedium,
                                               ),
@@ -942,7 +941,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                'Materiais',
+                                                lang.get("materials", "Materiais"),
                                                 style: AppTheme.of(context)
                                                     .headlineMedium,
                                               ),

@@ -376,7 +376,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          'As suas Tarefas',
+                                          lang.get("your_tasks", "As suas Tarefas"),
                                           style: AppTheme.of(context)
                                               .headlineMedium,
                                         ),

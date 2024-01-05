@@ -244,9 +244,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                         focusNode: _model.yourNameFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Nome Completo',
+                          labelText: lang.get("username_label", "Nome Completo"),
                           labelStyle: AppTheme.of(context).bodySmall,
-                          hintText: 'Introduza o seu nome...',
+                          hintText: lang.get("username_placeholder", "Introduza o seu nome..."),
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(

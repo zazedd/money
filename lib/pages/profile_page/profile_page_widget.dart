@@ -398,7 +398,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      'Mudar Password',
+                                      lang.get("profile_accout_change_password", "Mudar Password"),
                                       style: AppTheme.of(context)
                                           .displaySmall
                                           .override(

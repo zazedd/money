@@ -3,6 +3,7 @@ import '/components/validar_pedido/validar_pedido_widget.dart';
 import '/components/visualizar_pedido/visualizar_pedido_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -174,7 +175,7 @@ class request_listview extends StatelessWidget {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
                               child: Text(
-                                'Quantidade',
+                                lang.get("quantity", "Quantidade"),
                                 textAlign: TextAlign.end,
                                 style: AppTheme.of(context).bodySmall.override(
                                       fontFamily: 'Inter',

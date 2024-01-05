@@ -123,7 +123,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Bem Vindo!',
+                                    lang.get("login_title", "Bem-Vindo!"),
                                     style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
@@ -142,7 +142,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      'Crie uma conta para continuar',
+                                      lang.get("signup_text", "Crie uma conta para continuar"),
                                       style: AppTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -161,9 +161,9 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   focusNode: _model.nameFocusNode,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Nome Completo',
+                                    labelText: lang.get("username_label", "Nome Completo"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: 'Introduza o seu nome...',
+                                    hintText: lang.get("username_placeholder", "Introduza o seu nome..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -216,9 +216,9 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   focusNode: _model.emailAddressFocusNode,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Email',
+                                    labelText: lang.get("email_label", "Email"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: 'Introduza o seu email...',
+                                    hintText: lang.get("email_placeholder", "Introduza o seu email..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -272,9 +272,9 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   focusNode: _model.passwordCreateFocusNode,
                                   obscureText: !_model.passwordCreateVisibility,
                                   decoration: InputDecoration(
-                                    labelText: 'Password',
+                                    labelText: lang.get("password_label", "Password"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: 'Introduza a sua password...',
+                                    hintText: lang.get("password_placeholder", "Introduza a sua password..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -344,9 +344,9 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                   obscureText:
                                       !_model.passwordConfirmVisibility,
                                   decoration: InputDecoration(
-                                    labelText: 'Confirmar Password',
+                                    labelText: lang.get("confirm_password_label", "Confirmar a password"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: 'Confirme a sua password...',
+                                    hintText: lang.get("confirm_password_placeholder", "Confirme a sua password..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -453,7 +453,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                         context.pushNamedAuth(
                                             'loginPage', context.mounted);
                                       },
-                                      text: 'Criar',
+                                      text: lang.get("create_btn", "Criar"),
                                       icon: Icon(
                                         Icons.arrow_forward_ios,
                                         size: 15.0,
@@ -528,7 +528,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 0.0, 24.0, 0.0),
                                             child: Text(
-                                              'Login',
+                                              lang.get("signup_footer_btn", "Login"),
                                               style: AppTheme.of(context)
                                                   .bodyMedium
                                                   .override(
@@ -539,7 +539,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget> {
                                             ),
                                           ),
                                           Text(
-                                            'Já tem uma conta?',
+                                            lang.get("signup_footer_text", "Já tem uma conta?"),
                                             style:
                                                 AppTheme.of(context).bodyMedium,
                                           ),

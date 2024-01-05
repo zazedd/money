@@ -129,7 +129,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      'Entre na sua conta para continuar',
+                                      lang.get("login_text", "Entre na sua conta para continuar"),
                                       style: AppTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -157,11 +157,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           focusNode: _model.emailLoginFocusNode,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: 'Email',
+                                            labelText: lang.get("email_label", "Email"),
                                             labelStyle:
                                                 AppTheme.of(context).bodySmall,
                                             hintText:
-                                                'Introduza o seu email...',
+                                                lang.get("email_placeholder", "Introduza o seu email..."),
                                             hintStyle:
                                                 AppTheme.of(context).bodySmall,
                                             enabledBorder: OutlineInputBorder(
@@ -225,11 +225,11 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           obscureText:
                                               !_model.passwordLoginVisibility,
                                           decoration: InputDecoration(
-                                            labelText: 'Password',
+                                            labelText: lang.get("password_label", "Password"),
                                             labelStyle:
                                                 AppTheme.of(context).bodySmall,
                                             hintText:
-                                                'Introduza a sua password...',
+                                                lang.get("password_placeholder", "Introduza a sua password..."),
                                             hintStyle:
                                                 AppTheme.of(context).bodySmall,
                                             enabledBorder: OutlineInputBorder(
@@ -347,7 +347,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                   context.mounted);
                                             }
                                           },
-                                          text: 'Login',
+                                          text: lang.get("signup_footer_btn", "Login"),
                                           icon: Icon(
                                             Icons.arrow_forward_ios,
                                             size: 15.0,
@@ -386,7 +386,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               context
                                                   .pushNamed('mudarPassword');
                                             },
-                                            text: 'Esqueceu-se da password?',
+                                            text: lang.get("login_footer_forgot_password", "Esqueceu-se da password?"),
                                             options: FFButtonOptions(
                                               width: 193.0,
                                               height: 40.0,
@@ -449,7 +449,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                              'Não tem conta?',
+                                              lang.get("login_footer_text", "Não tem conta?"),
                                               style: AppTheme.of(context)
                                                   .bodyMedium,
                                             ),
@@ -458,7 +458,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                   .fromSTEB(
                                                       24.0, 0.0, 4.0, 0.0),
                                               child: Text(
-                                                'Sign Up',
+                                                lang.get("login_footer_btn", "Sign Up"),
                                                 style: AppTheme.of(context)
                                                     .bodyMedium
                                                     .override(
