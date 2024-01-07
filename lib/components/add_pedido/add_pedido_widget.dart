@@ -321,6 +321,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                         'work_id': widget.obra?.id,
                         'status': 0,
                       });
+                      print_("Adicionado um pedido");
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(

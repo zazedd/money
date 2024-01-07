@@ -388,6 +388,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                                   widget.obra?.id,
                                 ),
                               );
+                              print_("Adicionado um movimentp à obra");
                               Navigator.pop(context);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(

@@ -526,6 +526,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                             'name': _model.nomeController.text,
                             'status': 0,
                           });
+                          print_("Adicionada uma tarefa");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

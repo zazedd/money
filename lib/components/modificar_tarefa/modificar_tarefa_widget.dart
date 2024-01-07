@@ -586,6 +586,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                               widget.tarefa?.id,
                             ),
                           );
+                          print_("Task Table modificada");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

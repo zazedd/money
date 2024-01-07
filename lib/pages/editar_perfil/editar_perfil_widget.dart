@@ -212,7 +212,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                           await ProfilePicTable().insert({
                             'user_id': currentUserUid,
                             'file_name': _model.uploadedFileUrl,
-                          });
+                          }); print_("Profile pic inserida");
                         },
                         text: 'Mudar Fotografia',
                         options: FFButtonOptions(
@@ -299,7 +299,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                               'id',
                               containerUsersRow?.id,
                             ),
-                          );
+                          ); print_("Utilizador atualizado");
                         },
                         text: 'Guardar',
                         options: FFButtonOptions(

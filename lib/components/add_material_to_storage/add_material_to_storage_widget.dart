@@ -310,6 +310,7 @@ class _AddMaterialToStorageWidgetState
                         'quantity': int.tryParse(_model.quantController1.text),
                         'is_units': _model.radioButtonValue == 'Unidades',
                       });
+                      print_("Foi adicionado material ao storage");
                       Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(

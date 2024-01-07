@@ -447,6 +447,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                           matchingRows: (rows) => rows,
                                         );
                                       }
+                                      print_("Bank Table e Material Table atualizadas");
 
                                       await MovementTable().delete(
                                         matchingRows: (rows) => rows.eq(
@@ -454,6 +455,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                           bottomSheetMovementRow?.id,
                                         ),
                                       );
+                                      print_("Movement Table deletado id");
                                       Navigator.pop(context);
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(

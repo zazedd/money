@@ -366,6 +366,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                     widget.pedido?.id,
                                   ),
                                 );
+                                print_("Request table atualizada");
                                 Navigator.pop(context);
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
@@ -453,7 +454,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                       ),
                                     );
                                   },
-                                ).then((value) => safeSetState(() {}));
+                                ).then((value) => safeSetState(() {})); print_("Pedido validado");
                               },
                               text: lang.get("accept", "Aceitar"),
                               icon: Icon(

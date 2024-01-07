@@ -116,7 +116,7 @@ class _SelectMovFundWidgetState extends State<SelectMovFundWidget> {
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {})); print_("Transação adicionada");
 
                               Navigator.pop(context);
                             },
@@ -163,7 +163,7 @@ class _SelectMovFundWidgetState extends State<SelectMovFundWidget> {
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {})); print_("Fundo modificado");
 
                               Navigator.pop(context);
                             },

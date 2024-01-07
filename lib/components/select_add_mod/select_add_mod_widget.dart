@@ -117,7 +117,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {})); print_("Material modificado");
                             },
                             text: lang.get("select_add_mod_mod", "Modificar"),
                             options: FFButtonOptions(
@@ -159,7 +159,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {})); print_("Material adicionado");
                             },
                             text: lang.get("select_add_mod_add", "Adicionar"),
                             icon: Icon(
@@ -205,7 +205,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {})); print_("Material removido");
                             },
                             text: lang.get("select_add_mod_sub", "Subtrair"),
                             icon: Icon(

@@ -362,6 +362,7 @@ class _AddMoreMaterialWidgetState extends State<AddMoreMaterialWidget> {
                                   1,
                                 ),
                               );
+                              print_("Foi adicionado mais material e descontado no valor do banco");
                               Navigator.pop(context);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(

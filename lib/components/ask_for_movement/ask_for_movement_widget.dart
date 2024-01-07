@@ -207,7 +207,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                                       },
                                     ).then((value) => safeSetState(() {}));
                                   }
-
+                                  print_("Pedido de movimento registado");
                                   Navigator.pop(context);
                                 },
                                 text: lang.get("yes", "Sim"),

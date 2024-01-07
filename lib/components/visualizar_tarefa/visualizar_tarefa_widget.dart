@@ -488,6 +488,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                       widget.task?.id,
                                     ),
                                   );
+                                  print_("Task Table atualizada");
                                   Navigator.pop(context);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(

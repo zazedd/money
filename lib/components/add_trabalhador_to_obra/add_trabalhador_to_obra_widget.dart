@@ -234,6 +234,7 @@ class _AddTrabalhadorToObraWidgetState
                             'status': 3,
                             'name': lang.get("working", "Trabalhar"),
                           });
+                          print_("Adicionado um trabalhador à obra");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

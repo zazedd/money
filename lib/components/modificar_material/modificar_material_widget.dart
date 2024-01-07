@@ -384,6 +384,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                               widget.material?.id,
                             ),
                           );
+                          print_("Material atualizado");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

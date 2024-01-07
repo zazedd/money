@@ -613,6 +613,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               widget.obra?.id,
                             ),
                           );
+                          print_("Work Table modificada");
                           await TaskTable().update(
                             data: {
                               'user_id': _model.dropDownValue,
@@ -627,6 +628,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                   4,
                                 ),
                           );
+                          print_("Task table modificada");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(

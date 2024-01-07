@@ -377,6 +377,7 @@ class _ModificarMaterialObraWidgetState
                                     bottomSheetMatWorkRow?.id,
                                   ),
                                 );
+                                print_("Material modificado na obra");
                                 Navigator.pop(context);
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(

@@ -460,6 +460,7 @@ class _AddMoreMaterialFromRequestWidgetState
                                       1,
                                     ),
                                   );
+                                  print_("Foi adicionado material para request");
                                   Navigator.pop(context);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(

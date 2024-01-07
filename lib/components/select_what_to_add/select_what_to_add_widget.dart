@@ -123,7 +123,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                               ),
                             );
                           },
-                        ).then((value) => safeSetState(() {}));
+                        ).then((value) => safeSetState(() {})); print_("Trabalhador adicionado");
                       },
                       text: lang.get("select_what_to_add_worker", "Trabalhador"),
                       options: FFButtonOptions(
@@ -163,7 +163,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                               ),
                             );
                           },
-                        ).then((value) => safeSetState(() {}));
+                        ).then((value) => safeSetState(() {})); print_("Tarefa adicionada");
                       },
                       text: lang.get("visualize_task", "Tarefa"),
                       options: FFButtonOptions(
@@ -203,7 +203,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                               ),
                             );
                           },
-                        ).then((value) => safeSetState(() {}));
+                        ).then((value) => safeSetState(() {})); print_("Material adicionado");
                       },
                       text: lang.get("material_title", "Material"),
                       options: FFButtonOptions(
@@ -243,7 +243,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                               ),
                             );
                           },
-                        ).then((value) => safeSetState(() {}));
+                        ).then((value) => safeSetState(() {})); print_("Movimento adicionado");
                       },
                       text: lang.get("select_what_to_add_movement", "Movimento"),
                       options: FFButtonOptions(

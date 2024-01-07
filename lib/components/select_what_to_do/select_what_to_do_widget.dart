@@ -116,7 +116,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                     ),
                                   );
                                 },
-                              ).then((value) => safeSetState(() {}));
+                              ).then((value) => safeSetState(() {})); print_("Obra modificada");
                             },
                             text: lang.get("modify_work", "Modificar Obra"),
                             options: FFButtonOptions(
@@ -161,6 +161,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               widget.obra?.id,
                                             ),
                                           );
+                                          print_("Obra Cancelada");
                                           Navigator.pop(context);
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(
@@ -228,6 +229,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                   widget.obra?.id,
                                                 ),
                                               );
+                                              print_("Obra concluida");
                                               Navigator.pop(context);
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(
@@ -293,6 +295,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           widget.obra?.id,
                                         ),
                                       );
+                                      print_("Obra resumida");
                                       Navigator.pop(context);
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(

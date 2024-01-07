@@ -522,7 +522,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                           'ends_at':
                               supaSerialize<DateTime>(_model.datePicked2),
                           'used_budget': 0.0,
-                        });
+                        }); print_("Work Table da obra inserida");
                         await TaskTable().insert({
                           'work_id': _model.obra?.id,
                           'user_id': _model.dropDownValue,
@@ -534,7 +534,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                               supaSerialize<DateTime>(_model.datePicked2),
                           'status': 4,
                           'name': 'Supervisionar',
-                        });
+                        }); print_("Task Table da obra inserida");
 
                         context.pushNamed('homePageCEO');
 

@@ -338,6 +338,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                     bottomSheetBankRow?.id,
                                   ),
                                 );
+                                print_("Fundos do banco alterados");
                                 Navigator.pop(context);
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
@@ -369,6 +370,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                     bottomSheetBankRow?.id,
                                   ),
                                 );
+                                print_("Transação adicionada");
                                 Navigator.pop(context);
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(

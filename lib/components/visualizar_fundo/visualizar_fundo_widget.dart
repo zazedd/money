@@ -279,6 +279,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                               1,
                             ),
                           );
+                          print_("Bank Table Atualizada");
                           await FundsBankTable().delete(
                             matchingRows: (rows) => rows.eq(
                               'id',

@@ -302,10 +302,12 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                               widget.material?.id,
                             ),
                           );
+                          print_("Material table atualizada");
                           await MovementTable().insert({
                             'quantity': -int.parse(_model.quantController.text),
                             'description': _model.descController.text,
                           });
+                          print_("Movement table modificada");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
