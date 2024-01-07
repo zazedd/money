@@ -124,7 +124,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             focusNode: _model.descFocusNode,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Descrição',
+                              labelText: lang.get("description", "Descrição"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               alignLabelWithHint: false,
                               hintStyle: AppTheme.of(context).bodySmall,
@@ -188,7 +188,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             textCapitalization: TextCapitalization.none,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Valor',
+                              labelText: lang.get("value", "Valor"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -266,7 +266,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    'Fundos adicionados com sucesso!',
+                                    lang.get("funds_added", "Fundos adicionados com sucesso!"),
                                     style: TextStyle(
                                       color: AppTheme.of(context).primaryText,
                                     ),
@@ -276,7 +276,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                                 ),
                               );
                             },
-                            text: 'Submeter',
+                            text: lang.get("submit", "Submeter"),
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 15.0,
