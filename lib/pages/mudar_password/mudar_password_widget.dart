@@ -100,7 +100,8 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(21.0, 21.0, 21.0, 21.0),
                 child: Text(
-                  lang.get("email_text", "Introduza aqui o seu email. Iremos enviar os passos necessários para mudar a password da sua conta de maneira segura."),
+                  lang.get("email_text",
+                      "Introduza aqui o seu email. Iremos enviar os passos necessários para mudar a password da sua conta de maneira segura."),
                   textAlign: TextAlign.justify,
                   style: AppTheme.of(context).bodyMedium,
                 ),
@@ -114,7 +115,8 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                   decoration: InputDecoration(
                     labelText: lang.get("email_label", "Email"),
                     labelStyle: AppTheme.of(context).bodySmall,
-                    hintText: lang.get("email_placeholder", "Introduza o seu email..."),
+                    hintText: lang.get(
+                        "email_placeholder", "Introduza o seu email..."),
                     hintStyle: AppTheme.of(context).bodySmall,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -158,7 +160,7 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () {
-                    print('Button-Login pressed ...');
+                    print_('Button-Login pressed ...');
                   },
                   text: lang.get("send_request", "Enviar Pedido"),
                   options: FFButtonOptions(

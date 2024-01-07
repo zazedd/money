@@ -260,6 +260,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                                   bottomSheetBankRow?.id,
                                 ),
                               );
+                              print(
+                                  "banco foi atualizado para ter mais ${bottomSheetBankRow.total!}");
                               Navigator.pop(context);
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(

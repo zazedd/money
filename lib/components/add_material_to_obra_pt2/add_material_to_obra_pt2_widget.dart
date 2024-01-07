@@ -179,6 +179,7 @@ class _AddMaterialToObraPt2WidgetState
                                   newValue =
                                       double.parse(newValue.toStringAsFixed(0));
                                   setState(() => _model.sliderValue = newValue);
+                                  print_("O valor foi mudado para $newValue");
                                 },
                               ),
                             ),

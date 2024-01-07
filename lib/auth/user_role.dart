@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../geral/util.dart';
 
 class userRole {
   static int? role;
@@ -12,6 +13,6 @@ void saveUserRole(int role) async {
 Future<int?> getUserRole() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   int? res = prefs.getInt('userRole');
-  print("shared prefs got $res");
+  print_("shared prefs got $res");
   return res;
 }

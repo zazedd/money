@@ -184,6 +184,8 @@ class _AddMaterialToObraPt1WidgetState
                                           );
                                         },
                                       ).then((value) => safeSetState(() {}));
+                                      print_(
+                                          "escolhido o material com nome ${gridViewMaterialRow.name}");
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(

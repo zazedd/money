@@ -1,4 +1,5 @@
 import 'database.dart';
+import 'package:money/geral/util.dart';
 
 abstract class SupabaseTable<T extends SupabaseDataRow> {
   String get tableName;
@@ -26,7 +27,7 @@ abstract class SupabaseTable<T extends SupabaseDataRow> {
           .limit(1)
           .select<PostgrestMap?>()
           .maybeSingle()
-          .catchError((e) => print('Error querying row: $e'))
+          .catchError((e) => print_('Error querying row: $e'))
           .then((r) => [if (r != null) createRow(r)]);
 
   Future<T> insert(Map<String, dynamic> data) => SupabaseBackend.client

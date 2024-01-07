@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import '/backend/supabase/supabase.dart';
 import 'package:flutter/material.dart';
+import '/geral/util.dart';
 
 class ColorMap {
   Map<String, Color> colors = Map();
@@ -13,10 +14,10 @@ class ColorMap {
       var value = await json;
 
       setCores(utf8.decode(value));
-      print("Fetched Language Data");
+      print_("Fetched Language Data");
     } catch (e) {
       colors = {};
-      print(
+      print_(
           "cores.json could not be fetched, default color values will be used instead.");
       return;
     }
@@ -26,7 +27,7 @@ class ColorMap {
     Map<String, dynamic> r = jsonDecode(body);
     r.forEach((key, value) {
       var ss = value as String;
-      print(value);
+      print_(value);
       Color cor = Color(int.parse(ss, radix: 16));
       colors[key] = cor;
     });

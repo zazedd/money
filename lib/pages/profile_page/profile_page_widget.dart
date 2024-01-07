@@ -398,7 +398,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      lang.get("profile_accout_change_password", "Mudar Password"),
+                                      lang.get("profile_accout_change_password",
+                                          "Mudar Password"),
                                       style: AppTheme.of(context)
                                           .displaySmall
                                           .override(
@@ -497,7 +498,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                           size: 20.0,
                                         ),
                                         onPressed: () {
-                                          print('IconButton pressed ...');
+                                          print_('IconButton pressed ...');
                                         },
                                       ),
                                     ],
@@ -562,7 +563,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                             size: 20.0,
                                           ),
                                           onPressed: () {
-                                            print('IconButton pressed ...');
+                                            print_('IconButton pressed ...');
                                           },
                                         ),
                                       ],

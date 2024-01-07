@@ -18,6 +18,8 @@ import 'geral/colors.dart';
 import 'geral/nav/nav.dart';
 import 'index.dart';
 
+bool debug = true;
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import '/backend/supabase/supabase.dart';
+import '/geral/util.dart';
 
 class Language {
   Map<String, String> linguagem = Map();
@@ -12,10 +13,10 @@ class Language {
       var value = await json; // await the download
 
       setTextos(utf8.decode(value));
-      print("Fetched Language Data");
+      print_("Fetched Language Data");
     } catch (e) {
       linguagem = {};
-      print(
+      print_(
           "textos.json could not be fetched, default strings will be used instead");
     }
   }

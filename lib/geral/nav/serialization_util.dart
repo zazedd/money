@@ -5,8 +5,7 @@ import 'package:from_css_color/from_css_color.dart';
 
 import '/backend/supabase/supabase.dart';
 
-import '../../geral/place.dart';
-import '../../geral/uploaded_file.dart';
+import '../../geral/util.dart';
 
 /// SERIALIZATION HELPERS
 
@@ -77,7 +76,7 @@ String? serializeParam(
         return null;
     }
   } catch (e) {
-    print('Error serializing parameter: $e');
+    print_('Error serializing parameter: $e');
     return null;
   }
 }
@@ -231,7 +230,7 @@ dynamic deserializeParam<T>(
         return null;
     }
   } catch (e) {
-    print('Error deserializing parameter: $e');
+    print_('Error deserializing parameter: $e');
     return null;
   }
 }
