@@ -91,7 +91,7 @@ class _AddMaterialToStorageWidgetState
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                 child: Text(
-                  'Adicionar Material',
+                  lang.get("add_material", "Adicionar Material"),
                   style: AppTheme.of(context).headlineSmall,
                 ),
               ),
@@ -113,7 +113,7 @@ class _AddMaterialToStorageWidgetState
                             focusNode: _model.nomeFocusNode,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Nome',
+                              labelText: lang.get("name", "Nome"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -174,7 +174,7 @@ class _AddMaterialToStorageWidgetState
                           focusNode: _model.quantFocusNode1,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Quantidade',
+                            labelText: lang.get("quantity", "Quantidade"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -234,7 +234,7 @@ class _AddMaterialToStorageWidgetState
                           focusNode: _model.quantFocusNode2,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Custo por unidade/kg',
+                            labelText: lang.get("add_material_cost", "Custo por unidade/kg"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -314,7 +314,7 @@ class _AddMaterialToStorageWidgetState
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            'Material adicionado com sucesso!',
+                            lang.get("added_material", "Material adicionado com sucesso!"),
                             style: TextStyle(
                               color: AppTheme.of(context).primaryText,
                             ),
@@ -324,7 +324,7 @@ class _AddMaterialToStorageWidgetState
                         ),
                       );
                     },
-                    text: 'Submeter',
+                    text: lang.get("submit", "Submeter"),
                     icon: Icon(
                       Icons.arrow_forward_ios,
                       size: 15.0,

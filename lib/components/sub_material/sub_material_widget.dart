@@ -90,7 +90,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                'Subtrair Material',
+                lang.get("sub_material", "Subtrair Material"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -111,9 +111,9 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                           focusNode: _model.nomeFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Nome',
+                            labelText: lang.get("name", "Nome"),
                             labelStyle: AppTheme.of(context).bodySmall,
-                            hintText: 'Nome',
+                            hintText: lang.get("name", "Nome"),
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -173,7 +173,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                         focusNode: _model.quantFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Quantidade',
+                          labelText: lang.get("quantity", "Quantidade"),
                           labelStyle: AppTheme.of(context).bodySmall,
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
@@ -233,7 +233,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                         focusNode: _model.descFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Descrição',
+                          labelText: lang.get("description", "Descrição"),
                           labelStyle: AppTheme.of(context).bodySmall,
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
@@ -310,7 +310,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Quantidade subtraída com sucesso.',
+                                lang.get("quantity_sub", "Quantidade subtraída com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -320,7 +320,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                             ),
                           );
                         },
-                        text: 'Submeter',
+                        text: lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

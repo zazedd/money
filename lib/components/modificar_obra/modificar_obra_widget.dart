@@ -129,7 +129,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                     child: Text(
-                      'Modificar Obra',
+                      lang.get("modify_work", "Modificar Obra"),
                       style: AppTheme.of(context).headlineSmall,
                     ),
                   ),
@@ -152,7 +152,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 focusNode: _model.nomeFocusNode1,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Nome',
+                                  labelText: lang.get("name", "Nome"),
                                   labelStyle: AppTheme.of(context).bodySmall,
                                   hintStyle: AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
@@ -219,7 +219,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               focusNode: _model.nomeFocusNode2,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Budget',
+                                labelText: lang.get("budget", "Budget"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -284,7 +284,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               focusNode: _model.descFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Descrição',
+                                labelText: lang.get("description", "Descrição"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -390,7 +390,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
                                 textStyle: AppTheme.of(context).bodyMedium,
-                                hintText: 'Selecione um Empreiteiro..',
+                                hintText: lang.get("select_contractor", "Selecione um Empreiteiro..."),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: AppTheme.of(context).secondaryText,
@@ -470,7 +470,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 });
                               }
                             },
-                            text: 'Data de Início',
+                            text: lang.get("date_init", "Data de Início"),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -544,7 +544,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                   });
                                 }
                               },
-                              text: 'Data de Fim',
+                              text: lang.get("date_end", "Data de Fim"),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -631,7 +631,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Obra atualizada com sucesso.',
+                                lang.get("work_updated", "Obra atualizada com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -641,7 +641,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                             ),
                           );
                         },
-                        text: 'Submeter',
+                        text: lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

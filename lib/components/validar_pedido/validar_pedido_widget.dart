@@ -109,7 +109,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Validar Pedido',
+                    lang.get("validate_request", "Validar Pedido"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -145,7 +145,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Nome:',
+                              lang.get("name_dots", "Nome:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -155,7 +155,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.pedido?.name,
-                                'Nome',
+                                lang.get("name", "Nome"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -197,7 +197,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
-                              'Descrição:',
+                              lang.get("description_dots", "Descrição:"),
                               style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -212,7 +212,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.pedido?.description,
-                                'Desc',
+                                lang.get("description", "Descrição"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -255,7 +255,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Quantidade:',
+                              lang.get("quantity_dots", "Quantidade:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -308,7 +308,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                'Valor Calculado:',
+                                lang.get("validate_request_value", "Valor Calculado:"),
                                 style: AppTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -370,7 +370,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Pedido rejeitado.',
+                                      lang.get("rejected_request", "Pedido rejeitado."),
                                       style: TextStyle(
                                         color: AppTheme.of(context)
                                             .primaryText,
@@ -382,7 +382,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                   ),
                                 );
                               },
-                              text: 'Rejeitar',
+                              text: lang.get("reject", "Rejeitar"),
                               icon: Icon(
                                 Icons.close,
                                 size: 15.0,
@@ -443,7 +443,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                           obra: widget.obra!,
                                           nome: valueOrDefault<String>(
                                             widget.pedido?.name,
-                                            'Nome',
+                                            lang.get("name", "Nome"),
                                           ),
                                           qnt: valueOrDefault<int>(
                                             widget.pedido?.quantity,
@@ -455,7 +455,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                   },
                                 ).then((value) => safeSetState(() {}));
                               },
-                              text: 'Aceitar',
+                              text: lang.get("accept", "Aceitar"),
                               icon: Icon(
                                 Icons.done,
                                 size: 15.0,

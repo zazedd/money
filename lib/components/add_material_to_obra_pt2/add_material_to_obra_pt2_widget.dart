@@ -85,7 +85,7 @@ class _AddMaterialToObraPt2WidgetState
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                'Adicionar Material',
+                lang.get("add_material", "Adicionar Material"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -135,7 +135,7 @@ class _AddMaterialToObraPt2WidgetState
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Quantidade',
+                            lang.get("quantity", "Quantidade"),
                             style: AppTheme.of(context).titleSmall,
                           ),
                         ),
@@ -204,7 +204,7 @@ class _AddMaterialToObraPt2WidgetState
                     });
                     await MovementTable().insert({
                       'cost': 0.0,
-                      'description': 'Adicionado material do Stock',
+                      'description': lang.get("added_from_stock", "Adicionado material do Stock"),
                       'mat_work_id': _model.matwork?.id,
                       'quantity': _model.sliderValue!.toInt(),
                       'is_stocked': true,
@@ -215,7 +215,7 @@ class _AddMaterialToObraPt2WidgetState
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(
-                          'Quantidade adicionada com sucesso!',
+                          lang.get("quantity_added", "Quantidade adicionada com sucesso!"),
                           style: TextStyle(
                             color: AppTheme.of(context).primaryText,
                           ),
@@ -227,7 +227,7 @@ class _AddMaterialToObraPt2WidgetState
 
                     setState(() {});
                   },
-                  text: 'Submeter',
+                  text: lang.get("submit", "Submeter"),
                   icon: Icon(
                     Icons.arrow_forward_ios,
                     size: 15.0,

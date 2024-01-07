@@ -42,7 +42,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
     _model.nomeController ??= TextEditingController(
         text: valueOrDefault<String>(
       widget.tarefa?.name,
-      'Nome',
+          lang.get("name", "Nome"),
     ));
     _model.nomeFocusNode ??= FocusNode();
 
@@ -125,7 +125,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                     child: Text(
-                      'Modificar Tarefa',
+                      lang.get("modify_task", "Modificar Tarefa"),
                       style: AppTheme.of(context).headlineSmall,
                     ),
                   ),
@@ -148,7 +148,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                 focusNode: _model.nomeFocusNode,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Nome',
+                                  labelText: lang.get("name", "Nome"),
                                   labelStyle: AppTheme.of(context).bodySmall,
                                   hintStyle: AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
@@ -215,7 +215,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                               focusNode: _model.descFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Descrição',
+                                labelText: lang.get("description", "Descrição"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -319,7 +319,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
                                 textStyle: AppTheme.of(context).bodyMedium,
-                                hintText: 'Selecione um Trabalhador...',
+                                hintText: lang.get("select_worker", "Selecione um Trabalhador..."),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: AppTheme.of(context).secondaryText,
@@ -365,7 +365,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                             width: MediaQuery.sizeOf(context).width * 0.93,
                             height: 50.0,
                             textStyle: AppTheme.of(context).bodyMedium,
-                            hintText: 'Selecione um Estado...',
+                            hintText: lang.get("select_state", "Selecione um Estado..."),
                             icon: Icon(
                               Icons.keyboard_arrow_down_rounded,
                               color: AppTheme.of(context).secondaryText,
@@ -443,7 +443,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                 });
                               }
                             },
-                            text: 'Data de Início',
+                            text: lang.get("date_init", "Data de Início"),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -517,7 +517,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                   });
                                 }
                               },
-                              text: 'Data de Fim',
+                              text: lang.get("date_end", "Data de Fim"),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -590,7 +590,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Tarefa atualizada com sucesso.',
+                                lang.get("updated_task", "Tarefa atualizada com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -600,7 +600,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                             ),
                           );
                         },
-                        text: 'Submeter',
+                        text: lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

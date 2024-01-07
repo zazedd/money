@@ -107,7 +107,7 @@ class _AddTrabalhadorToObraWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Adicionar Trabalhador',
+                    lang.get("add_worker_to_work", "Adicionar Trabalhador"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -165,7 +165,7 @@ class _AddTrabalhadorToObraWidgetState
                                       MediaQuery.sizeOf(context).width * 0.93,
                                   height: 50.0,
                                   textStyle: AppTheme.of(context).bodyMedium,
-                                  hintText: 'Selecione um Trabalhador...',
+                                  hintText: lang.get("select_worker", "Selecione um Trabalhador..."),
                                   icon: Icon(
                                     Icons.keyboard_arrow_down_rounded,
                                     color: AppTheme.of(context).secondaryText,
@@ -226,19 +226,19 @@ class _AddTrabalhadorToObraWidgetState
                             'work_id': widget.obra?.id,
                             'user_id': _model.dropDownValue,
                             'description':
-                                'Trabalhar (inserido automaticamente)',
+                                lang.get("working_auto", "Trabalhar (inserido automaticamente)"),
                             'starts_at':
                                 supaSerialize<DateTime>(widget.obra?.startsAt),
                             'ends_at':
                                 supaSerialize<DateTime>(widget.obra?.endsAt),
                             'status': 3,
-                            'name': 'Trabalhar',
+                            'name': lang.get("working", "Trabalhar"),
                           });
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Trabalhador adicionado com sucesso.',
+                                lang.get("added_worker", "Trabalhador adicionado com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -252,7 +252,7 @@ class _AddTrabalhadorToObraWidgetState
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'O trabalhador já está na obra!',
+                                lang.get("worker_in_work", "O trabalhador já está na obra!"),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -263,7 +263,7 @@ class _AddTrabalhadorToObraWidgetState
                           );
                         }
                       },
-                      text: 'Submeter',
+                      text: lang.get("submit", "Submeter"),
                       icon: Icon(
                         Icons.arrow_forward_ios,
                         size: 15.0,

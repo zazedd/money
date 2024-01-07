@@ -83,7 +83,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                'Pretende adicionar, remover ou modificar?',
+                lang.get("add_remove_modify", "Pretende adicionar, remover ou modificar?"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -119,7 +119,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
-                            text: 'Modificar',
+                            text: lang.get("select_add_mod_mod", "Modificar"),
                             options: FFButtonOptions(
                               height: 89.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -161,7 +161,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
-                            text: 'Adicionar',
+                            text: lang.get("select_add_mod_add", "Adicionar"),
                             icon: Icon(
                               Icons.add_rounded,
                               size: 15.0,
@@ -207,7 +207,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
-                            text: 'Subtrair',
+                            text: lang.get("select_add_mod_sub", "Subtrair"),
                             icon: Icon(
                               Icons.remove_rounded,
                               size: 15.0,

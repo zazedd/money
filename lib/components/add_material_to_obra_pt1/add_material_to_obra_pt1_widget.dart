@@ -106,7 +106,7 @@ class _AddMaterialToObraPt1WidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Adicionar Material',
+                    lang.get("add_material", "Adicionar Material"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -191,7 +191,7 @@ class _AddMaterialToObraPt1WidgetState
                                           .showSnackBar(
                                         SnackBar(
                                           content: Text(
-                                            'O Material já está na obra!',
+                                            lang.get("material_already_work", "O Material já está na obra!"),
                                             style: TextStyle(
                                               color: AppTheme.of(context)
                                                   .primaryText,

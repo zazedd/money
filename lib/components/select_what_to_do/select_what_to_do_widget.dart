@@ -82,7 +82,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                'O que pretender fazer?',
+                lang.get("select_what_to_do", "O que pretender fazer?"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -118,7 +118,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                 },
                               ).then((value) => safeSetState(() {}));
                             },
-                            text: 'Modificar Obra',
+                            text: lang.get("modify_work", "Modificar Obra"),
                             options: FFButtonOptions(
                               height: 89.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -166,7 +166,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               .showSnackBar(
                                             SnackBar(
                                               content: Text(
-                                                'Obra cancelada.',
+                                                lang.get("canceled_work", "Obra cancelada."),
                                                 style: TextStyle(
                                                   color: AppTheme.of(context)
                                                       .primaryText,
@@ -179,7 +179,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                             ),
                                           );
                                         },
-                                        text: 'Cancelar',
+                                        text: lang.get("select_what_to_do_cancel", "Cancelar"),
                                         icon: Icon(
                                           Icons.close,
                                           size: 15.0,
@@ -233,7 +233,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                   .showSnackBar(
                                                 SnackBar(
                                                   content: Text(
-                                                    'Obra concluída!',
+                                                    lang.get("done_work", "Obra concluída!"),
                                                     style: TextStyle(
                                                       color:
                                                           AppTheme.of(context)
@@ -248,7 +248,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                 ),
                                               );
                                             },
-                                            text: 'Concluír',
+                                            text: lang.get("select_what_to_do_conclude", "Concluír"),
                                             icon: Icon(
                                               Icons.done,
                                               size: 15.0,
@@ -298,7 +298,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           .showSnackBar(
                                         SnackBar(
                                           content: Text(
-                                            'Obra resumida.',
+                                            lang.get("resume_work", "Obra resumida."),
                                             style: TextStyle(
                                               color: AppTheme.of(context)
                                                   .primaryText,
@@ -311,7 +311,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                         ),
                                       );
                                     },
-                                    text: 'Resumir Obra',
+                                    text: lang.get("work_to_resume", "Resumir Obra"),
                                     options: FFButtonOptions(
                                       width: double.infinity,
                                       height: 89.0,

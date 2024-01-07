@@ -104,7 +104,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                'Modificar Material',
+                lang.get("modify_material", "Modificar Material"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -125,9 +125,9 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                           focusNode: _model.nomeFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Nome',
+                            labelText: lang.get("name", "Nome"),
                             labelStyle: AppTheme.of(context).bodySmall,
-                            hintText: 'Nome',
+                            hintText: lang.get("name", "Nome"),
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -187,7 +187,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                         focusNode: _model.quantFocusNode1,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Quantidade',
+                          labelText: lang.get("quantity", "Quantidade"),
                           labelStyle: AppTheme.of(context).bodySmall,
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
@@ -247,7 +247,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                         focusNode: _model.quantFocusNode2,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Custo',
+                          labelText: lang.get("cost", "Custo"),
                           labelStyle: AppTheme.of(context).bodySmall,
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
@@ -330,7 +330,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              'Material removido com sucesso.',
+                              lang.get("removed_material", "Material removido com sucesso."),
                               style: TextStyle(
                                 color: AppTheme.of(context).primaryText,
                               ),
@@ -340,7 +340,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                           ),
                         );
                       },
-                      text: 'Apagar ',
+                      text: lang.get("delete", "Apagar"),
                       icon: Icon(
                         Icons.close,
                         size: 15.0,
@@ -388,7 +388,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Material atualizado com sucesso.',
+                                lang.get("updated_material", "Material atualizado com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -398,7 +398,7 @@ class _ModificarMaterialWidgetState extends State<ModificarMaterialWidget> {
                             ),
                           );
                         },
-                        text: 'Submeter',
+                        text: lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

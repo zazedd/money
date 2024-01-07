@@ -114,7 +114,7 @@ class _VisualizarPessoaDisponivelWidgetState
                         child: Text(
                           valueOrDefault<String>(
                             widget.user?.name,
-                            'name',
+                            lang.get("name", "Nome"),
                           ),
                           style: AppTheme.of(context).headlineSmall,
                         ),
@@ -153,7 +153,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'Cargo:',
+                                lang.get("visualize_worker_role", "Cargo:"),
                                 style: AppTheme.of(context).titleSmall,
                               ),
                             ),
@@ -164,14 +164,14 @@ class _VisualizarPessoaDisponivelWidgetState
                                 valueOrDefault<String>(
                                   () {
                                     if (widget.user?.role == 0) {
-                                      return 'CEO/CFO';
+                                      return lang.get("ceo_cfo", "CEO/CFO");
                                     } else if (widget.user?.role == 1) {
-                                      return 'Empreiteiro';
+                                      return lang.get("contractor", "Empreiteiro");
                                     } else {
-                                      return 'Trabalhador';
+                                      return lang.get("select_what_to_add_worker", "Trabalhador");
                                     }
                                   }(),
-                                  'Trabalhador',
+                                  lang.get("select_what_to_add_worker", "Trabalhador"),
                                 ),
                                 textAlign: TextAlign.start,
                                 style: AppTheme.of(context).bodyMedium,
@@ -213,7 +213,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                'Sobre:',
+                                lang.get("visualize_worker_about", "Sobre:"),
                                 style: AppTheme.of(context).titleSmall.override(
                                       fontFamily: 'Inter',
                                       fontSize: 16.0,
@@ -268,7 +268,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                'Obras:',
+                                lang.get("visualize_worker_work", "Obras:"),
                                 style: AppTheme.of(context).titleSmall.override(
                                       fontFamily: 'Inter',
                                       fontSize: 16.0,

@@ -115,7 +115,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                     child: Text(
-                      'Adicionar Tarefa',
+                      lang.get("add_task_title", "Adicionar Tarefa"),
                       style: AppTheme.of(context).headlineSmall,
                     ),
                   ),
@@ -138,7 +138,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                                 focusNode: _model.nomeFocusNode,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: 'Nome',
+                                  labelText: lang.get("name", "Nome"),
                                   labelStyle: AppTheme.of(context).bodySmall,
                                   hintStyle: AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
@@ -205,7 +205,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                               focusNode: _model.descFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Descrição',
+                                labelText: lang.get("description", "Descrição"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -308,7 +308,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
                                 textStyle: AppTheme.of(context).bodyMedium,
-                                hintText: 'Selecione um Trabalhador...',
+                                hintText: lang.get("select_worker", "Selecione um Trabalhador..."),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: AppTheme.of(context).secondaryText,
@@ -387,7 +387,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                                 });
                               }
                             },
-                            text: 'Data de Início',
+                            text: lang.get("date_init", "Data de Início"),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -462,7 +462,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                                   });
                                 }
                               },
-                              text: 'Data de Fim',
+                              text: lang.get("date_end", "Data de Fim"),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -530,7 +530,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Tarefa adicionada à obra.',
+                                lang.get("task_added", "Tarefa adicionada à obra."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -540,7 +540,7 @@ class _AddTarefaToObraWidgetState extends State<AddTarefaToObraWidget> {
                             ),
                           );
                         },
-                        text: 'Submeter',
+                        text: lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

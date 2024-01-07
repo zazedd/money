@@ -81,7 +81,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                'Fundo',
+                lang.get("visualize_funds", "Fundo"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -115,7 +115,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Descrição:',
+                          lang.get("description_dots", "Descrição:"),
                           style: AppTheme.of(context).titleSmall,
                         ),
                       ),
@@ -125,7 +125,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         child: Text(
                           valueOrDefault<String>(
                             widget.fundo?.desc,
-                            'desc',
+                            lang.get("description", "Descrição"),
                           ),
                           textAlign: TextAlign.start,
                           style: AppTheme.of(context).bodyMedium,
@@ -166,7 +166,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Data:',
+                          lang.get("date_dots", "Data:"),
                           style: AppTheme.of(context).titleSmall,
                         ),
                       ),
@@ -218,7 +218,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          'Valor:',
+                          lang.get("value_dots", "Valor:"),
                           style: AppTheme.of(context).titleSmall,
                         ),
                       ),
@@ -289,7 +289,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Fundo apagado!',
+                                lang.get("deleted_fund", "Fundo apagado!"),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -299,7 +299,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                             ),
                           );
                         },
-                        text: 'Remover',
+                        text: lang.get("erase", "Remover"),
                         icon: Icon(
                           Icons.close,
                           size: 15.0,

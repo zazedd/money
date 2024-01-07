@@ -109,7 +109,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                       child: Text(
-                        'Pedido',
+                        lang.get("visualize_request", "Pedido"),
                         style: AppTheme.of(context).headlineSmall,
                       ),
                     ),
@@ -134,7 +134,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Aceite',
+                                            lang.get("accepted", "Aceite"),
                                             style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -175,7 +175,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Pendente',
+                                            lang.get("pendent", "Pendente"),
                                             style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -216,7 +216,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Cancelado',
+                                            lang.get("canceled2", "Cancelado"),
                                             style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -285,7 +285,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.pedido?.name,
-                                'Nome',
+                                lang.get("name", "Nome"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -327,7 +327,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
-                              'Descrição:',
+                              lang.get("description_dots", "Descrição:"),
                               style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -342,7 +342,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.pedido?.description,
-                                'Desc',
+                                lang.get("description", "Descrição"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -384,7 +384,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
-                              'Quantidade:',
+                              lang.get("quantity_dots", "Quantidade:"),
                               style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -442,7 +442,7 @@ class _VisualizarPedidoWidgetState extends State<VisualizarPedidoWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                'Valor Calculado:',
+                                lang.get("validate_request_value", "Valor Calculado:"),
                                 style: AppTheme.of(context)
                                     .titleSmall
                                     .override(

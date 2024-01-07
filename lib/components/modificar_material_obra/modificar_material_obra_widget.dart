@@ -115,7 +115,7 @@ class _ModificarMaterialObraWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Modificar Material',
+                    lang.get("modify_material", "Modificar Material"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -151,7 +151,7 @@ class _ModificarMaterialObraWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Nome:',
+                              lang.get("name_dots", "Nome:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -161,7 +161,7 @@ class _ModificarMaterialObraWidgetState
                             child: Text(
                               valueOrDefault<String>(
                                 widget.material?.name,
-                                'Nome',
+                                lang.get("name", "Nome"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -224,7 +224,7 @@ class _ModificarMaterialObraWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'Quantidade',
+                                lang.get("quantity", "Quantidade"),
                                 style: AppTheme.of(context).titleSmall,
                               ),
                             ),
@@ -310,7 +310,7 @@ class _ModificarMaterialObraWidgetState
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    'Material removido da obra.',
+                                    lang.get("removed_material_work", "Material removido da obra."),
                                     style: TextStyle(
                                       color: AppTheme.of(context).primaryText,
                                     ),
@@ -320,7 +320,7 @@ class _ModificarMaterialObraWidgetState
                                 ),
                               );
                             },
-                            text: 'Remover',
+                            text: lang.get("erase", "Remover"),
                             icon: Icon(
                               Icons.close,
                               size: 15.0,
@@ -381,7 +381,7 @@ class _ModificarMaterialObraWidgetState
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Quantidade atualizada com sucesso.',
+                                      lang.get("updated_quantity", "Quantidade atualizada com sucesso."),
                                       style: TextStyle(
                                         color: AppTheme.of(context).primaryText,
                                       ),
@@ -392,7 +392,7 @@ class _ModificarMaterialObraWidgetState
                                   ),
                                 );
                               },
-                              text: 'Submeter',
+                              text: lang.get("submit", "Submeter"),
                               icon: Icon(
                                 Icons.arrow_forward_ios,
                                 size: 15.0,

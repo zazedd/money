@@ -179,7 +179,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                           focusNode: _model.descFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Descrição',
+                            labelText: lang.get("description", "Descrição"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             alignLabelWithHint: false,
                             hintStyle: AppTheme.of(context).bodySmall,
@@ -248,7 +248,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                           textCapitalization: TextCapitalization.none,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Quantidade (opcional)',
+                            labelText: lang.get("quantity_op", "Quantidade (Opcional)"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -325,7 +325,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            'Obrigado, por favor aguarde que o seu pedido seja aceite.',
+                            lang.get("thanks_standby", "Obrigado, por favor aguarde que o seu pedido seja aceite."),
                             style: GoogleFonts.getFont(
                               'Montserrat',
                               color: AppTheme.of(context).primaryText,
@@ -336,7 +336,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                         ),
                       );
                     },
-                    text: 'Submeter',
+                    text: lang.get("submit", "Submeter"),
                     icon: Icon(
                       Icons.arrow_forward_ios,
                       size: 15.0,

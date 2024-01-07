@@ -104,7 +104,7 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Adicionar Fundos',
+                    lang.get("add_funds_title", "Adicionar Fundos"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),

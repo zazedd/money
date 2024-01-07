@@ -136,7 +136,7 @@ class _AddMoreMaterialFromRequestWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Compra de Material para a Obra',
+                    lang.get("buy_material_to_work", "Compra de Material para a Obra"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -158,9 +158,9 @@ class _AddMoreMaterialFromRequestWidgetState
                               focusNode: _model.nomeFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Nome',
+                                labelText: lang.get("name", "Nome"),
                                 labelStyle: AppTheme.of(context).bodySmall,
-                                hintText: 'Nome',
+                                hintText: lang.get("name", "Nome"),
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -225,7 +225,7 @@ class _AddMoreMaterialFromRequestWidgetState
                             focusNode: _model.quantFocusNode1,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Quantidade',
+                              labelText: lang.get("quantity", "Quantidade"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -286,7 +286,7 @@ class _AddMoreMaterialFromRequestWidgetState
                             focusNode: _model.quantFocusNode2,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Custo',
+                              labelText: lang.get("cost", "Custo"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -464,7 +464,7 @@ class _AddMoreMaterialFromRequestWidgetState
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Quantidade adicionada com sucesso!',
+                                        lang.get("quantity_added", "Quantidade adicionada com sucesso!"),
                                         style: TextStyle(
                                           color:
                                               AppTheme.of(context).primaryText,
@@ -478,7 +478,7 @@ class _AddMoreMaterialFromRequestWidgetState
 
                                   setState(() {});
                                 },
-                                text: 'Submeter',
+                                text: lang.get("submit", "Submeter"),
                                 icon: Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15.0,

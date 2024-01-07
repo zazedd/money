@@ -135,7 +135,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Completa',
+                                            lang.get("completed", "Completa"),
                                             style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -174,7 +174,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Pendente',
+                                            lang.get("pendent", "Pendente"),
                                             style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -213,7 +213,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Text(
-                                            'Cancelada',
+                                            lang.get("canceled", "Cancelada"),
                                             style: AppTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -271,7 +271,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Atribuída a:',
+                              lang.get("visualize_task_assigned", "Atribuída a:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -281,7 +281,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 bottomSheetUsersRow?.name,
-                                'Pessoa',
+                                lang.get("person", "Pessoa"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -324,7 +324,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Nome:',
+                              lang.get("name_dots", "Nome:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -334,7 +334,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.task?.name,
-                                'Nome',
+                                lang.get("name", "Nome"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -376,7 +376,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
-                              'Descrição:',
+                              lang.get("description_dots", "Descrição:"),
                               style: AppTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter',
                                     fontSize: 18.0,
@@ -389,7 +389,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.task?.description,
-                                'Desc',
+                                lang.get("description", "Descrição"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -431,7 +431,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
-                              'Data de Fim:',
+                              lang.get("date_end_dots", "Data de Fim:"),
                               style: AppTheme.of(context).titleSmall.override(
                                     fontFamily: 'Inter',
                                     fontSize: 18.0,
@@ -492,7 +492,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Obrigado por concluír a sua tarefa.',
+                                        lang.get("thanks_for_finishing", "Obrigado por concluír a sua tarefa."),
                                         style: TextStyle(
                                           color:
                                               AppTheme.of(context).primaryText,
@@ -504,7 +504,7 @@ class _VisualizarTarefaWidgetState extends State<VisualizarTarefaWidget> {
                                     ),
                                   );
                                 },
-                                text: 'Marcar como Concluída',
+                                text: lang.get("visualize_task_btn", "Marcar como Concluída"),
                                 icon: Icon(
                                   Icons.done,
                                   size: 15.0,

@@ -112,7 +112,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'Adicionar Transação',
+                    lang.get("add_movement_title", "Adicionar Transação"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -134,7 +134,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                               focusNode: _model.nomeFocusNode1,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Nome',
+                                labelText: lang.get("name", "Nome"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -200,7 +200,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                             focusNode: _model.descFocusNode,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Descrição',
+                              labelText: lang.get("description", "Descrição"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               alignLabelWithHint: false,
                               hintStyle: AppTheme.of(context).bodySmall,
@@ -264,7 +264,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                             textCapitalization: TextCapitalization.none,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Valor',
+                              labelText: lang.get("value", "Valor"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -342,7 +342,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Fundos adicionados com sucesso!',
+                                      lang.get("funds_added", "Fundos adicionados com sucesso!"),
                                       style: TextStyle(
                                         color: AppTheme.of(context).primaryText,
                                       ),
@@ -373,7 +373,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      'Transação adicionada com sucesso!',
+                                      lang.get("added_transaction", "Transação adicionada com sucesso!"),
                                       style: TextStyle(
                                         color: AppTheme.of(context).primaryText,
                                       ),
@@ -385,7 +385,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                 );
                               }
                             },
-                            text: 'Submeter',
+                            text: lang.get("submit", "Submeter"),
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 15.0,

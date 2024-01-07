@@ -114,7 +114,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    'O Pedido precisa de Transação?',
+                    lang.get("ask_movement", "O Pedido precisa de Transação?"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -136,7 +136,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                                 onPressed: () async {
                                   Navigator.pop(context);
                                 },
-                                text: 'Não',
+                                text: lang.get("no", "Não"),
                                 icon: Icon(
                                   Icons.close,
                                   size: 15.0,
@@ -210,7 +210,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
 
                                   Navigator.pop(context);
                                 },
-                                text: 'Sim',
+                                text: lang.get("yes", "Sim"),
                                 icon: Icon(
                                   Icons.done,
                                   size: 15.0,
