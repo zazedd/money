@@ -5,6 +5,7 @@ import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/upload_data.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class EditarPerfilWidget extends StatefulWidget {
   _EditarPerfilWidgetState createState() => _EditarPerfilWidgetState();
 }
 
-class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
+class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
+    with ConnectivityMixin {
   late EditarPerfilModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -212,7 +214,8 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                           await ProfilePicTable().insert({
                             'user_id': currentUserUid,
                             'file_name': _model.uploadedFileUrl,
-                          }); print_("Profile pic inserida");
+                          });
+                          print_("Profile pic inserida");
                         },
                         text: 'Mudar Fotografia',
                         options: FFButtonOptions(
@@ -244,9 +247,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                         focusNode: _model.yourNameFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: lang.get("username_label", "Nome Completo"),
+                          labelText:
+                              lang.get("username_label", "Nome Completo"),
                           labelStyle: AppTheme.of(context).bodySmall,
-                          hintText: lang.get("username_placeholder", "Introduza o seu nome..."),
+                          hintText: lang.get("username_placeholder",
+                              "Introduza o seu nome..."),
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
@@ -299,7 +304,8 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                               'id',
                               containerUsersRow?.id,
                             ),
-                          ); print_("Utilizador atualizado");
+                          );
+                          print_("Utilizador atualizado");
                         },
                         text: 'Guardar',
                         options: FFButtonOptions(

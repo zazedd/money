@@ -3,6 +3,7 @@ import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class HomePageTrabalhadorWidget extends StatefulWidget {
 }
 
 class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late HomePageTrabalhadorModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -153,7 +154,7 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                   if (listViewWorkRowList.isEmpty) {
                     return Center(
                       child: Image.asset(
-                        'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                        'assets/images/empty.png',
                         width: MediaQuery.sizeOf(context).width * 0.5,
                         height: MediaQuery.sizeOf(context).height * 0.7,
                       ),

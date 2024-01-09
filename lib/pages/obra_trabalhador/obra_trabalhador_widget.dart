@@ -5,6 +5,7 @@ import '/components/visualizar_pedido/visualizar_pedido_widget.dart';
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
@@ -34,7 +35,7 @@ class ObraTrabalhadorWidget extends StatefulWidget {
 }
 
 class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late ObraTrabalhadorModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -376,7 +377,8 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          lang.get("your_tasks", "As suas Tarefas"),
+                                          lang.get(
+                                              "your_tasks", "As suas Tarefas"),
                                           style: AppTheme.of(context)
                                               .headlineMedium,
                                         ),
@@ -417,7 +419,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                         if (listViewTaskRowList.isEmpty) {
                                           return Center(
                                             child: Image.asset(
-                                              'assets/images/emptyBudgets@2x.png',
+                                              'assets/images/empty.png',
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.8,
@@ -487,7 +489,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                         if (listViewRequestRowList.isEmpty) {
                                           return Center(
                                             child: Image.asset(
-                                              'assets/images/emptyBudgets@2x.png',
+                                              'assets/images/empty.png',
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.8,

@@ -4,6 +4,7 @@ import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/custom_functions.dart' as functions;
@@ -27,7 +28,7 @@ class TransacoesWidget extends StatefulWidget {
 }
 
 class _TransacoesWidgetState extends State<TransacoesWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late TransacoesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -297,7 +298,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 15.0, 0.0, 0.0),
                         child: Text(
-                          lang.get("home_statistics_last_30days", "Últimos 30 dias"),
+                          lang.get(
+                              "home_statistics_last_30days", "Últimos 30 dias"),
                           style: AppTheme.of(context).displaySmall.override(
                                 fontFamily: 'Readex Pro',
                                 fontSize: 20.0,
@@ -619,7 +621,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                   if (listViewMovementRowList.isEmpty) {
                                     return Center(
                                       child: Image.asset(
-                                        'assets/images/emptyBudgets@2x.png',
+                                        'assets/images/empty.png',
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 0.8,
@@ -678,7 +680,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                   if (listViewFundsBankRowList.isEmpty) {
                                     return Center(
                                       child: Image.asset(
-                                        'assets/images/emptyBudgets@2x.png',
+                                        'assets/images/empty.png',
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 0.8,

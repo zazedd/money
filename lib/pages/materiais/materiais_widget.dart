@@ -4,6 +4,7 @@ import '/components/select_add_mod/select_add_mod_widget.dart';
 import '/geral/animations.dart';
 import '/geral/language.dart';
 import '/geral/colors.dart';
+import '/geral/no_internet.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class MateriaisWidget extends StatefulWidget {
 }
 
 class _MateriaisWidgetState extends State<MateriaisWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late MateriaisModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -157,7 +158,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                         if (listViewMaterialRowList.isEmpty) {
                           return Center(
                             child: Image.asset(
-                              'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                              'assets/images/empty.png',
                               width: MediaQuery.sizeOf(context).width * 0.5,
                               height: MediaQuery.sizeOf(context).height * 0.5,
                             ),
@@ -202,7 +203,8 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                 child: Container(
                                   width: 100.0,
                                   decoration: BoxDecoration(
-                                    color: colors.get("secondary_background", Color(0xFF2B2B2B)),
+                                    color: colors.get("secondary_background",
+                                        Color(0xFF2B2B2B)),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   child: Padding(
@@ -261,7 +263,8 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                       .fromSTEB(
                                                           0.0, 0.0, 4.0, 0.0),
                                                   child: Text(
-                                                    lang.get("quantity", "Quantidade"),
+                                                    lang.get("quantity",
+                                                        "Quantidade"),
                                                     textAlign: TextAlign.end,
                                                     style: AppTheme.of(context)
                                                         .bodySmall

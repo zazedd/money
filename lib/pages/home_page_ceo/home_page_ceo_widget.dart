@@ -3,6 +3,7 @@ import '/geral/animations.dart';
 import '/geral/theme.dart';
 import '/geral/language.dart';
 import '/geral/colors.dart';
+import '/geral/no_internet.dart';
 import '/geral/util.dart';
 import '/geral/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class HomePageCEOWidget extends StatefulWidget {
 }
 
 class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late HomePageCEOModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();

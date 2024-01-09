@@ -3,6 +3,7 @@ import '/geral/drop_down.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
@@ -21,7 +22,8 @@ class CriarObraWidget extends StatefulWidget {
   _CriarObraWidgetState createState() => _CriarObraWidgetState();
 }
 
-class _CriarObraWidgetState extends State<CriarObraWidget> {
+class _CriarObraWidgetState extends State<CriarObraWidget>
+    with ConnectivityMixin {
   late CriarObraModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -218,7 +220,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                   ),
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: lang.get("work_create_budget", "Budget (Opcional)"),
+                    labelText:
+                        lang.get("work_create_budget", "Budget (Opcional)"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -481,7 +484,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                         width: MediaQuery.sizeOf(context).width * 0.93,
                         height: 50.0,
                         textStyle: AppTheme.of(context).bodyMedium,
-                        hintText: lang.get("work_create_select", "Selecione..."),
+                        hintText:
+                            lang.get("work_create_select", "Selecione..."),
                         icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: AppTheme.of(context).secondaryText,
@@ -522,7 +526,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                           'ends_at':
                               supaSerialize<DateTime>(_model.datePicked2),
                           'used_budget': 0.0,
-                        }); print_("Work Table da obra inserida");
+                        });
+                        print_("Work Table da obra inserida");
                         await TaskTable().insert({
                           'work_id': _model.obra?.id,
                           'user_id': _model.dropDownValue,
@@ -534,14 +539,16 @@ class _CriarObraWidgetState extends State<CriarObraWidget> {
                               supaSerialize<DateTime>(_model.datePicked2),
                           'status': 4,
                           'name': 'Supervisionar',
-                        }); print_("Task Table da obra inserida");
+                        });
+                        print_("Task Table da obra inserida");
 
                         context.pushNamed('homePageCEO');
 
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              lang.get("work_added", "Obra criada com sucesso."),
+                              lang.get(
+                                  "work_added", "Obra criada com sucesso."),
                               style: TextStyle(
                                 color: AppTheme.of(context).primaryText,
                               ),

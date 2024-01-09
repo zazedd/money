@@ -2,6 +2,7 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
@@ -23,7 +24,7 @@ class HomePageEmpreendedorWidget extends StatefulWidget {
 }
 
 class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late HomePageEmpreendedorModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -152,7 +153,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                   if (listViewWorkRowList.isEmpty) {
                     return Center(
                       child: Image.asset(
-                        'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                        'assets/images/empty.png',
                         width: MediaQuery.sizeOf(context).width * 0.5,
                         height: MediaQuery.sizeOf(context).height * 0.7,
                       ),
@@ -189,7 +190,8 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                             width: double.infinity,
                             height: 130.0,
                             decoration: BoxDecoration(
-                              color: colors.get("secondary_background", Color(0xFF2B2B2B)),
+                              color: colors.get(
+                                  "secondary_background", Color(0xFF2B2B2B)),
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 3.0,

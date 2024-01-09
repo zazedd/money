@@ -2,6 +2,7 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
+import '/geral/no_internet.dart';
 import '/geral/util.dart';
 import '/geral/language.dart';
 import '/geral/colors.dart';
@@ -18,7 +19,8 @@ class ProfilePageWidget extends StatefulWidget {
   _ProfilePageWidgetState createState() => _ProfilePageWidgetState();
 }
 
-class _ProfilePageWidgetState extends State<ProfilePageWidget> {
+class _ProfilePageWidgetState extends State<ProfilePageWidget>
+    with ConnectivityMixin {
   late ProfilePageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();

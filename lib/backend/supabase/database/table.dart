@@ -1,4 +1,6 @@
 import 'database.dart';
+
+import 'dart:async';
 import 'package:money/geral/util.dart';
 
 abstract class SupabaseTable<T extends SupabaseDataRow> {

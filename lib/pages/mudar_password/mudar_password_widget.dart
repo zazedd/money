@@ -1,6 +1,7 @@
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
+import '/geral/no_internet.dart';
 import '/geral/language.dart';
 import '/geral/colors.dart';
 import '/geral/widgets.dart';
@@ -16,7 +17,8 @@ class MudarPasswordWidget extends StatefulWidget {
   _MudarPasswordWidgetState createState() => _MudarPasswordWidgetState();
 }
 
-class _MudarPasswordWidgetState extends State<MudarPasswordWidget> {
+class _MudarPasswordWidgetState extends State<MudarPasswordWidget>
+    with ConnectivityMixin {
   late MudarPasswordModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();

@@ -5,6 +5,7 @@ import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/language.dart';
+import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -38,7 +39,7 @@ class ObraCEOEmpreendedorWidget extends StatefulWidget {
 }
 
 class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
-    with TickerProviderStateMixin {
+    with TickerProviderStateMixin, ConnectivityMixin {
   late ObraCEOEmpreendedorModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -755,7 +756,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                               if (listViewTaskRowList.isEmpty) {
                                                 return Center(
                                                   child: Image.asset(
-                                                    'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                                                    'assets/images/empty.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -789,7 +790,8 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                lang.get("moviments_title", "Movimentos"),
+                                                lang.get("moviments_title",
+                                                    "Movimentos"),
                                                 style: AppTheme.of(context)
                                                     .headlineMedium,
                                               ),
@@ -832,7 +834,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                   .isEmpty) {
                                                 return Center(
                                                   child: Image.asset(
-                                                    'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                                                    'assets/images/empty.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -908,7 +910,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                   .isEmpty) {
                                                 return Center(
                                                   child: Image.asset(
-                                                    'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                                                    'assets/images/empty.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
@@ -941,7 +943,8 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
-                                                lang.get("materials", "Materiais"),
+                                                lang.get(
+                                                    "materials", "Materiais"),
                                                 style: AppTheme.of(context)
                                                     .headlineMedium,
                                               ),
@@ -986,7 +989,7 @@ class _ObraCEOEmpreendedorWidgetState extends State<ObraCEOEmpreendedorWidget>
                                                   .isEmpty) {
                                                 return Center(
                                                   child: Image.asset(
-                                                    'assets/images/Screenshot_2023-12-27_at_21.57.03.png',
+                                                    'assets/images/empty.png',
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *

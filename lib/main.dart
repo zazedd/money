@@ -14,6 +14,7 @@ import 'geral/theme.dart';
 import 'geral/util.dart';
 import 'geral/internationalization.dart';
 import 'geral/language.dart';
+import 'geral/no_internet.dart';
 import 'geral/colors.dart';
 import 'geral/nav/nav.dart';
 import 'index.dart';
@@ -33,6 +34,7 @@ void main() async {
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   userRole.role = prefs.getInt("userRole");
+  print_(userRole.role.toString());
 
   runApp(MyApp());
 }
