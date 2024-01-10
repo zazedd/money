@@ -4,7 +4,7 @@ import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,7 +95,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                 child: Text(
-                  lang.get("add_request_title", "Fazer Pedido"),
+                  CustomLocalizations.lang.get("add_request_title", "Fazer Pedido"),
                   style: AppTheme.of(context).headlineSmall,
                 ),
               ),
@@ -117,7 +117,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                             focusNode: _model.nomeFocusNode1,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get(
+                              labelText: CustomLocalizations.lang.get(
                                   "add_request_name", "Nome do Material"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
@@ -179,7 +179,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                           focusNode: _model.descFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: lang.get("description", "Descrição"),
+                            labelText: CustomLocalizations.lang.get("description", "Descrição"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             alignLabelWithHint: false,
                             hintStyle: AppTheme.of(context).bodySmall,
@@ -248,7 +248,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                           textCapitalization: TextCapitalization.none,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: lang.get("quantity_op", "Quantidade (Opcional)"),
+                            labelText: CustomLocalizations.lang.get("quantity_op", "Quantidade (Opcional)"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -326,7 +326,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            lang.get("thanks_standby", "Obrigado, por favor aguarde que o seu pedido seja aceite."),
+                            CustomLocalizations.lang.get("thanks_standby", "Obrigado, por favor aguarde que o seu pedido seja aceite."),
                             style: GoogleFonts.getFont(
                               'Montserrat',
                               color: AppTheme.of(context).primaryText,
@@ -337,7 +337,7 @@ class _AddPedidoWidgetState extends State<AddPedidoWidget> {
                         ),
                       );
                     },
-                    text: lang.get("submit", "Submeter"),
+                    text: CustomLocalizations.lang.get("submit", "Submeter"),
                     icon: Icon(
                       Icons.arrow_forward_ios,
                       size: 15.0,

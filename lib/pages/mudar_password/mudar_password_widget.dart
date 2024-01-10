@@ -2,7 +2,7 @@ import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/no_internet.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -73,7 +73,8 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget>
           },
         ),
         title: Text(
-          lang.get("profile_account_change_password", 'Mudar Password'),
+          CustomLocalizations.lang
+              .get("profile_account_change_password", 'Mudar Password'),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20.0,
@@ -102,7 +103,7 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget>
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(21.0, 21.0, 21.0, 21.0),
                 child: Text(
-                  lang.get("email_text",
+                  CustomLocalizations.lang.get("email_text",
                       "Introduza aqui o seu email. Iremos enviar os passos necessários para mudar a password da sua conta de maneira segura."),
                   textAlign: TextAlign.justify,
                   style: AppTheme.of(context).bodyMedium,
@@ -115,10 +116,11 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget>
                   focusNode: _model.emailAddressFocusNode,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: lang.get("email_label", "Email"),
+                    labelText:
+                        CustomLocalizations.lang.get("email_label", "Email"),
                     labelStyle: AppTheme.of(context).bodySmall,
-                    hintText: lang.get(
-                        "email_placeholder", "Introduza o seu email..."),
+                    hintText: CustomLocalizations.lang
+                        .get("email_placeholder", "Introduza o seu email..."),
                     hintStyle: AppTheme.of(context).bodySmall,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -164,7 +166,8 @@ class _MudarPasswordWidgetState extends State<MudarPasswordWidget>
                   onPressed: () {
                     print_('Button-Login pressed ...');
                   },
-                  text: lang.get("send_request", "Enviar Pedido"),
+                  text: CustomLocalizations.lang
+                      .get("send_request", "Enviar Pedido"),
                   options: FFButtonOptions(
                     width: 190.0,
                     height: 50.0,

@@ -1,7 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -121,7 +121,7 @@ class works_carousel extends StatelessWidget {
                                       '${valueOrDefault<String>(
                                         carouselWorkRow.usedBudget?.toString(),
                                         '0',
-                                      )}€ ${lang.get("home_work_budget", "usados de")} ${carouselWorkRow.budget?.toString()}€',
+                                      )}€ ${CustomLocalizations.lang.get("home_work_budget", "usados de")} ${carouselWorkRow.budget?.toString()}€',
                                       style: AppTheme.of(context)
                                           .displaySmall
                                           .override(
@@ -172,8 +172,9 @@ class works_carousel extends StatelessWidget {
                                           dateTimeFormat(
                                             'MM/yy',
                                             carouselWorkRow.startsAt!,
-                                            locale: FFLocalizations.of(context)
-                                                .languageCode,
+                                            locale:
+                                                CustomLocalizations.of(context)
+                                                    .languageCode,
                                           ),
                                           style: AppTheme.of(context)
                                               .displaySmall
@@ -228,8 +229,9 @@ class works_carousel extends StatelessWidget {
                                           dateTimeFormat(
                                             'MM/yy',
                                             carouselWorkRow.endsAt!,
-                                            locale: FFLocalizations.of(context)
-                                                .languageCode,
+                                            locale:
+                                                CustomLocalizations.of(context)
+                                                    .languageCode,
                                           ),
                                           style: AppTheme.of(context)
                                               .displaySmall
@@ -257,7 +259,8 @@ class works_carousel extends StatelessWidget {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 7.0, 0.0, 0.0),
                                 child: Text(
-                                  lang.get("completed", "Completa"),
+                                  CustomLocalizations.lang
+                                      .get("completed", "Completa"),
                                   textAlign: TextAlign.start,
                                   style: AppTheme.of(context)
                                       .displaySmall
@@ -277,7 +280,8 @@ class works_carousel extends StatelessWidget {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 7.0, 0.0, 0.0),
                                 child: Text(
-                                  lang.get("canceled", "Cancelada"),
+                                  CustomLocalizations.lang
+                                      .get("canceled", "Cancelada"),
                                   textAlign: TextAlign.start,
                                   style: AppTheme.of(context)
                                       .displaySmall
@@ -297,7 +301,7 @@ class works_carousel extends StatelessWidget {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 7.0, 0.0, 0.0),
                                 child: Text(
-                                  '${lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((carouselWorkRow.budget! - carouselWorkRow.usedBudget!) / (((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${lang.get("day", "dia")}s',
+                                  '${CustomLocalizations.lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((carouselWorkRow.budget! - carouselWorkRow.usedBudget!) / (((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${CustomLocalizations.lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((carouselWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${CustomLocalizations.lang.get("day", "dia")}s',
                                   textAlign: TextAlign.start,
                                   style: AppTheme.of(context)
                                       .displaySmall

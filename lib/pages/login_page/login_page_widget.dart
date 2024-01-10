@@ -1,14 +1,11 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
-
 import '/auth/supabase_auth/auth_util.dart';
 import '/auth/user_role.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
-import '/geral/language.dart';
 import '/geral/no_internet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -113,7 +110,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    lang.get("login_title", 'err'),
+                                    CustomLocalizations.lang
+                                        .get("login_title", 'err'),
                                     textAlign: TextAlign.center,
                                     style: AppTheme.of(context)
                                         .displaySmall
@@ -133,7 +131,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      lang.get("login_text",
+                                      CustomLocalizations.lang.get("login_text",
                                           "Entre na sua conta para continuar"),
                                       style: AppTheme.of(context)
                                           .titleMedium
@@ -162,13 +160,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                           focusNode: _model.emailLoginFocusNode,
                                           obscureText: false,
                                           decoration: InputDecoration(
-                                            labelText: lang.get(
-                                                "email_label", "Email"),
+                                            labelText: CustomLocalizations.lang
+                                                .get("email_label", "Email"),
                                             labelStyle:
                                                 AppTheme.of(context).bodySmall,
-                                            hintText: lang.get(
-                                                "email_placeholder",
-                                                "Introduza o seu email..."),
+                                            hintText: CustomLocalizations.lang
+                                                .get("email_placeholder",
+                                                    "Introduza o seu email..."),
                                             hintStyle:
                                                 AppTheme.of(context).bodySmall,
                                             enabledBorder: OutlineInputBorder(
@@ -232,11 +230,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                           obscureText:
                                               !_model.passwordLoginVisibility,
                                           decoration: InputDecoration(
-                                            labelText: lang.get(
-                                                "password_label", "Password"),
+                                            labelText: CustomLocalizations.lang
+                                                .get("password_label",
+                                                    "Password"),
                                             labelStyle:
                                                 AppTheme.of(context).bodySmall,
-                                            hintText: lang.get(
+                                            hintText: CustomLocalizations.lang.get(
                                                 "password_placeholder",
                                                 "Introduza a sua password..."),
                                             hintStyle:
@@ -356,7 +355,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                   context.mounted);
                                             }
                                           },
-                                          text: lang.get(
+                                          text: CustomLocalizations.lang.get(
                                               "signup_footer_btn", "Login"),
                                           icon: Icon(
                                             Icons.arrow_forward_ios,
@@ -396,7 +395,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                               context
                                                   .pushNamed('mudarPassword');
                                             },
-                                            text: lang.get(
+                                            text: CustomLocalizations.lang.get(
                                                 "login_footer_forgot_password",
                                                 "Esqueceu-se da password?"),
                                             options: FFButtonOptions(
@@ -461,7 +460,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                               MainAxisAlignment.center,
                                           children: [
                                             Text(
-                                              lang.get("login_footer_text",
+                                              CustomLocalizations.lang.get(
+                                                  "login_footer_text",
                                                   "Não tem conta?"),
                                               style: AppTheme.of(context)
                                                   .bodyMedium,
@@ -471,7 +471,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget>
                                                   .fromSTEB(
                                                       24.0, 0.0, 4.0, 0.0),
                                               child: Text(
-                                                lang.get("login_footer_btn",
+                                                CustomLocalizations.lang.get(
+                                                    "login_footer_btn",
                                                     "Sign Up"),
                                                 style: AppTheme.of(context)
                                                     .bodyMedium

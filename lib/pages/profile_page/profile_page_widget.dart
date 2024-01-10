@@ -4,7 +4,7 @@ import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/no_internet.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -276,7 +276,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              lang.get("profile_account", 'Minha Conta'),
+                              CustomLocalizations.lang
+                                  .get("profile_account", 'Minha Conta'),
                               style: AppTheme.of(context).headlineSmall,
                             ),
                           ],
@@ -322,7 +323,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  lang.get(
+                                  CustomLocalizations.lang.get(
                                       "profile_account_edit", 'Editar Perfil'),
                                   style: AppTheme.of(context)
                                       .displaySmall
@@ -400,7 +401,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      lang.get("profile_accout_change_password",
+                                      CustomLocalizations.lang.get(
+                                          "profile_accout_change_password",
                                           "Mudar Password"),
                                       style: AppTheme.of(context)
                                           .displaySmall
@@ -519,7 +521,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                setAppLanguage(context, 'pt');
+                                setAppLanguage(context, 'en');
                               },
                               child: Material(
                                 color: Colors.transparent,

@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'sub_material_model.dart';
@@ -90,7 +90,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("sub_material", "Subtrair Material"),
+                CustomLocalizations.lang.get("sub_material", "Subtrair Material"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -111,9 +111,9 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                           focusNode: _model.nomeFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: lang.get("name", "Nome"),
+                            labelText: CustomLocalizations.lang.get("name", "Nome"),
                             labelStyle: AppTheme.of(context).bodySmall,
-                            hintText: lang.get("name", "Nome"),
+                            hintText: CustomLocalizations.lang.get("name", "Nome"),
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -173,7 +173,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                         focusNode: _model.quantFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: lang.get("quantity", "Quantidade"),
+                          labelText: CustomLocalizations.lang.get("quantity", "Quantidade"),
                           labelStyle: AppTheme.of(context).bodySmall,
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
@@ -233,7 +233,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                         focusNode: _model.descFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: lang.get("description", "Descrição"),
+                          labelText: CustomLocalizations.lang.get("description", "Descrição"),
                           labelStyle: AppTheme.of(context).bodySmall,
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
@@ -312,7 +312,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                lang.get("quantity_sub", "Quantidade subtraída com sucesso."),
+                                CustomLocalizations.lang.get("quantity_sub", "Quantidade subtraída com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -322,7 +322,7 @@ class _SubMaterialWidgetState extends State<SubMaterialWidget> {
                             ),
                           );
                         },
-                        text: lang.get("submit", "Submeter"),
+                        text: CustomLocalizations.lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

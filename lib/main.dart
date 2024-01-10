@@ -13,13 +13,8 @@ import '/backend/supabase/supabase.dart';
 import 'geral/theme.dart';
 import 'geral/util.dart';
 import 'geral/internationalization.dart';
-import 'geral/language.dart';
-import 'geral/no_internet.dart';
 import 'geral/colors.dart';
-import 'geral/nav/nav.dart';
 import 'index.dart';
-
-bool debug = true;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,12 +24,12 @@ void main() async {
 
   await AppTheme.initialize();
 
-  await initializeLanguage();
+  await CustomLocalizations.initialize();
   await initializeColors();
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
   userRole.role = prefs.getInt("userRole");
-  print_(userRole.role.toString());
+  print_("Stored user role ${userRole.role.toString()}");
 
   runApp(MyApp());
 }
@@ -72,7 +67,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   void setLocale(String language) {
-    setState(() => _locale = createLocale(language));
+    setState(() {
+      _locale = createLocale(language);
+      CustomLocalizations.storeLocale(_locale.toString());
+    });
   }
 
   void setThemeMode(ThemeMode mode) => setState(() {
@@ -83,9 +81,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: lang.get("title", 'Money'),
-      localizationsDelegates: [
-        FFLocalizationsDelegate(),
+      title: CustomLocalizations.lang.get("title", 'Money'),
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -93,6 +90,7 @@ class _MyAppState extends State<MyApp> {
       locale: _locale,
       supportedLocales: const [
         Locale('pt'),
+        Locale('en'),
       ],
       theme: ThemeData(
         brightness: Brightness.light,
@@ -176,8 +174,9 @@ class _NavBarPageState extends State<NavBarPage> {
                 label: key == 'profilePage'
                     ? 'Perfil'
                     : key == 'materiais'
-                        ? lang.get("materal_title", 'Materiais')
-                        : lang.get("home_home", 'Home'),
+                        ? CustomLocalizations.lang
+                            .get("materal_title", 'Materiais')
+                        : CustomLocalizations.lang.get("home_home", 'Home'),
                 tooltip: '',
               );
             }).toList() ??
@@ -185,7 +184,7 @@ class _NavBarPageState extends State<NavBarPage> {
               BottomNavigationBarItem(
                   icon: getIcon('homePageTrabalhador'),
                   activeIcon: getActiveIcon('homePageTrabalhador'),
-                  label: lang.get("home_home", 'Home'))
+                  label: CustomLocalizations.lang.get("home_home", 'Home'))
             ],
       ),
     );

@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/add_more_material_from_request/add_more_material_from_request_widget.dart';
 import '/components/add_movimento_to_obra/add_movimento_to_obra_widget.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
@@ -114,7 +114,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("ask_movement", "O Pedido precisa de Transação?"),
+                    CustomLocalizations.lang.get("ask_movement", "O Pedido precisa de Transação?"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -136,7 +136,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                                 onPressed: () async {
                                   Navigator.pop(context);
                                 },
-                                text: lang.get("no", "Não"),
+                                text: CustomLocalizations.lang.get("no", "Não"),
                                 icon: Icon(
                                   Icons.close,
                                   size: 15.0,
@@ -210,7 +210,7 @@ class _AskForMovementWidgetState extends State<AskForMovementWidget> {
                                   print_("Pedido de movimento registado");
                                   Navigator.pop(context);
                                 },
-                                text: lang.get("yes", "Sim"),
+                                text: CustomLocalizations.lang.get("yes", "Sim"),
                                 icon: Icon(
                                   Icons.done,
                                   size: 15.0,

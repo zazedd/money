@@ -3,7 +3,7 @@ import '/components/add_fundos/add_fundos_widget.dart';
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
@@ -169,7 +169,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
           },
         ),
         title: Text(
-          lang.get("moviments_title", "Movimentos"),
+          CustomLocalizations.lang.get("moviments_title", "Movimentos"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20.0,
@@ -247,7 +247,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                           child: Text(
                             valueOrDefault<String>(
                               rowBankRow?.name,
-                              lang.get("name", "Nome"),
+                              CustomLocalizations.lang.get("name", "Nome"),
                             ),
                             style: AppTheme.of(context).displaySmall.override(
                                   fontFamily: 'Readex Pro',
@@ -298,7 +298,7 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 15.0, 0.0, 0.0),
                         child: Text(
-                          lang.get(
+                          CustomLocalizations.lang.get(
                               "home_statistics_last_30days", "Últimos 30 dias"),
                           style: AppTheme.of(context).displaySmall.override(
                                 fontFamily: 'Readex Pro',
@@ -591,7 +591,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    lang.get("moviments_title", "Movimentos"),
+                                    CustomLocalizations.lang
+                                        .get("moviments_title", "Movimentos"),
                                     style: AppTheme.of(context).headlineMedium,
                                   ),
                                 ],
@@ -650,7 +651,8 @@ class _TransacoesWidgetState extends State<TransacoesWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    lang.get("moviments_funds", "Fundos"),
+                                    CustomLocalizations.lang
+                                        .get("moviments_funds", "Fundos"),
                                     style: AppTheme.of(context).headlineMedium,
                                   ),
                                 ],

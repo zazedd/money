@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/add_transaction/add_transaction_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -82,7 +82,7 @@ class _SelectMovFundWidgetState extends State<SelectMovFundWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("select_mov_fund", "Transação ou Fundo?"),
+                CustomLocalizations.lang.get("select_mov_fund", "Transação ou Fundo?"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -120,7 +120,7 @@ class _SelectMovFundWidgetState extends State<SelectMovFundWidget> {
 
                               Navigator.pop(context);
                             },
-                            text: lang.get("select_mov_fund_trans", "Transação"),
+                            text: CustomLocalizations.lang.get("select_mov_fund_trans", "Transação"),
                             icon: Icon(
                               Icons.trending_down_rounded,
                               size: 15.0,
@@ -167,7 +167,7 @@ class _SelectMovFundWidgetState extends State<SelectMovFundWidget> {
 
                               Navigator.pop(context);
                             },
-                            text: lang.get("select_add_mod_fund", "Fundo"),
+                            text: CustomLocalizations.lang.get("select_add_mod_fund", "Fundo"),
                             icon: Icon(
                               Icons.trending_up_rounded,
                               size: 15.0,

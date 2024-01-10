@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/ask_for_movement/ask_for_movement_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -109,7 +109,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("validate_request", "Validar Pedido"),
+                    CustomLocalizations.lang.get("validate_request", "Validar Pedido"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -145,7 +145,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              lang.get("name_dots", "Nome:"),
+                              CustomLocalizations.lang.get("name_dots", "Nome:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -155,7 +155,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.pedido?.name,
-                                lang.get("name", "Nome"),
+                                CustomLocalizations.lang.get("name", "Nome"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -197,7 +197,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 5.0),
                             child: Text(
-                              lang.get("description_dots", "Descrição:"),
+                              CustomLocalizations.lang.get("description_dots", "Descrição:"),
                               style: AppTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -212,7 +212,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             child: Text(
                               valueOrDefault<String>(
                                 widget.pedido?.description,
-                                lang.get("description", "Descrição"),
+                                CustomLocalizations.lang.get("description", "Descrição"),
                               ),
                               textAlign: TextAlign.start,
                               style: AppTheme.of(context).bodyMedium,
@@ -255,7 +255,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              lang.get("quantity_dots", "Quantidade:"),
+                              CustomLocalizations.lang.get("quantity_dots", "Quantidade:"),
                               style: AppTheme.of(context).titleSmall,
                             ),
                           ),
@@ -308,7 +308,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                lang.get("validate_request_value", "Valor Calculado:"),
+                                CustomLocalizations.lang.get("validate_request_value", "Valor Calculado:"),
                                 style: AppTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -371,7 +371,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      lang.get("rejected_request", "Pedido rejeitado."),
+                                      CustomLocalizations.lang.get("rejected_request", "Pedido rejeitado."),
                                       style: TextStyle(
                                         color: AppTheme.of(context)
                                             .primaryText,
@@ -383,7 +383,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                   ),
                                 );
                               },
-                              text: lang.get("reject", "Rejeitar"),
+                              text: CustomLocalizations.lang.get("reject", "Rejeitar"),
                               icon: Icon(
                                 Icons.close,
                                 size: 15.0,
@@ -444,7 +444,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                           obra: widget.obra!,
                                           nome: valueOrDefault<String>(
                                             widget.pedido?.name,
-                                            lang.get("name", "Nome"),
+                                            CustomLocalizations.lang.get("name", "Nome"),
                                           ),
                                           qnt: valueOrDefault<int>(
                                             widget.pedido?.quantity,
@@ -456,7 +456,7 @@ class _ValidarPedidoWidgetState extends State<ValidarPedidoWidget> {
                                   },
                                 ).then((value) => safeSetState(() {})); print_("Pedido validado");
                               },
-                              text: lang.get("accept", "Aceitar"),
+                              text: CustomLocalizations.lang.get("accept", "Aceitar"),
                               icon: Icon(
                                 Icons.done,
                                 size: 15.0,

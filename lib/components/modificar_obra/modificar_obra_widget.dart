@@ -5,7 +5,7 @@ import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/form_field_controller.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'modificar_obra_model.dart';
@@ -129,7 +129,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                     child: Text(
-                      lang.get("modify_work", "Modificar Obra"),
+                      CustomLocalizations.lang.get("modify_work", "Modificar Obra"),
                       style: AppTheme.of(context).headlineSmall,
                     ),
                   ),
@@ -152,7 +152,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 focusNode: _model.nomeFocusNode1,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: lang.get("name", "Nome"),
+                                  labelText: CustomLocalizations.lang.get("name", "Nome"),
                                   labelStyle: AppTheme.of(context).bodySmall,
                                   hintStyle: AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
@@ -219,7 +219,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               focusNode: _model.nomeFocusNode2,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: lang.get("budget", "Budget"),
+                                labelText: CustomLocalizations.lang.get("budget", "Budget"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -284,7 +284,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                               focusNode: _model.descFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: lang.get("description", "Descrição"),
+                                labelText: CustomLocalizations.lang.get("description", "Descrição"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -390,7 +390,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
                                 textStyle: AppTheme.of(context).bodyMedium,
-                                hintText: lang.get("select_contractor", "Selecione um Empreiteiro..."),
+                                hintText: CustomLocalizations.lang.get("select_contractor", "Selecione um Empreiteiro..."),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: AppTheme.of(context).secondaryText,
@@ -470,7 +470,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                 });
                               }
                             },
-                            text: lang.get("date_init", "Data de Início"),
+                            text: CustomLocalizations.lang.get("date_init", "Data de Início"),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -544,7 +544,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                                   });
                                 }
                               },
-                              text: lang.get("date_end", "Data de Fim"),
+                              text: CustomLocalizations.lang.get("date_end", "Data de Fim"),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -633,7 +633,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                lang.get("work_updated", "Obra atualizada com sucesso."),
+                                CustomLocalizations.lang.get("work_updated", "Obra atualizada com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -643,7 +643,7 @@ class _ModificarObraWidgetState extends State<ModificarObraWidget> {
                             ),
                           );
                         },
-                        text: lang.get("submit", "Submeter"),
+                        text: CustomLocalizations.lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

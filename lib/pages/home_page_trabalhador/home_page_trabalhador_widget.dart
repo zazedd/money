@@ -2,7 +2,7 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
@@ -293,9 +293,10 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                   dateTimeFormat(
                                                     'MM/yy',
                                                     listViewWorkRow.startsAt!,
-                                                    locale: FFLocalizations.of(
-                                                            context)
-                                                        .languageCode,
+                                                    locale:
+                                                        CustomLocalizations.of(
+                                                                context)
+                                                            .languageCode,
                                                   ),
                                                   style: AppTheme.of(context)
                                                       .displaySmall
@@ -359,9 +360,10 @@ class _HomePageTrabalhadorWidgetState extends State<HomePageTrabalhadorWidget>
                                                   dateTimeFormat(
                                                     'MM/yy',
                                                     listViewWorkRow.endsAt!,
-                                                    locale: FFLocalizations.of(
-                                                            context)
-                                                        .languageCode,
+                                                    locale:
+                                                        CustomLocalizations.of(
+                                                                context)
+                                                            .languageCode,
                                                   ),
                                                   style: AppTheme.of(context)
                                                       .displaySmall

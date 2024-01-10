@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -85,7 +85,7 @@ class _AddMaterialToObraPt2WidgetState
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("add_material", "Adicionar Material"),
+                CustomLocalizations.lang.get("add_material", "Adicionar Material"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -135,7 +135,7 @@ class _AddMaterialToObraPt2WidgetState
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            lang.get("quantity", "Quantidade"),
+                            CustomLocalizations.lang.get("quantity", "Quantidade"),
                             style: AppTheme.of(context).titleSmall,
                           ),
                         ),
@@ -204,7 +204,7 @@ class _AddMaterialToObraPt2WidgetState
                     });
                     await MovementTable().insert({
                       'cost': 0.0,
-                      'description': lang.get("added_from_stock", "Adicionado material do Stock"),
+                      'description': CustomLocalizations.lang.get("added_from_stock", "Adicionado material do Stock"),
                       'mat_work_id': _model.matwork?.id,
                       'quantity': _model.sliderValue!.toInt(),
                       'is_stocked': true,
@@ -215,7 +215,7 @@ class _AddMaterialToObraPt2WidgetState
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(
-                          lang.get("quantity_added", "Quantidade adicionada com sucesso!"),
+                          CustomLocalizations.lang.get("quantity_added", "Quantidade adicionada com sucesso!"),
                           style: TextStyle(
                             color: AppTheme.of(context).primaryText,
                           ),
@@ -227,7 +227,7 @@ class _AddMaterialToObraPt2WidgetState
 
                     setState(() {});
                   },
-                  text: lang.get("submit", "Submeter"),
+                  text: CustomLocalizations.lang.get("submit", "Submeter"),
                   icon: Icon(
                     Icons.arrow_forward_ios,
                     size: 15.0,

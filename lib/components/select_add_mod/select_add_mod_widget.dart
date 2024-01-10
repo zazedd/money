@@ -3,7 +3,7 @@ import '/components/add_more_material/add_more_material_widget.dart';
 import '/components/modificar_material/modificar_material_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -83,7 +83,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("add_remove_modify", "Pretende adicionar, remover ou modificar?"),
+                CustomLocalizations.lang.get("add_remove_modify", "Pretende adicionar, remover ou modificar?"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -119,7 +119,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                 },
                               ).then((value) => safeSetState(() {})); print_("Material modificado");
                             },
-                            text: lang.get("select_add_mod_mod", "Modificar"),
+                            text: CustomLocalizations.lang.get("select_add_mod_mod", "Modificar"),
                             options: FFButtonOptions(
                               height: 89.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -161,7 +161,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                 },
                               ).then((value) => safeSetState(() {})); print_("Material adicionado");
                             },
-                            text: lang.get("select_add_mod_add", "Adicionar"),
+                            text: CustomLocalizations.lang.get("select_add_mod_add", "Adicionar"),
                             icon: Icon(
                               Icons.add_rounded,
                               size: 15.0,
@@ -207,7 +207,7 @@ class _SelectAddModWidgetState extends State<SelectAddModWidget> {
                                 },
                               ).then((value) => safeSetState(() {})); print_("Material removido");
                             },
-                            text: lang.get("select_add_mod_sub", "Subtrair"),
+                            text: CustomLocalizations.lang.get("select_add_mod_sub", "Subtrair"),
                             icon: Icon(
                               Icons.remove_rounded,
                               size: 15.0,

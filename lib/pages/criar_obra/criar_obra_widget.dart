@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/geral/drop_down.dart';
 import '/geral/icon_button.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
@@ -84,7 +84,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
           },
         ),
         title: Text(
-          lang.get("work_create_title", "Criar Obra"),
+          CustomLocalizations.lang.get("work_create_title", "Criar Obra"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 color: AppTheme.of(context).info,
@@ -104,7 +104,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
               Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Text(
-                  lang.get("basic_data", "Dados Básicos"),
+                  CustomLocalizations.lang.get("basic_data", "Dados Básicos"),
                   style: AppTheme.of(context).headlineMedium.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
@@ -119,7 +119,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                   focusNode: _model.nameFocusNode1,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: lang.get("name", "Nome"),
+                    labelText: CustomLocalizations.lang.get("name", "Nome"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -167,7 +167,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                   focusNode: _model.nameFocusNode2,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: lang.get("description", "Descrição"),
+                    labelText: CustomLocalizations.lang
+                        .get("description", "Descrição"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -220,8 +221,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                   ),
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText:
-                        lang.get("work_create_budget", "Budget (Opcional)"),
+                    labelText: CustomLocalizations.lang
+                        .get("work_create_budget", "Budget (Opcional)"),
                     labelStyle: AppTheme.of(context).bodySmall,
                     hintStyle: AppTheme.of(context).bodyMedium,
                     enabledBorder: OutlineInputBorder(
@@ -330,7 +331,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                             });
                           }
                         },
-                        text: lang.get("date_init", "Data de Início"),
+                        text: CustomLocalizations.lang
+                            .get("date_init", "Data de Início"),
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -406,7 +408,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                               });
                             }
                           },
-                          text: lang.get("date_end", "Data de Fim"),
+                          text: CustomLocalizations.lang
+                              .get("date_end", "Data de Fim"),
                           options: FFButtonOptions(
                             height: 40.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -434,7 +437,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
               Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Text(
-                  lang.get("contractor", "Empreiteiro"),
+                  CustomLocalizations.lang.get("contractor", "Empreiteiro"),
                   style: AppTheme.of(context).headlineMedium.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
@@ -484,8 +487,8 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                         width: MediaQuery.sizeOf(context).width * 0.93,
                         height: 50.0,
                         textStyle: AppTheme.of(context).bodyMedium,
-                        hintText:
-                            lang.get("work_create_select", "Selecione..."),
+                        hintText: CustomLocalizations.lang
+                            .get("work_create_select", "Selecione..."),
                         icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: AppTheme.of(context).secondaryText,
@@ -547,7 +550,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              lang.get(
+                              CustomLocalizations.lang.get(
                                   "work_added", "Obra criada com sucesso."),
                               style: TextStyle(
                                 color: AppTheme.of(context).primaryText,
@@ -560,7 +563,7 @@ class _CriarObraWidgetState extends State<CriarObraWidget>
 
                         setState(() {});
                       },
-                      text: lang.get("create_btn", "Criar"),
+                      text: CustomLocalizations.lang.get("create_btn", "Criar"),
                       icon: Icon(
                         Icons.arrow_forward_ios,
                         size: 15.0,

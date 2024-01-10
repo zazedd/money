@@ -1,7 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/no_internet.dart';
 import '/geral/util.dart';
@@ -140,7 +140,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
         title: Align(
           alignment: AlignmentDirectional(-1.0, 0.0),
           child: Text(
-            lang.get("home_home", 'Home'),
+            CustomLocalizations.lang.get("home_home", 'Home'),
             textAlign: TextAlign.start,
             style: AppTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
@@ -243,7 +243,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                     child: Text(
                                       valueOrDefault<String>(
                                         baBankRow?.name,
-                                        lang.get("name", "Nome"),
+                                        CustomLocalizations.lang
+                                            .get("name", "Nome"),
                                       ),
                                       style: AppTheme.of(context)
                                           .displaySmall
@@ -343,7 +344,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    lang.get("home_statistics", 'Estatísticas'),
+                                    CustomLocalizations.lang
+                                        .get("home_statistics", 'Estatísticas'),
                                     style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
@@ -407,7 +409,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Text(
-                                                    lang.get(
+                                                    CustomLocalizations.lang.get(
                                                         "home_statistics_work_ongoing",
                                                         "Obras em curso"),
                                                     textAlign: TextAlign.start,
@@ -463,7 +465,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Text(
-                                                    lang.get(
+                                                    CustomLocalizations.lang.get(
                                                         "home_statistics_work_finished",
                                                         "Obras completas"),
                                                     textAlign: TextAlign.start,
@@ -515,7 +517,7 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Text(
-                                                  lang.get(
+                                                  CustomLocalizations.lang.get(
                                                       "home_statistics_work_canceled",
                                                       "Obras canceladas"),
                                                   textAlign: TextAlign.start,
@@ -590,7 +592,8 @@ class _HomePageCEOWidgetState extends State<HomePageCEOWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    lang.get("home_statistics_last_30days",
+                                    CustomLocalizations.lang.get(
+                                        "home_statistics_last_30days",
                                         'Últimos 30 dias'),
                                     style: AppTheme.of(context)
                                         .displaySmall

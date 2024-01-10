@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'add_more_material_from_request_model.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 export 'add_more_material_from_request_model.dart';
 
 class AddMoreMaterialFromRequestWidget extends StatefulWidget {
@@ -136,7 +136,7 @@ class _AddMoreMaterialFromRequestWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("buy_material_to_work", "Compra de Material para a Obra"),
+                    CustomLocalizations.lang.get("buy_material_to_work", "Compra de Material para a Obra"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -158,9 +158,9 @@ class _AddMoreMaterialFromRequestWidgetState
                               focusNode: _model.nomeFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: lang.get("name", "Nome"),
+                                labelText: CustomLocalizations.lang.get("name", "Nome"),
                                 labelStyle: AppTheme.of(context).bodySmall,
-                                hintText: lang.get("name", "Nome"),
+                                hintText: CustomLocalizations.lang.get("name", "Nome"),
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -225,7 +225,7 @@ class _AddMoreMaterialFromRequestWidgetState
                             focusNode: _model.quantFocusNode1,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("quantity", "Quantidade"),
+                              labelText: CustomLocalizations.lang.get("quantity", "Quantidade"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -286,7 +286,7 @@ class _AddMoreMaterialFromRequestWidgetState
                             focusNode: _model.quantFocusNode2,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("cost", "Custo"),
+                              labelText: CustomLocalizations.lang.get("cost", "Custo"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -465,7 +465,7 @@ class _AddMoreMaterialFromRequestWidgetState
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        lang.get("quantity_added", "Quantidade adicionada com sucesso!"),
+                                        CustomLocalizations.lang.get("quantity_added", "Quantidade adicionada com sucesso!"),
                                         style: TextStyle(
                                           color:
                                               AppTheme.of(context).primaryText,
@@ -479,7 +479,7 @@ class _AddMoreMaterialFromRequestWidgetState
 
                                   setState(() {});
                                 },
-                                text: lang.get("submit", "Submeter"),
+                                text: CustomLocalizations.lang.get("submit", "Submeter"),
                                 icon: Icon(
                                   Icons.arrow_forward_ios,
                                   size: 15.0,

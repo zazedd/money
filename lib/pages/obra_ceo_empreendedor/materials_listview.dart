@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/modificar_material_obra/modificar_material_obra_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -79,7 +79,8 @@ class materials_listview extends StatelessWidget {
                           Text(
                             valueOrDefault<String>(
                               listViewMaterialRow.name,
-                              lang.get("material_title", "Material"),
+                              CustomLocalizations.lang
+                                  .get("material_title", "Material"),
                             ),
                             style: AppTheme.of(context).displaySmall.override(
                                   fontFamily: 'Readex Pro',
@@ -106,7 +107,8 @@ class materials_listview extends StatelessWidget {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
                               child: Text(
-                                lang.get("quantity", "Quantidade"),
+                                CustomLocalizations.lang
+                                    .get("quantity", "Quantidade"),
                                 textAlign: TextAlign.end,
                                 style: AppTheme.of(context).bodySmall.override(
                                       fontFamily: 'Inter',

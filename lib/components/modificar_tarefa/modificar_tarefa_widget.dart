@@ -3,7 +3,7 @@ import '/geral/drop_down.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/widgets.dart';
 import '/geral/form_field_controller.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +42,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
     _model.nomeController ??= TextEditingController(
         text: valueOrDefault<String>(
       widget.tarefa?.name,
-          lang.get("name", "Nome"),
+          CustomLocalizations.lang.get("name", "Nome"),
     ));
     _model.nomeFocusNode ??= FocusNode();
 
@@ -125,7 +125,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                     child: Text(
-                      lang.get("modify_task", "Modificar Tarefa"),
+                      CustomLocalizations.lang.get("modify_task", "Modificar Tarefa"),
                       style: AppTheme.of(context).headlineSmall,
                     ),
                   ),
@@ -148,7 +148,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                 focusNode: _model.nomeFocusNode,
                                 obscureText: false,
                                 decoration: InputDecoration(
-                                  labelText: lang.get("name", "Nome"),
+                                  labelText: CustomLocalizations.lang.get("name", "Nome"),
                                   labelStyle: AppTheme.of(context).bodySmall,
                                   hintStyle: AppTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
@@ -215,7 +215,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                               focusNode: _model.descFocusNode,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: lang.get("description", "Descrição"),
+                                labelText: CustomLocalizations.lang.get("description", "Descrição"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -319,7 +319,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.93,
                                 height: 50.0,
                                 textStyle: AppTheme.of(context).bodyMedium,
-                                hintText: lang.get("select_worker", "Selecione um Trabalhador..."),
+                                hintText: CustomLocalizations.lang.get("select_worker", "Selecione um Trabalhador..."),
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
                                   color: AppTheme.of(context).secondaryText,
@@ -365,7 +365,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                             width: MediaQuery.sizeOf(context).width * 0.93,
                             height: 50.0,
                             textStyle: AppTheme.of(context).bodyMedium,
-                            hintText: lang.get("select_state", "Selecione um Estado..."),
+                            hintText: CustomLocalizations.lang.get("select_state", "Selecione um Estado..."),
                             icon: Icon(
                               Icons.keyboard_arrow_down_rounded,
                               color: AppTheme.of(context).secondaryText,
@@ -443,7 +443,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                 });
                               }
                             },
-                            text: lang.get("date_init", "Data de Início"),
+                            text: CustomLocalizations.lang.get("date_init", "Data de Início"),
                             options: FFButtonOptions(
                               height: 40.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -517,7 +517,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                                   });
                                 }
                               },
-                              text: lang.get("date_end", "Data de Fim"),
+                              text: CustomLocalizations.lang.get("date_end", "Data de Fim"),
                               options: FFButtonOptions(
                                 height: 40.0,
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -591,7 +591,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                lang.get("updated_task", "Tarefa atualizada com sucesso."),
+                                CustomLocalizations.lang.get("updated_task", "Tarefa atualizada com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -601,7 +601,7 @@ class _ModificarTarefaWidgetState extends State<ModificarTarefaWidget> {
                             ),
                           );
                         },
-                        text: lang.get("submit", "Submeter"),
+                        text: CustomLocalizations.lang.get("submit", "Submeter"),
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.0,

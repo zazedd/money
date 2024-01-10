@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/add_material_to_storage/add_material_to_storage_widget.dart';
 import '/components/select_add_mod/select_add_mod_widget.dart';
 import '/geral/animations.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/no_internet.dart';
 import '/geral/theme.dart';
@@ -100,7 +100,7 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
         backgroundColor: colors.get("background2", Color(0xFF181818)),
         automaticallyImplyLeading: false,
         title: Text(
-          lang.get("materials", "Materiais"),
+          CustomLocalizations.lang.get("materials", "Materiais"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 color: AppTheme.of(context).info,
@@ -129,7 +129,8 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
-                            lang.get("material_total", "Total de Materiais"),
+                            CustomLocalizations.lang
+                                .get("material_total", "Total de Materiais"),
                             style: AppTheme.of(context).headlineMedium,
                           ),
                         ],
@@ -228,7 +229,8 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                               Text(
                                                 valueOrDefault<String>(
                                                   listViewMaterialRow.name,
-                                                  lang.get("name", "Nome"),
+                                                  CustomLocalizations.lang
+                                                      .get("name", "Nome"),
                                                 ),
                                                 style: AppTheme.of(context)
                                                     .displaySmall
@@ -263,8 +265,9 @@ class _MateriaisWidgetState extends State<MateriaisWidget>
                                                       .fromSTEB(
                                                           0.0, 0.0, 4.0, 0.0),
                                                   child: Text(
-                                                    lang.get("quantity",
-                                                        "Quantidade"),
+                                                    CustomLocalizations.lang
+                                                        .get("quantity",
+                                                            "Quantidade"),
                                                     textAlign: TextAlign.end,
                                                     style: AppTheme.of(context)
                                                         .bodySmall

@@ -1,7 +1,7 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
@@ -125,7 +125,8 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    lang.get("login_title", "Bem-Vindo!"),
+                                    CustomLocalizations.lang
+                                        .get("login_title", "Bem-Vindo!"),
                                     style: AppTheme.of(context)
                                         .displaySmall
                                         .override(
@@ -144,7 +145,8 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      lang.get("signup_text",
+                                      CustomLocalizations.lang.get(
+                                          "signup_text",
                                           "Crie uma conta para continuar"),
                                       style: AppTheme.of(context)
                                           .titleMedium
@@ -164,10 +166,11 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                   focusNode: _model.nameFocusNode,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: lang.get(
-                                        "username_label", "Nome Completo"),
+                                    labelText: CustomLocalizations.lang
+                                        .get("username_label", "Nome Completo"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: lang.get("username_placeholder",
+                                    hintText: CustomLocalizations.lang.get(
+                                        "username_placeholder",
                                         "Introduza o seu nome..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
@@ -221,9 +224,11 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                   focusNode: _model.emailAddressFocusNode,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: lang.get("email_label", "Email"),
+                                    labelText: CustomLocalizations.lang
+                                        .get("email_label", "Email"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: lang.get("email_placeholder",
+                                    hintText: CustomLocalizations.lang.get(
+                                        "email_placeholder",
                                         "Introduza o seu email..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
@@ -278,10 +283,11 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                   focusNode: _model.passwordCreateFocusNode,
                                   obscureText: !_model.passwordCreateVisibility,
                                   decoration: InputDecoration(
-                                    labelText:
-                                        lang.get("password_label", "Password"),
+                                    labelText: CustomLocalizations.lang
+                                        .get("password_label", "Password"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: lang.get("password_placeholder",
+                                    hintText: CustomLocalizations.lang.get(
+                                        "password_placeholder",
                                         "Introduza a sua password..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
                                     enabledBorder: OutlineInputBorder(
@@ -352,11 +358,11 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                   obscureText:
                                       !_model.passwordConfirmVisibility,
                                   decoration: InputDecoration(
-                                    labelText: lang.get(
+                                    labelText: CustomLocalizations.lang.get(
                                         "confirm_password_label",
                                         "Confirmar a password"),
                                     labelStyle: AppTheme.of(context).bodySmall,
-                                    hintText: lang.get(
+                                    hintText: CustomLocalizations.lang.get(
                                         "confirm_password_placeholder",
                                         "Confirme a sua password..."),
                                     hintStyle: AppTheme.of(context).bodySmall,
@@ -465,7 +471,8 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                         context.pushNamedAuth(
                                             'loginPage', context.mounted);
                                       },
-                                      text: lang.get("create_btn", "Criar"),
+                                      text: CustomLocalizations.lang
+                                          .get("create_btn", "Criar"),
                                       icon: Icon(
                                         Icons.arrow_forward_ios,
                                         size: 15.0,
@@ -540,7 +547,7 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     4.0, 0.0, 24.0, 0.0),
                                             child: Text(
-                                              lang.get(
+                                              CustomLocalizations.lang.get(
                                                   "signup_footer_btn", "Login"),
                                               style: AppTheme.of(context)
                                                   .bodyMedium
@@ -552,7 +559,8 @@ class _RegisterPageWidgetState extends State<RegisterPageWidget>
                                             ),
                                           ),
                                           Text(
-                                            lang.get("signup_footer_text",
+                                            CustomLocalizations.lang.get(
+                                                "signup_footer_text",
                                                 "Já tem uma conta?"),
                                             style:
                                                 AppTheme.of(context).bodyMedium,

@@ -1,22 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'language.dart';
+import 'util.dart';
 
 const _kLocaleStorageKey = '__locale_key__';
 
-class FFLocalizations {
-  FFLocalizations(this.locale);
+class CustomLocalizations {
+  CustomLocalizations(this.locale);
 
   final Locale locale;
 
-  static FFLocalizations of(BuildContext context) =>
-      Localizations.of<FFLocalizations>(context, FFLocalizations)!;
+  static CustomLocalizations of(BuildContext context) =>
+      Localizations.of<CustomLocalizations>(context, CustomLocalizations)!;
 
-  static List<String> languages() => ['pt'];
+  static List<String> languages() => ['pt', 'en'];
+
+  static late Language lang;
 
   static late SharedPreferences _prefs;
-  static Future initialize() async =>
-      _prefs = await SharedPreferences.getInstance();
+  static Future initialize() async {
+    _prefs = await SharedPreferences.getInstance();
+    print_("Stored locale ${getStoredLocale().toString()}");
+    lang = Language(getStoredLocale().toString());
+    await lang.fetchData();
+  }
+
   static Future storeLocale(String locale) =>
       _prefs.setString(_kLocaleStorageKey, locale);
   static Locale? getStoredLocale() {
@@ -25,75 +34,6 @@ class FFLocalizations {
   }
 
   String get languageCode => locale.toString();
-  String? get languageShortCode =>
-      _languagesWithShortCode.contains(locale.toString())
-          ? '${locale.toString()}_short'
-          : null;
-  int get languageIndex => languages().contains(languageCode)
-      ? languages().indexOf(languageCode)
-      : 0;
-
-  String getText(String key) =>
-      (kTranslationsMap[key] ?? {})[locale.toString()] ?? '';
-
-  String getVariableText({
-    String? ptText = '',
-  }) =>
-      [ptText][languageIndex] ?? '';
-
-  static const Set<String> _languagesWithShortCode = {
-    'ar',
-    'az',
-    'ca',
-    'cs',
-    'da',
-    'de',
-    'dv',
-    'en',
-    'es',
-    'et',
-    'fi',
-    'fr',
-    'gr',
-    'he',
-    'hi',
-    'hu',
-    'it',
-    'km',
-    'ku',
-    'mn',
-    'ms',
-    'no',
-    'pt',
-    'ro',
-    'ru',
-    'rw',
-    'sv',
-    'th',
-    'uk',
-    'vi',
-  };
-}
-
-class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
-  const FFLocalizationsDelegate();
-
-  @override
-  bool isSupported(Locale locale) {
-    final language = locale.toString();
-    return FFLocalizations.languages().contains(
-      language.endsWith('_')
-          ? language.substring(0, language.length - 1)
-          : language,
-    );
-  }
-
-  @override
-  Future<FFLocalizations> load(Locale locale) =>
-      SynchronousFuture<FFLocalizations>(FFLocalizations(locale));
-
-  @override
-  bool shouldReload(FFLocalizationsDelegate old) => false;
 }
 
 Locale createLocale(String language) => language.contains('_')

@@ -4,7 +4,7 @@ import '/components/add_pedido/add_pedido_widget.dart';
 import '/components/visualizar_pedido/visualizar_pedido_widget.dart';
 import '/geral/animations.dart';
 import '/geral/icon_button.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/theme.dart';
@@ -153,7 +153,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
           },
         ),
         title: Text(
-          lang.get("work_title", "Obra"),
+          CustomLocalizations.lang.get("work_title", "Obra"),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 fontSize: 20,
@@ -270,9 +270,10 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                 dateTimeFormat(
                                                   'MM/yy',
                                                   widget.obra!.startsAt!,
-                                                  locale: FFLocalizations.of(
-                                                          context)
-                                                      .languageCode,
+                                                  locale:
+                                                      CustomLocalizations.of(
+                                                              context)
+                                                          .languageCode,
                                                 ),
                                                 style: AppTheme.of(context)
                                                     .displaySmall
@@ -314,9 +315,10 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                                 dateTimeFormat(
                                                   'MM/yy',
                                                   widget.obra!.endsAt!,
-                                                  locale: FFLocalizations.of(
-                                                          context)
-                                                      .languageCode,
+                                                  locale:
+                                                      CustomLocalizations.of(
+                                                              context)
+                                                          .languageCode,
                                                 ),
                                                 style: AppTheme.of(context)
                                                     .displaySmall
@@ -377,7 +379,7 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          lang.get(
+                                          CustomLocalizations.lang.get(
                                               "your_tasks", "As suas Tarefas"),
                                           style: AppTheme.of(context)
                                               .headlineMedium,
@@ -446,7 +448,8 @@ class _ObraTrabalhadorWidgetState extends State<ObraTrabalhadorWidget>
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Text(
-                                          lang.get("work_requests",
+                                          CustomLocalizations.lang.get(
+                                              "work_requests",
                                               "Os seus pedidos"),
                                           style: AppTheme.of(context)
                                               .headlineMedium,

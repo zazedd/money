@@ -3,7 +3,7 @@ import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'add_fundos_model.dart';
@@ -104,7 +104,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("add_funds_title", "Adicionar Fundos"),
+                    CustomLocalizations.lang
+                        .get("add_funds_title", "Adicionar Fundos"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -124,7 +125,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             focusNode: _model.descFocusNode,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("description", "Descrição"),
+                              labelText: CustomLocalizations.lang
+                                  .get("description", "Descrição"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               alignLabelWithHint: false,
                               hintStyle: AppTheme.of(context).bodySmall,
@@ -188,7 +190,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                             textCapitalization: TextCapitalization.none,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("value", "Valor"),
+                              labelText: CustomLocalizations.lang
+                                  .get("value", "Valor"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -266,7 +269,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    lang.get("funds_added", "Fundos adicionados com sucesso!"),
+                                    CustomLocalizations.lang.get("funds_added",
+                                        "Fundos adicionados com sucesso!"),
                                     style: TextStyle(
                                       color: AppTheme.of(context).primaryText,
                                     ),
@@ -276,7 +280,8 @@ class _AddFundosWidgetState extends State<AddFundosWidget> {
                                 ),
                               );
                             },
-                            text: lang.get("submit", "Submeter"),
+                            text: CustomLocalizations.lang
+                                .get("submit", "Submeter"),
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 15.0,

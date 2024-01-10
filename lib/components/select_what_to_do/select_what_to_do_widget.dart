@@ -1,7 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/components/modificar_obra/modificar_obra_widget.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
@@ -82,7 +82,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("select_what_to_do", "O que pretender fazer?"),
+                CustomLocalizations.lang.get("select_what_to_do", "O que pretender fazer?"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -118,7 +118,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                 },
                               ).then((value) => safeSetState(() {})); print_("Obra modificada");
                             },
-                            text: lang.get("modify_work", "Modificar Obra"),
+                            text: CustomLocalizations.lang.get("modify_work", "Modificar Obra"),
                             options: FFButtonOptions(
                               height: 89.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -167,7 +167,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                               .showSnackBar(
                                             SnackBar(
                                               content: Text(
-                                                lang.get("canceled_work", "Obra cancelada."),
+                                                CustomLocalizations.lang.get("canceled_work", "Obra cancelada."),
                                                 style: TextStyle(
                                                   color: AppTheme.of(context)
                                                       .primaryText,
@@ -180,7 +180,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                             ),
                                           );
                                         },
-                                        text: lang.get("select_what_to_do_cancel", "Cancelar"),
+                                        text: CustomLocalizations.lang.get("select_what_to_do_cancel", "Cancelar"),
                                         icon: Icon(
                                           Icons.close,
                                           size: 15.0,
@@ -235,7 +235,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                   .showSnackBar(
                                                 SnackBar(
                                                   content: Text(
-                                                    lang.get("done_work", "Obra concluída!"),
+                                                    CustomLocalizations.lang.get("done_work", "Obra concluída!"),
                                                     style: TextStyle(
                                                       color:
                                                           AppTheme.of(context)
@@ -250,7 +250,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                                 ),
                                               );
                                             },
-                                            text: lang.get("select_what_to_do_conclude", "Concluír"),
+                                            text: CustomLocalizations.lang.get("select_what_to_do_conclude", "Concluír"),
                                             icon: Icon(
                                               Icons.done,
                                               size: 15.0,
@@ -301,7 +301,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                           .showSnackBar(
                                         SnackBar(
                                           content: Text(
-                                            lang.get("resume_work", "Obra resumida."),
+                                            CustomLocalizations.lang.get("resume_work", "Obra resumida."),
                                             style: TextStyle(
                                               color: AppTheme.of(context)
                                                   .primaryText,
@@ -314,7 +314,7 @@ class _SelectWhatToDoWidgetState extends State<SelectWhatToDoWidget> {
                                         ),
                                       );
                                     },
-                                    text: lang.get("work_to_resume", "Resumir Obra"),
+                                    text: CustomLocalizations.lang.get("work_to_resume", "Resumir Obra"),
                                     options: FFButtonOptions(
                                       width: double.infinity,
                                       height: 89.0,

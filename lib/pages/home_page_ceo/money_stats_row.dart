@@ -1,8 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
-import '/geral/colors.dart';
+import '/geral/internationalization.dart';
 import '/geral/util.dart';
 import '/geral/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
@@ -64,7 +63,8 @@ class money_stats_row extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      lang.get("home_statistics_revenues", "Receitas"),
+                      CustomLocalizations.lang
+                          .get("home_statistics_revenues", "Receitas"),
                       textAlign: TextAlign.start,
                       style: AppTheme.of(context).headlineSmall,
                     ),
@@ -169,7 +169,8 @@ class money_stats_row extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        lang.get("home_statistics_expenses", "Despesas"),
+                        CustomLocalizations.lang
+                            .get("home_statistics_expenses", "Despesas"),
                         textAlign: TextAlign.start,
                         style: AppTheme.of(context).headlineSmall,
                       ),

@@ -5,7 +5,7 @@ import '/components/add_tarefa_to_obra/add_tarefa_to_obra_widget.dart';
 import '/components/add_trabalhador_to_obra/add_trabalhador_to_obra_widget.dart';
 import '/geral/theme.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
@@ -88,7 +88,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("select_what_to_add", "O que pretende adicionar?"),
+                CustomLocalizations.lang.get("select_what_to_add", "O que pretende adicionar?"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -125,7 +125,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                           },
                         ).then((value) => safeSetState(() {})); print_("Trabalhador adicionado");
                       },
-                      text: lang.get("select_what_to_add_worker", "Trabalhador"),
+                      text: CustomLocalizations.lang.get("select_what_to_add_worker", "Trabalhador"),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -165,7 +165,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                           },
                         ).then((value) => safeSetState(() {})); print_("Tarefa adicionada");
                       },
-                      text: lang.get("visualize_task", "Tarefa"),
+                      text: CustomLocalizations.lang.get("visualize_task", "Tarefa"),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -205,7 +205,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                           },
                         ).then((value) => safeSetState(() {})); print_("Material adicionado");
                       },
-                      text: lang.get("material_title", "Material"),
+                      text: CustomLocalizations.lang.get("material_title", "Material"),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -245,7 +245,7 @@ class _SelectWhatToAddWidgetState extends State<SelectWhatToAddWidget> {
                           },
                         ).then((value) => safeSetState(() {})); print_("Movimento adicionado");
                       },
-                      text: lang.get("select_what_to_add_movement", "Movimento"),
+                      text: CustomLocalizations.lang.get("select_what_to_add_movement", "Movimento"),
                       options: FFButtonOptions(
                         height: 40.0,
                         padding: EdgeInsetsDirectional.fromSTEB(

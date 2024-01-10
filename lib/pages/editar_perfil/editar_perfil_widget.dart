@@ -4,7 +4,7 @@ import '/geral/icon_button.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/upload_data.dart';
@@ -76,7 +76,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
           },
         ),
         title: Text(
-          lang.get("profile_account_edit", 'Editar Perfil'),
+          CustomLocalizations.lang.get("profile_account_edit", 'Editar Perfil'),
           style: AppTheme.of(context).headlineMedium.override(
                 fontFamily: 'Readex Pro',
                 color: AppTheme.of(context).info,
@@ -247,10 +247,11 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget>
                         focusNode: _model.yourNameFocusNode,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText:
-                              lang.get("username_label", "Nome Completo"),
+                          labelText: CustomLocalizations.lang
+                              .get("username_label", "Nome Completo"),
                           labelStyle: AppTheme.of(context).bodySmall,
-                          hintText: lang.get("username_placeholder",
+                          hintText: CustomLocalizations.lang.get(
+                              "username_placeholder",
                               "Introduza o seu nome..."),
                           hintStyle: AppTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(

@@ -19,12 +19,12 @@ export 'dart:typed_data' show Uint8List;
 export 'dart:convert' show jsonEncode, jsonDecode;
 export 'package:intl/intl.dart';
 export 'package:page_transition/page_transition.dart';
-export 'internationalization.dart' show FFLocalizations;
+export 'internationalization.dart' show CustomLocalizations;
 export 'nav/nav.dart';
 
 bool debug = true;
 void print_(String pr) {
-  // if (!debug) return;
+  if (!debug) return;
 
   print(pr);
 }

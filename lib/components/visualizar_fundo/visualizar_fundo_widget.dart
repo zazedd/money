@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -81,7 +81,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
               child: Text(
-                lang.get("visualize_funds", "Fundo"),
+                CustomLocalizations.lang.get("visualize_funds", "Fundo"),
                 style: AppTheme.of(context).headlineSmall,
               ),
             ),
@@ -115,7 +115,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          lang.get("description_dots", "Descrição:"),
+                          CustomLocalizations.lang.get("description_dots", "Descrição:"),
                           style: AppTheme.of(context).titleSmall,
                         ),
                       ),
@@ -125,7 +125,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         child: Text(
                           valueOrDefault<String>(
                             widget.fundo?.desc,
-                            lang.get("description", "Descrição"),
+                            CustomLocalizations.lang.get("description", "Descrição"),
                           ),
                           textAlign: TextAlign.start,
                           style: AppTheme.of(context).bodyMedium,
@@ -166,7 +166,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          lang.get("date_dots", "Data:"),
+                          CustomLocalizations.lang.get("date_dots", "Data:"),
                           style: AppTheme.of(context).titleSmall,
                         ),
                       ),
@@ -177,7 +177,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                           dateTimeFormat(
                             'd/M/yy H:mm',
                             widget.fundo!.createdAt!,
-                            locale: FFLocalizations.of(context).languageCode,
+                            locale: CustomLocalizations.of(context).languageCode,
                           ),
                           textAlign: TextAlign.start,
                           style: AppTheme.of(context).bodyMedium,
@@ -218,7 +218,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Text(
-                          lang.get("value_dots", "Valor:"),
+                          CustomLocalizations.lang.get("value_dots", "Valor:"),
                           style: AppTheme.of(context).titleSmall,
                         ),
                       ),
@@ -290,7 +290,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                lang.get("deleted_fund", "Fundo apagado!"),
+                                CustomLocalizations.lang.get("deleted_fund", "Fundo apagado!"),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -300,7 +300,7 @@ class _VisualizarFundoWidgetState extends State<VisualizarFundoWidget> {
                             ),
                           );
                         },
-                        text: lang.get("erase", "Remover"),
+                        text: CustomLocalizations.lang.get("erase", "Remover"),
                         icon: Icon(
                           Icons.close,
                           size: 15.0,

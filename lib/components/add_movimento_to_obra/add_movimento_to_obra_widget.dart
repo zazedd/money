@@ -3,7 +3,7 @@ import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:flutter/material.dart';
 import 'add_movimento_to_obra_model.dart';
 export 'add_movimento_to_obra_model.dart';
@@ -99,7 +99,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                 child: Text(
-                  lang.get("add_moviment", "Adicionar Movimento"),
+                  CustomLocalizations.lang.get("add_moviment", "Adicionar Movimento"),
                   style: AppTheme.of(context).headlineSmall,
                 ),
               ),
@@ -121,7 +121,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                             focusNode: _model.nomeFocusNode,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("name", "Nome"),
+                              labelText: CustomLocalizations.lang.get("name", "Nome"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -182,7 +182,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                           focusNode: _model.descFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: lang.get("description", "Descrição"),
+                            labelText: CustomLocalizations.lang.get("description", "Descrição"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -242,7 +242,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                           focusNode: _model.qntFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: lang.get("quantity_op", "Quantidade (Opcional)"),
+                            labelText: CustomLocalizations.lang.get("quantity_op", "Quantidade (Opcional)"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -303,7 +303,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                           focusNode: _model.precoFocusNode,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: lang.get("price", "Preço"),
+                            labelText: CustomLocalizations.lang.get("price", "Preço"),
                             labelStyle: AppTheme.of(context).bodySmall,
                             hintStyle: AppTheme.of(context).bodySmall,
                             enabledBorder: OutlineInputBorder(
@@ -393,7 +393,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    lang.get("added_moviment", "Movimento adicionado com sucesso!"),
+                                    CustomLocalizations.lang.get("added_moviment", "Movimento adicionado com sucesso!"),
                                     style: TextStyle(
                                       color: AppTheme.of(context).primaryText,
                                     ),
@@ -405,7 +405,7 @@ class _AddMovimentoToObraWidgetState extends State<AddMovimentoToObraWidget> {
 
                               setState(() {});
                             },
-                            text: lang.get("submit", "Submeter"),
+                            text: CustomLocalizations.lang.get("submit", "Submeter"),
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 15.0,

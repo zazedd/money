@@ -3,7 +3,7 @@ import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/widgets.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'visualizar_movimento_model.dart';
@@ -135,7 +135,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                       child: Text(
                         valueOrDefault<String>(
                           bottomSheetMovementRow?.name,
-                          lang.get("visualize_funds", "Fundo"),
+                          CustomLocalizations.lang.get("visualize_funds", "Fundo"),
                         ),
                         style: AppTheme.of(context).headlineSmall,
                       ),
@@ -172,7 +172,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  lang.get("description_dots", "Descrição:"),
+                                  CustomLocalizations.lang.get("description_dots", "Descrição:"),
                                   style:
                                       AppTheme.of(context).titleSmall,
                                 ),
@@ -183,7 +183,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 child: Text(
                                   valueOrDefault<String>(
                                     bottomSheetMovementRow?.description,
-                                    lang.get("description", "Descrição"),
+                                    CustomLocalizations.lang.get("description", "Descrição"),
                                   ),
                                   textAlign: TextAlign.start,
                                   style:
@@ -227,7 +227,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  lang.get("date_dots", "Data:"),
+                                  CustomLocalizations.lang.get("date_dots", "Data:"),
                                   style:
                                       AppTheme.of(context).titleSmall,
                                 ),
@@ -282,7 +282,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  lang.get("quantity_dots", "Quantidade:"),
+                                  CustomLocalizations.lang.get("quantity_dots", "Quantidade:"),
                                   style:
                                       AppTheme.of(context).titleSmall,
                                 ),
@@ -338,7 +338,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  lang.get("cost_dots", "Custo:"),
+                                  CustomLocalizations.lang.get("cost_dots", "Custo:"),
                                   style:
                                       AppTheme.of(context).titleSmall,
                                 ),
@@ -461,7 +461,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                           .showSnackBar(
                                         SnackBar(
                                           content: Text(
-                                            lang.get("removed_moviment", "Movimento removido."),
+                                            CustomLocalizations.lang.get("removed_moviment", "Movimento removido."),
                                             style: TextStyle(
                                               color:
                                                   AppTheme.of(context)
@@ -476,7 +476,7 @@ class _VisualizarMovimentoWidgetState extends State<VisualizarMovimentoWidget> {
                                         ),
                                       );
                                     },
-                                    text: lang.get("erase", "Remover"),
+                                    text: CustomLocalizations.lang.get("erase", "Remover"),
                                     icon: Icon(
                                       Icons.close,
                                       size: 15.0,

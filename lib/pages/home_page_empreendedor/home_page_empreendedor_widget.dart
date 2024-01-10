@@ -1,7 +1,7 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/geral/animations.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/no_internet.dart';
 import '/geral/colors.dart';
 import '/geral/theme.dart';
@@ -278,7 +278,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                       listViewWorkRow.usedBudget
                                                           ?.toString(),
                                                       '0',
-                                                    )}€ ${lang.get("home_work_budget", "usados de")} ${listViewWorkRow.budget?.toString()}€',
+                                                    )}€ ${CustomLocalizations.lang.get("home_work_budget", "usados de")} ${listViewWorkRow.budget?.toString()}€',
                                                     style: AppTheme.of(context)
                                                         .displaySmall
                                                         .override(
@@ -345,8 +345,8 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                           listViewWorkRow
                                                               .startsAt!,
                                                           locale:
-                                                              FFLocalizations.of(
-                                                                      context)
+                                                              CustomLocalizations
+                                                                      .of(context)
                                                                   .languageCode,
                                                         ),
                                                         style:
@@ -430,8 +430,8 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                                           listViewWorkRow
                                                               .endsAt!,
                                                           locale:
-                                                              FFLocalizations.of(
-                                                                      context)
+                                                              CustomLocalizations
+                                                                      .of(context)
                                                                   .languageCode,
                                                         ),
                                                         style:
@@ -460,7 +460,7 @@ class _HomePageEmpreendedorWidgetState extends State<HomePageEmpreendedorWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 7.0, 0.0, 0.0),
                                       child: Text(
-                                        '${lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${lang.get("days", "dias")}',
+                                        '${CustomLocalizations.lang.get("home_work_budget_usage_part1", "Pode gastar mais")} ${((listViewWorkRow.budget! - listViewWorkRow.usedBudget!) / (((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil())).toStringAsFixed(2)}${CustomLocalizations.lang.get("home_work_budget_usage_part2", "€/dia durante")} ${((listViewWorkRow.endsAt!.secondsSinceEpoch.toDouble() - getCurrentTimestamp.secondsSinceEpoch.toDouble()) / (24 * 60 * 60)).ceil().toString()} ${CustomLocalizations.lang.get("days", "dias")}',
                                         textAlign: TextAlign.start,
                                         style: AppTheme.of(context)
                                             .displaySmall

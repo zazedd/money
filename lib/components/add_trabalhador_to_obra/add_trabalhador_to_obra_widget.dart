@@ -3,7 +3,7 @@ import '/geral/drop_down.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/widgets.dart';
 import '/geral/form_field_controller.dart';
 import 'package:flutter/material.dart';
@@ -107,7 +107,7 @@ class _AddTrabalhadorToObraWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("add_worker_to_work", "Adicionar Trabalhador"),
+                    CustomLocalizations.lang.get("add_worker_to_work", "Adicionar Trabalhador"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -165,7 +165,7 @@ class _AddTrabalhadorToObraWidgetState
                                       MediaQuery.sizeOf(context).width * 0.93,
                                   height: 50.0,
                                   textStyle: AppTheme.of(context).bodyMedium,
-                                  hintText: lang.get("select_worker", "Selecione um Trabalhador..."),
+                                  hintText: CustomLocalizations.lang.get("select_worker", "Selecione um Trabalhador..."),
                                   icon: Icon(
                                     Icons.keyboard_arrow_down_rounded,
                                     color: AppTheme.of(context).secondaryText,
@@ -226,20 +226,20 @@ class _AddTrabalhadorToObraWidgetState
                             'work_id': widget.obra?.id,
                             'user_id': _model.dropDownValue,
                             'description':
-                                lang.get("working_auto", "Trabalhar (inserido automaticamente)"),
+                                CustomLocalizations.lang.get("working_auto", "Trabalhar (inserido automaticamente)"),
                             'starts_at':
                                 supaSerialize<DateTime>(widget.obra?.startsAt),
                             'ends_at':
                                 supaSerialize<DateTime>(widget.obra?.endsAt),
                             'status': 3,
-                            'name': lang.get("working", "Trabalhar"),
+                            'name': CustomLocalizations.lang.get("working", "Trabalhar"),
                           });
                           print_("Adicionado um trabalhador à obra");
                           Navigator.pop(context);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                lang.get("added_worker", "Trabalhador adicionado com sucesso."),
+                                CustomLocalizations.lang.get("added_worker", "Trabalhador adicionado com sucesso."),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -253,7 +253,7 @@ class _AddTrabalhadorToObraWidgetState
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                lang.get("worker_in_work", "O trabalhador já está na obra!"),
+                                CustomLocalizations.lang.get("worker_in_work", "O trabalhador já está na obra!"),
                                 style: TextStyle(
                                   color: AppTheme.of(context).primaryText,
                                 ),
@@ -264,7 +264,7 @@ class _AddTrabalhadorToObraWidgetState
                           );
                         }
                       },
-                      text: lang.get("submit", "Submeter"),
+                      text: CustomLocalizations.lang.get("submit", "Submeter"),
                       icon: Icon(
                         Icons.arrow_forward_ios,
                         size: 15.0,

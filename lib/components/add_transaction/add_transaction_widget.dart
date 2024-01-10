@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
 import '/geral/colors.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -112,7 +112,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("add_movement_title", "Adicionar Transação"),
+                    CustomLocalizations.lang.get("add_movement_title", "Adicionar Transação"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -134,7 +134,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                               focusNode: _model.nomeFocusNode1,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: lang.get("name", "Nome"),
+                                labelText: CustomLocalizations.lang.get("name", "Nome"),
                                 labelStyle: AppTheme.of(context).bodySmall,
                                 hintStyle: AppTheme.of(context).bodySmall,
                                 enabledBorder: OutlineInputBorder(
@@ -200,7 +200,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                             focusNode: _model.descFocusNode,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("description", "Descrição"),
+                              labelText: CustomLocalizations.lang.get("description", "Descrição"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               alignLabelWithHint: false,
                               hintStyle: AppTheme.of(context).bodySmall,
@@ -264,7 +264,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                             textCapitalization: TextCapitalization.none,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: lang.get("value", "Valor"),
+                              labelText: CustomLocalizations.lang.get("value", "Valor"),
                               labelStyle: AppTheme.of(context).bodySmall,
                               hintStyle: AppTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
@@ -343,7 +343,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      lang.get("funds_added", "Fundos adicionados com sucesso!"),
+                                      CustomLocalizations.lang.get("funds_added", "Fundos adicionados com sucesso!"),
                                       style: TextStyle(
                                         color: AppTheme.of(context).primaryText,
                                       ),
@@ -375,7 +375,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                      lang.get("added_transaction", "Transação adicionada com sucesso!"),
+                                      CustomLocalizations.lang.get("added_transaction", "Transação adicionada com sucesso!"),
                                       style: TextStyle(
                                         color: AppTheme.of(context).primaryText,
                                       ),
@@ -387,7 +387,7 @@ class _AddTransactionWidgetState extends State<AddTransactionWidget> {
                                 );
                               }
                             },
-                            text: lang.get("submit", "Submeter"),
+                            text: CustomLocalizations.lang.get("submit", "Submeter"),
                             icon: Icon(
                               Icons.arrow_forward_ios,
                               size: 15.0,

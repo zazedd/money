@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/components/visualizar_pedido/visualizar_pedido_widget.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -151,7 +151,8 @@ class requests_listview extends StatelessWidget {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
                               child: Text(
-                                lang.get("quantity", "Quantidade"),
+                                CustomLocalizations.lang
+                                    .get("quantity", "Quantidade"),
                                 textAlign: TextAlign.end,
                                 style: AppTheme.of(context).bodySmall.override(
                                       fontFamily: 'Inter',

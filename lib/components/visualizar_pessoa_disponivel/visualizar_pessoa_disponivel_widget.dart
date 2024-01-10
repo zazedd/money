@@ -1,7 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/geral/theme.dart';
 import '/geral/util.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -114,7 +114,7 @@ class _VisualizarPessoaDisponivelWidgetState
                         child: Text(
                           valueOrDefault<String>(
                             widget.user?.name,
-                            lang.get("name", "Nome"),
+                            CustomLocalizations.lang.get("name", "Nome"),
                           ),
                           style: AppTheme.of(context).headlineSmall,
                         ),
@@ -153,7 +153,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                lang.get("visualize_worker_role", "Cargo:"),
+                                CustomLocalizations.lang.get("visualize_worker_role", "Cargo:"),
                                 style: AppTheme.of(context).titleSmall,
                               ),
                             ),
@@ -164,14 +164,14 @@ class _VisualizarPessoaDisponivelWidgetState
                                 valueOrDefault<String>(
                                   () {
                                     if (widget.user?.role == 0) {
-                                      return lang.get("ceo_cfo", "CEO/CFO");
+                                      return CustomLocalizations.lang.get("ceo_cfo", "CEO/CFO");
                                     } else if (widget.user?.role == 1) {
-                                      return lang.get("contractor", "Empreiteiro");
+                                      return CustomLocalizations.lang.get("contractor", "Empreiteiro");
                                     } else {
-                                      return lang.get("select_what_to_add_worker", "Trabalhador");
+                                      return CustomLocalizations.lang.get("select_what_to_add_worker", "Trabalhador");
                                     }
                                   }(),
-                                  lang.get("select_what_to_add_worker", "Trabalhador"),
+                                  CustomLocalizations.lang.get("select_what_to_add_worker", "Trabalhador"),
                                 ),
                                 textAlign: TextAlign.start,
                                 style: AppTheme.of(context).bodyMedium,
@@ -213,7 +213,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                lang.get("visualize_worker_about", "Sobre:"),
+                                CustomLocalizations.lang.get("visualize_worker_about", "Sobre:"),
                                 style: AppTheme.of(context).titleSmall.override(
                                       fontFamily: 'Inter',
                                       fontSize: 16.0,
@@ -268,7 +268,7 @@ class _VisualizarPessoaDisponivelWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 5.0),
                               child: Text(
-                                lang.get("visualize_worker_work", "Obras:"),
+                                CustomLocalizations.lang.get("visualize_worker_work", "Obras:"),
                                 style: AppTheme.of(context).titleSmall.override(
                                       fontFamily: 'Inter',
                                       fontSize: 16.0,

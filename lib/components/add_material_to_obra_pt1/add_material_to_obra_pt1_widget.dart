@@ -1,7 +1,7 @@
 import '/backend/supabase/supabase.dart';
 import '/components/add_material_to_obra_pt2/add_material_to_obra_pt2_widget.dart';
 import '/geral/theme.dart';
-import '/geral/language.dart';
+import '/geral/internationalization.dart';
 import '/geral/colors.dart';
 import '/geral/util.dart';
 import 'package:flutter/material.dart';
@@ -106,7 +106,7 @@ class _AddMaterialToObraPt1WidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 0.0, 0.0),
                   child: Text(
-                    lang.get("add_material", "Adicionar Material"),
+                    CustomLocalizations.lang.get("add_material", "Adicionar Material"),
                     style: AppTheme.of(context).headlineSmall,
                   ),
                 ),
@@ -191,7 +191,7 @@ class _AddMaterialToObraPt1WidgetState
                                           .showSnackBar(
                                         SnackBar(
                                           content: Text(
-                                            lang.get("material_already_work", "O Material já está na obra!"),
+                                            CustomLocalizations.lang.get("material_already_work", "O Material já está na obra!"),
                                             style: TextStyle(
                                               color: AppTheme.of(context)
                                                   .primaryText,
