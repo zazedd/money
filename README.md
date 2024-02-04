@@ -17,6 +17,10 @@ A budget management mobile application for a construction company.
   - [X] Materials
   - [X] Requests
 
+### Backend-as-a-Service (BaaS)
+
+[Supabase](https://supabase.io/) was utilized as the backend-as-a-service (BaaS) for this mobile application. It simplifies the process of connecting, managing, and interacting with the backend, allowing for seamless integration and data handling.
+
 ## Running
 
 Simply run the provided script:
