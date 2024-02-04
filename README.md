@@ -27,6 +27,6 @@ flutter run
 It is assumed you have flutter instaled on your machine.
 
 ## Screenshots
-![Home Page](.github/home.jpg | height=100)
-![Work Page](.github/work.jpg)
-![Bank Page](.github/bank.jpg)
+<img src=".github/home.jpg" alt="Home Page" height="100"/>
+<img src=".github/work.jpg" alt="Work Page" height="100"/>
+<img src=".github/bank.jpg" alt="Bank Page" height="100"/>
