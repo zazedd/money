@@ -27,6 +27,6 @@ flutter run
 It is assumed you have flutter instaled on your machine.
 
 ## Screenshots
-![Home Page](.github/home.jpg)
+![Home Page](.github/home.jpg | height=100)
 ![Work Page](.github/work.jpg)
 ![Bank Page](.github/bank.jpg)
